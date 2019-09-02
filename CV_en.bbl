@@ -1,0 +1,3537 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\preamble{%
+\newcommand{\noop}[1]{}%
+}
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{PerdizPaganucci2013}{inbook}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b4474ab4949c0ca3fdfb7b5ff6a8d5ea}{%
+           family={Queiroz},
+           familyi={Q\bibinitperiod},
+           given={Luciano\bibnamedelima Paganucci},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{4}{%
+        {França, Fl{á}vio}%
+        {Melo, Efig{ê}nia}%
+        {Souza, Isys}%
+        {Pugliesi, Lara}%
+      }
+      \list{publisher}{1}{%
+        {Universidade Estadual de Feira de Santana, Feira de Santana}%
+      }
+      \strng{namehash}{444fc5b6d91c70c8cf17377f422b697b}
+      \strng{fullhash}{444fc5b6d91c70c8cf17377f422b697b}
+      \strng{bibnamehash}{444fc5b6d91c70c8cf17377f422b697b}
+      \strng{authorbibnamehash}{444fc5b6d91c70c8cf17377f422b697b}
+      \strng{authornamehash}{444fc5b6d91c70c8cf17377f422b697b}
+      \strng{authorfullhash}{444fc5b6d91c70c8cf17377f422b697b}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{chapter}{Meliaceae}
+      \field{isbn}{9788562465123}
+      \field{title}{Flora de {Morro} do {Chap{é}u}}
+      \field{volume}{1}
+      \field{year}{2013}
+      \true{nocite}
+      \field{pages}{172\bibrangedash 174}
+      \range{pages}{3}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2013_PerdizPaganucci.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdiz2014}{inbook}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=e3e83069f007b3a4a16d4bdcca670455}{%
+           family={Flores},
+           familyi={F\bibinitperiod},
+           given={Andr{é}ia\bibnamedelima Silva},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1bd388512ffc127c5ba3a64a0ce26e19}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={Rodrigo\bibnamedelima Sch{ü}tz},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {UERR edic{õ}es, {Boa} {Vista}}%
+      }
+      \strng{namehash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{fullhash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{bibnamehash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{authorbibnamehash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{authornamehash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{authorfullhash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{editorbibnamehash}{44eb14e00b707c777dbaf8efdfaf3513}
+      \strng{editornamehash}{44eb14e00b707c777dbaf8efdfaf3513}
+      \strng{editorfullhash}{44eb14e00b707c777dbaf8efdfaf3513}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{chapter}{As Unidades de Conservaç{ã}o e a preservaç{ã}o da diversidade biol{ó}gica}
+      \field{isbn}{9788561924065}
+      \field{title}{Ensinando bot{â}nica nas florestas no sul do Estado de {Roraima}}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{45\bibrangedash 48}
+      \range{pages}{4}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2014_Perdiz.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2019}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=24f81a98a86091a4a565ba51a1d18558}{%
+           family={Daly},
+           familyi={D\bibinitperiod},
+           given={D.\bibnamedelimi C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6d08b591b7e7b0a1ceb99b14b62e3057}{%
+           family={Vicentini},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=91009630880951cf358d060fe6af13a5}{%
+           family={Fine},
+           familyi={F\bibinitperiod},
+           given={P.\bibnamedelimi V.\bibnamedelimi A.},
+           giveni={P\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4cbab2e70d143dc65edd8307809839ce}
+      \strng{fullhash}{4cbab2e70d143dc65edd8307809839ce}
+      \strng{bibnamehash}{4cbab2e70d143dc65edd8307809839ce}
+      \strng{authorbibnamehash}{4cbab2e70d143dc65edd8307809839ce}
+      \strng{authornamehash}{4cbab2e70d143dc65edd8307809839ce}
+      \strng{authorfullhash}{4cbab2e70d143dc65edd8307809839ce}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phytotaxa}
+      \field{title}{A new species of \textit{{Protium}} ({Burseraceae}) from the {Pacific} {Coast} of {Costa} {Rica}}
+      \field{year}{\noop{3002}submitted}
+      \true{nocite}
+    \endentry
+    \entry{Amorimetal2009}{article}{}
+      \name{author}{7}{}{%
+        {{uniquename=1,uniquepart=given,hash=f549a03cf76168c85a15ef0df5f6610b}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={Andr{é}\bibnamedelima M{á}rcio},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=1,uniquepart=given,hash=6a27f542fdb3badbcced8a45ef0f40a6}{%
+           family={Jardim},
+           familyi={J\bibinitperiod},
+           given={Jomar\bibnamedelima Gomes},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=677b96c46218a8b0a1e845029b36bd37}{%
+           family={Lopes},
+           familyi={L\bibinitperiod},
+           given={M{á}rdel\bibnamedelimb Miranda\bibnamedelima Mendes},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3ce08235c27d60953e8fa72a954f3b39}{%
+           family={Fiaschi},
+           familyi={F\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=692613290ee572614fef60f712c43cf7}{%
+           family={Borges},
+           familyi={B\bibinitperiod},
+           given={Rafael\bibnamedelimb Augusto\bibnamedelima Xavier},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim X\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=abc65ca2586620fb5ab301e1dc7ec1d0}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={William\bibnamedelima Wayt},
+           giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{130a16d763705046801e7bce3a23f8ff}
+      \strng{fullhash}{130a16d763705046801e7bce3a23f8ff}
+      \strng{bibnamehash}{130a16d763705046801e7bce3a23f8ff}
+      \strng{authorbibnamehash}{130a16d763705046801e7bce3a23f8ff}
+      \strng{authornamehash}{130a16d763705046801e7bce3a23f8ff}
+      \strng{authorfullhash}{130a16d763705046801e7bce3a23f8ff}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biota {Neotropica}}
+      \field{number}{3}
+      \field{title}{Angiospermas em remanescentes de floresta montana no sul da {Bahia}, {Brasil}}
+      \field{volume}{9}
+      \field{year}{2009}
+      \true{nocite}
+      \field{pages}{313\bibrangedash 348}
+      \range{pages}{36}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2009_Amorimetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2012a}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=5cba86b0a43bcd83fb730d2883ed39fe}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={Andr{é}\bibnamedelimb M{á}rcio\bibnamedelima Ara{ú}jo},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=c38f8b4a39215b7e3bc4d18da8b9c60f}{%
+           family={Ferrucci},
+           familyi={F\bibinitperiod},
+           given={Maria\bibnamedelima Silvia},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ede805d15cf0d4e412110cdfae08ad87}
+      \strng{fullhash}{ede805d15cf0d4e412110cdfae08ad87}
+      \strng{bibnamehash}{ede805d15cf0d4e412110cdfae08ad87}
+      \strng{authorbibnamehash}{ede805d15cf0d4e412110cdfae08ad87}
+      \strng{authornamehash}{ede805d15cf0d4e412110cdfae08ad87}
+      \strng{authorfullhash}{ede805d15cf0d4e412110cdfae08ad87}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brittonia}
+      \field{number}{2}
+      \field{title}{\textit{Paullinia unifoliolata}, a remarkable new species of {Sapindaceae} from the {Atlantic} {Forest} of southern {Bahia}, {Brazil}}
+      \field{volume}{64}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{114\bibrangedash 118}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1007/s12228-011-9213-1
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2012a_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2012b}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=661b56f5b0283012df649bb0783ae28b}{%
+           family={{S{ã}o-Mateus}},
+           familyi={S\bibinitperiod},
+           given={Wallace\bibnamedelimb Messias\bibnamedelima Barbosa},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=f549a03cf76168c85a15ef0df5f6610b}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={Andr{é}\bibnamedelima M{á}rcio},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{15562ceed909924b09f9fc895b14b307}
+      \strng{fullhash}{15562ceed909924b09f9fc895b14b307}
+      \strng{bibnamehash}{15562ceed909924b09f9fc895b14b307}
+      \strng{authorbibnamehash}{15562ceed909924b09f9fc895b14b307}
+      \strng{authornamehash}{15562ceed909924b09f9fc895b14b307}
+      \strng{authorfullhash}{15562ceed909924b09f9fc895b14b307}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sitientibus S{é}rie Ciências Biol{ó}gicas}
+      \field{number}{1}
+      \field{title}{Flora da {Bahia}: {Caryocaraceae}}
+      \field{volume}{12}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{109\bibrangedash 113}
+      \range{pages}{5}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2012b_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2014}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=c38f8b4a39215b7e3bc4d18da8b9c60f}{%
+           family={Ferrucci},
+           familyi={F\bibinitperiod},
+           given={Maria\bibnamedelima Silvia},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=5cba86b0a43bcd83fb730d2883ed39fe}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={Andr{é}\bibnamedelimb M{á}rcio\bibnamedelima Ara{ú}jo},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{0fa52b63f686e763f74e3512f90e061d}
+      \strng{fullhash}{0fa52b63f686e763f74e3512f90e061d}
+      \strng{bibnamehash}{0fa52b63f686e763f74e3512f90e061d}
+      \strng{authorbibnamehash}{0fa52b63f686e763f74e3512f90e061d}
+      \strng{authornamehash}{0fa52b63f686e763f74e3512f90e061d}
+      \strng{authorfullhash}{0fa52b63f686e763f74e3512f90e061d}
+      \field{extraname}{1}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Rodrigu{é}sia}
+      \field{number}{4}
+      \field{title}{Sapindaceae em remanescentes de florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{volume}{65}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{987\bibrangedash 1002}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1590/2175-7860201465410
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2014_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{BFG2015}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=47b1a4d706adeac54b7b87f14d08230b}{%
+           family={BFG},
+           familyi={B\bibinitperiod}}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{fullhash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{bibnamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authorbibnamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authornamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authorfullhash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Rodrigu{é}sia}
+      \field{number}{4}
+      \field{title}{Growing knowledge: an overview of Seed Plant diversity in {Brazil}}
+      \field{volume}{66}
+      \field{year}{2015}
+      \true{nocite}
+      \field{pages}{1085\bibrangedash 1113}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1590/2175-7860201566411
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2015_BFG.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2015}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=eb06c42a7a3c51291f0ee0012269fdae}{%
+           family={Giulietti},
+           familyi={G\bibinitperiod},
+           given={Ana\bibnamedelima Maria},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=0b1969fe7797fdb11f38a92564af1e4d}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Reyjane\bibnamedelima Patr{í}cia},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \strng{fullhash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \strng{bibnamehash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \strng{authorbibnamehash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \strng{authornamehash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \strng{authorfullhash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sitientibus S{é}rie Ciências Biol{ó}gicas}
+      \field{title}{Flora da {Bahia}: {Clethraceae}}
+      \field{volume}{15}
+      \field{year}{2015}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.13102/scb342
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2015_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Lavoretal2016}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=1918aecdec855b18f443717ffe16ceb8}{%
+           family={Lavor},
+           familyi={L\bibinitperiod},
+           given={Pamela},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=75205194f65b012599ca8c3295eaed66}{%
+           family={Versieux},
+           familyi={V\bibinitperiod},
+           given={Leonardo\bibnamedelima Melo},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=00ff61bf02646f35c039f510b793be5d}{%
+           family={Calvente},
+           familyi={C\bibinitperiod},
+           given={Alice},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ab9a161d741969299ba04c56304f2560}
+      \strng{fullhash}{ab9a161d741969299ba04c56304f2560}
+      \strng{bibnamehash}{ab9a161d741969299ba04c56304f2560}
+      \strng{authorbibnamehash}{ab9a161d741969299ba04c56304f2560}
+      \strng{authornamehash}{ab9a161d741969299ba04c56304f2560}
+      \strng{authorfullhash}{ab9a161d741969299ba04c56304f2560}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cactus and Succulent Journal}
+      \field{number}{3}
+      \field{title}{Rediscovery of {\textit{Pilosocereus oligolepsis}} ({Cactaceae}) in the state of {Roraima}, {Brazil}}
+      \field{volume}{88}
+      \field{year}{2016}
+      \true{nocite}
+      \field{pages}{137\bibrangedash 143}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.2985/015.088.0306
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2016_Lavoretal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Barbosaetal2016}{article}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=bd08751da88c2ab8b25b38bd9f3b1164}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={Reinaldo\bibnamedelima Imbrozio},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=1891d902ab50504977017fb0ee587ec7}{%
+           family={Castilho},
+           familyi={C\bibinitperiod},
+           given={Carolina\bibnamedelima Volkmer},
+           giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e4e11c55792befa4545bf261280c43ba}{%
+           family={Damasco},
+           familyi={D\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=02a0d7e2ca2dfc6087cf93fb26888011}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=af9db1271bb50de53a9452c0ea4e0424}{%
+           family={Fearnside},
+           familyi={F\bibinitperiod},
+           given={Philip\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \strng{fullhash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \strng{bibnamehash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \strng{authorbibnamehash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \strng{authornamehash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \strng{authorfullhash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Forest Ecology and Management}
+      \field{title}{Decomposition rates of coarse woody debris in undisturbed Amazonian seasonally flooded and unflooded forests in the Rio Negro-Rio Branco Basin in Roraima, Brazil}
+      \field{volume}{397}
+      \field{year}{2017}
+      \true{nocite}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.foreco.2017.04.026
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2017_Barbosaetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Oliveiraetal2017}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=1,uniquepart=given,hash=2bca50f8243a73b76e901646359a52d3}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=1,uniquepart=given,hash=44cee9de742b7253ea01cba40c18ca8b}{%
+           family={Farias},
+           familyi={F\bibinitperiod},
+           given={Hugo\bibnamedelima Sousa},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8e747e7c8908e2c8db1503034ac93075}{%
+           family={Scudeller},
+           familyi={S\bibinitperiod},
+           given={Veridiana},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bd08751da88c2ab8b25b38bd9f3b1164}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={Reinaldo\bibnamedelima Imbrozio},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{97373c67247cef27ac937116ea4e9884}
+      \strng{fullhash}{97373c67247cef27ac937116ea4e9884}
+      \strng{bibnamehash}{97373c67247cef27ac937116ea4e9884}
+      \strng{authorbibnamehash}{97373c67247cef27ac937116ea4e9884}
+      \strng{authornamehash}{97373c67247cef27ac937116ea4e9884}
+      \strng{authorfullhash}{97373c67247cef27ac937116ea4e9884}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biodiversity Data Journal}
+      \field{title}{Structure and tree species composition in different habitats of savanna used by indigenous people in the {Northern} {Brazilian} {Amazon}}
+      \field{volume}{5}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.3897/BDJ.5.e20044
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2017_Oliveiraetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Rodriguesetal2017}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=1,uniquepart=given,hash=1bd388512ffc127c5ba3a64a0ce26e19}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={Rodrigo\bibnamedelima Sch{ü}tz},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e3e83069f007b3a4a16d4bdcca670455}{%
+           family={Flores},
+           familyi={F\bibinitperiod},
+           given={Andr{é}ia\bibnamedelima Silva},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dd35faee34d73c02eb36ec8b58362674}
+      \strng{fullhash}{dd35faee34d73c02eb36ec8b58362674}
+      \strng{bibnamehash}{dd35faee34d73c02eb36ec8b58362674}
+      \strng{authorbibnamehash}{dd35faee34d73c02eb36ec8b58362674}
+      \strng{authornamehash}{dd35faee34d73c02eb36ec8b58362674}
+      \strng{authorfullhash}{dd35faee34d73c02eb36ec8b58362674}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Rodrigu{é}sia}
+      \field{number}{2}
+      \field{title}{Novas ocorr{ê}ncias de angiospermas para o estado de {Roraima}, {Brasil}}
+      \field{volume}{68}
+      \field{year}{2017}
+      \true{nocite}
+      \field{pages}{783\bibrangedash 790}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1590/2175-7860201768229
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2017_Rodriguesetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{BFG2018}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=47b1a4d706adeac54b7b87f14d08230b}{%
+           family={BFG},
+           familyi={B\bibinitperiod}}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{fullhash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{bibnamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authorbibnamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authornamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authorfullhash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Rodrigu{é}sia}
+      \field{number}{4}
+      \field{title}{Brazilian {Flora} 2020: {Innovation} and collaboration to meet Target 1 of the Global Strategy for Plant Conservation ({GSPC})}
+      \field{volume}{69}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{1513\bibrangedash 1527}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1590/2175-7860201869402
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2018_BFG.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Farronayetal2018}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=af2a6d2ad8166aa80df8f26d1fda0129}{%
+           family={Farro{ñ}ay},
+           familyi={F\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=fb9377c711901642d2bcb3be7df4f179}{%
+           family={Adrianz{é}n},
+           familyi={A\bibinitperiod},
+           given={Marisabel\bibnamedelima U.},
+           giveni={M\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9d256dcf76eea81eb0295a896ced68e3}{%
+           family={Vicentini},
+           familyi={V\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \strng{fullhash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \strng{bibnamehash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \strng{authorbibnamehash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \strng{authornamehash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \strng{authorfullhash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phytotaxa}
+      \field{number}{1}
+      \field{title}{A new species of {\textit{Macrolobium}} ({Fabaceae}, {Detarioideae}) endemic on a {Tepui} of the {Guyana} shield in {Brazil}}
+      \field{volume}{361}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{97\bibrangedash 105}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.11646/phytotaxa.361.1.8
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2018_Farronayetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Farronayetal2019b}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=595e20c956b5ea9b58c66c840f627cb6}{%
+           family={Farro{ñ}ay},
+           familyi={F\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e006241cb0efa2e262d1a56711e5ef87}{%
+           family={Prata},
+           familyi={P\bibinitperiod},
+           given={E.\bibnamedelimi M.\bibnamedelimi B.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6d08b591b7e7b0a1ceb99b14b62e3057}{%
+           family={Vicentini},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \strng{fullhash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \strng{bibnamehash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \strng{authorbibnamehash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \strng{authornamehash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \strng{authorfullhash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phytotaxa}
+      \field{number}{4}
+      \field{title}{Notes on morphology and distribution of {\textit{Acmanthera}} ({Adr}. {Juss}.) {Griseb.} ({Malpighiaceae}), an endemic genus from {Brazil}}
+      \field{volume}{415}
+      \field{year}{2019}
+      \true{nocite}
+      \field{pages}{199\bibrangedash 207}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.11646/phytotaxa.415.4.4
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2019b_Farronayetal_Acmanthera.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Farronayetal2019a}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=595e20c956b5ea9b58c66c840f627cb6}{%
+           family={Farro{ñ}ay},
+           familyi={F\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9f4050fabd769716c6b5206ce02372a3}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={F.\bibnamedelimi M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e006241cb0efa2e262d1a56711e5ef87}{%
+           family={Prata},
+           familyi={P\bibinitperiod},
+           given={E.\bibnamedelimi M.\bibnamedelimi B.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6d08b591b7e7b0a1ceb99b14b62e3057}{%
+           family={Vicentini},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9085f8eee173c044efea3cb2cf6f39af}
+      \strng{fullhash}{9085f8eee173c044efea3cb2cf6f39af}
+      \strng{bibnamehash}{9085f8eee173c044efea3cb2cf6f39af}
+      \strng{authorbibnamehash}{9085f8eee173c044efea3cb2cf6f39af}
+      \strng{authornamehash}{9085f8eee173c044efea3cb2cf6f39af}
+      \strng{authorfullhash}{9085f8eee173c044efea3cb2cf6f39af}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{\textit{{Schoepfia} clarkii} is a rare species of Schoepfiaceae that to date has been known only from the single flowering specimen used in the original description from white-sand vegeta- tion in Venezuela. Here we report new records for this species collected from the lower Negro River basin in Brazil, ca. 900 km from the type locality, but also from white-sand vegetation. We provide a more detailed description of the species, including the first observations of fruit characters, as well as illustrations, photographs, a distribution map, and discussion of its conservation status. We also provide a key for the identification of the South American species of {\textit{Schoepfia}}.}
+      \field{journaltitle}{Brittonia}
+      \field{title}{New record and emended description of a rare white-sand {Amazonian} species: \textit{{Schoepfia} clarkii} ({Schoepfiaceae})}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/s12228-019-09571-2
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2019_Farronayetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Pivaetal2019}{article}{}
+      \name{author}{9}{}{%
+        {{uniquename=0,uniquepart=base,hash=0fa88781f036a3c91049cf3b822f776b}{%
+           family={Piva},
+           familyi={P\bibinitperiod},
+           given={Luani\bibnamedelimb Rosa\bibnamedelimb de\bibnamedelima Oliveira},
+           giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=533f0d0ac68f2042d3b2646a59b3b5f4}{%
+           family={Jardine},
+           familyi={J\bibinitperiod},
+           given={Kolby\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=05f5c5e83e1b8f450ebf5ba58b26d97f}{%
+           family={Gimenez},
+           familyi={G\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6b6033fc809422a55bdb11d6511554e5}{%
+           family={Menezes},
+           familyi={M\bibinitperiod},
+           given={Valdiek\bibnamedelima S.},
+           giveni={V\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=152bd6d48d944acc24b4e9f95e49f932}{%
+           family={Durgante},
+           familyi={D\bibinitperiod},
+           given={Flavia},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=7a97475b3cf3f10cda682b982a02764e}{%
+           family={Cobello},
+           familyi={C\bibinitperiod},
+           given={Leticia\bibnamedelima Oliveira},
+           giveni={L\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=38fc6d18e47bccd802bbc058641eef20}{%
+           family={Higuchi},
+           familyi={H\bibinitperiod},
+           given={Niro},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f99317d6eaadb2c1d5bed5cf50d9be29}{%
+           family={Chambers},
+           familyi={C\bibinitperiod},
+           given={Jeffrey\bibnamedelima Q.},
+           giveni={J\bibinitperiod\bibinitdelim Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \strng{fullhash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \strng{bibnamehash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \strng{authorbibnamehash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \strng{authornamehash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \strng{authorfullhash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Volatile terpenoid resins represent a diverse group of plant defense chemicals involved in defense against her- bivory, abiotic stress, and communication. However, their composition in tropical forests remains poorly characterized. As a part of tree identification, the ‘smell’ of damaged trunks is widely used, but is highly sub- jective. Here, we analyzed trunk volatile monoterpene emissions from 15 species of the genus Protium in the central Amazon. By normalizing the abundances of 28 monoterpenes, 9 monoterpene ‘fingerprint’ patterns emerged, characterized by a distinct dominant monoterpene. While 4 of the ‘fingerprint’ patterns were composed of multiple species, 5 were composed of a single species. Moreover, among individuals of the same species, 6 species had a single ‘fingerprint’ pattern, while 9 species had two or more ‘fingerprint’ patterns among in- dividuals. A comparison of ‘fingerprints’ between 2015 and 2017 from 15 individuals generally showed excellent agreement, demonstrating a strong dependence on species identity, but not time of collection. The results are consistent with a previous study that found multiple divergent copies of monoterpene synthase enzymes in Protium. We conclude that the monoterpene ‘fingerprint’ database has important implications for constraining Protium species identification and phylogenetic relationships and enhancing understanding of physiological and ecological functions of resins and their potential commercial applications.}
+      \field{journaltitle}{Phytochemistry}
+      \field{title}{Volatile monoterpene 'fingerprints’ of resinous {\textit{Protium}} tree species in the {Amazon} {Rainforest}}
+      \field{volume}{160}
+      \field{year}{2019}
+      \true{nocite}
+      \field{pages}{61\bibrangedash 70}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.phytochem.2019.01.014
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2019_Pivaetal.pdf:PDF
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0031942218302620
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0031942218302620
+      \endverb
+    \endentry
+    \entry{Perdiz2011}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidade Estadual de Feira de Santana}%
+      }
+      \strng{namehash}{3188f8833d259db28f2dc027ae98eed8}
+      \strng{fullhash}{3188f8833d259db28f2dc027ae98eed8}
+      \strng{bibnamehash}{3188f8833d259db28f2dc027ae98eed8}
+      \strng{authorbibnamehash}{3188f8833d259db28f2dc027ae98eed8}
+      \strng{authornamehash}{3188f8833d259db28f2dc027ae98eed8}
+      \strng{authorfullhash}{3188f8833d259db28f2dc027ae98eed8}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Este trabalho apresenta um tratamento taxonômico de Sapindaceae em remanescentes de florestas montanas do sul da Bahia, Brasil. O objetivo principal foi realizar o levantamento de Sapindaceae em três remanescentes de floresta montana na região sul do estado da Bahia. O primeiro capítulo apresenta uma visão geral da morfologia do grupo, baseada nas espécies amostradas no estudo florístico. O segundo capítulo trata da descrição de uma nova espécie (Paullinia unifoliolata) encontrada neste inventário. O terceiro capítulo apresenta o resultado do levantamento florístico. Foram encontradas 21 espécies em seis gêneros. Paullinia apresentou a maior riqueza de espécies (7 spp.), seguido de Cupania (5 spp.), Allophylus (4 spp.), Matayba e Serjania (2 spp. cada) e Talisia (1 sp.). Allophylus leucoclados ̧ Cupania furfuracea, Matayba intermedia e Paullinia micrantha representam novos registros para a região Nordeste. Paullinia unifoliolata, espécie recém-descrita a partir deste estudo, é conhecida de uma região entre Arataca e Una. Apenas um espécime não foi determinado especificamente, por não se enquadrar em nenhuma das espécies descritas do gênero (Cupania sp. 1). Todas as espécies de Cupania e cinco de Paullinia são endêmicas do domínio Atlântico. As áreas amostradas neste estudo apresentaram a maior diversidade de espécies de Sapindaceae para o domínio Atlântico, em comparação com outros estudos no mesmo domínio. São apresentadas chave de identificação das espécies, descrições, e informações sobre floração, frutificação, distribuição geográfica e hábitat.}
+      \field{title}{Sapindaceae em remanescentes de floresta montana no sul da {Bahia}, {Brasil}}
+      \field{type}{Master's thesis}
+      \field{year}{2011}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/teses/2011_Perdiz-mestrado.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Lopesetal2007}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=84a59586577c922524e5c6715af982d0}{%
+           family={Lopes},
+           familyi={L\bibinitperiod},
+           given={M.\bibnamedelimi M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=57c9c3af6cde55126ec713c29342e87f}{%
+           family={Jardim},
+           familyi={J\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f95481fb5622871751f0db4bda18645e}{%
+           family={Brasil},
+           familyi={B\bibinitperiod},
+           given={Sociedade\bibnamedelima Bot{â}nica},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={do},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{fullhash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{bibnamehash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{authorbibnamehash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{authornamehash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{authorfullhash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{editorbibnamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editornamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editorfullhash}{f95481fb5622871751f0db4bda18645e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do 58° Congresso Nacional de Bot{â}nica}}
+      \field{title}{{Chave} interativa para identificação de famílias e gêneros de angiospermas em florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{year}{2007}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2007_Lopesetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{PerdizAmorim2007}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d4cd0dabcf4caa22ad92fab40844c786}{%
+           family={{NA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{fullhash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{bibnamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authorbibnamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authornamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authorfullhash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{editorbibnamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editornamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editorfullhash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Resumos do XIII Seminário de Iniciação Científica e IX Semana de Pesquisa e Pós-graduação da UESC}}
+      \field{title}{{Chave} interativa de m{ú}ltiplos acessos para identificaç{ã}o de {Orchidaceae} em florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{year}{2007}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2007_PerdizAmorim.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2007b}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=84a59586577c922524e5c6715af982d0}{%
+           family={Lopes},
+           familyi={L\bibinitperiod},
+           given={M.\bibnamedelimi M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=57c9c3af6cde55126ec713c29342e87f}{%
+           family={Jardim},
+           familyi={J\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f95481fb5622871751f0db4bda18645e}{%
+           family={Brasil},
+           familyi={B\bibinitperiod},
+           given={Sociedade\bibnamedelima Bot{â}nica},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={do},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{848d936f378664054f3dfc916df65f69}
+      \strng{fullhash}{848d936f378664054f3dfc916df65f69}
+      \strng{bibnamehash}{848d936f378664054f3dfc916df65f69}
+      \strng{authorbibnamehash}{848d936f378664054f3dfc916df65f69}
+      \strng{authornamehash}{848d936f378664054f3dfc916df65f69}
+      \strng{authorfullhash}{848d936f378664054f3dfc916df65f69}
+      \strng{editorbibnamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editornamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editorfullhash}{f95481fb5622871751f0db4bda18645e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do 58° Congresso Nacional de Bot{â}nica}}
+      \field{title}{{Chave} interativa de m{ú}ltiplos acessos para identificaç{ã}o de {Orchidaceae} em florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{year}{2007}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2007b_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2007a}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=7991ea3b309fb7e9e54a2c741d2bdcd0}{%
+           family={Fontana},
+           familyi={F\bibinitperiod},
+           given={A.\bibnamedelimi P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d4cd0dabcf4caa22ad92fab40844c786}{%
+           family={{NA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{fullhash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{bibnamehash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{authorbibnamehash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{authornamehash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{authorfullhash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{editorbibnamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editornamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editorfullhash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do XXVII Encontro Regional de Bot{â}nicos}}
+      \field{title}{Checklist de {Orchidaceae} em duas {á}reas de florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{year}{2007}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2007a_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{PerdizAmorim2008}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{fullhash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{bibnamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authorbibnamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authornamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authorfullhash}{a6280cd11b435650e15653a5693e6c39}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Resumos do XIV Seminário de Iniciação Científica da UESC}}
+      \field{title}{Chave digital para identificaç{ã}o de {Orchidaceae} em florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{year}{2008}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2008_PerdizAmorim.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2008}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8fb59c737c975093673ca0a954f5b78e}{%
+           family={S{ã}o-Mateus},
+           familyi={S\bibinithyphendelim M\bibinitperiod},
+           given={W.\bibnamedelimi M.\bibnamedelimi B.},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f95481fb5622871751f0db4bda18645e}{%
+           family={Brasil},
+           familyi={B\bibinitperiod},
+           given={Sociedade\bibnamedelima Bot{â}nica},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={do},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{fullhash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{bibnamehash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{authorbibnamehash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{authornamehash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{authorfullhash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{editorbibnamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editornamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editorfullhash}{f95481fb5622871751f0db4bda18645e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do 59° Congresso Nacional de Bot{â}nica}}
+      \field{title}{Caryocaraceae para a Flora da {Bahia}, {Brasil}}
+      \field{year}{2008}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2008_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2010}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=c86743ee81b90ca1b5410d60873e0ba5}{%
+           family={Ferrucci},
+           familyi={F\bibinitperiod},
+           given={M.\bibnamedelimi S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d4cd0dabcf4caa22ad92fab40844c786}{%
+           family={{NA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{fullhash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{bibnamehash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{authorbibnamehash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{authornamehash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{authorfullhash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{editorbibnamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editornamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editorfullhash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do X Congreso Latinoamericano de Bot{á}nica}}
+      \field{title}{\textit{Paullinia} {L}. ({Sapindaceae}) em áreas de floresta montana no sul da {Bahia}, {Brasil}}
+      \field{year}{2010}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2010_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Barbosaetal2013}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=779ae35e318dc11927dc6d530d1721fe}{%
+           family={Castilho},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi V.},
+           giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a78294e54dde4e3d79f4f3f9ca122efb}{%
+           family={Toledo},
+           familyi={T\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5e942b17346b73cc0094f91c2651327f}{%
+           family={Fearnside},
+           familyi={F\bibinitperiod},
+           given={P.\bibnamedelimi M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=a9846b40c6336e45e002c0852862aa6e}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d4cd0dabcf4caa22ad92fab40844c786}{%
+           family={{NA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{fullhash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{bibnamehash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{authorbibnamehash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{authornamehash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{authorfullhash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{editorbibnamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editornamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editorfullhash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do II Simp{ó}sio CENBAM e PPBio Amaz{ô}nia Ocidental} (27-29 novembro, 2013)}
+      \field{title}{Decomposição da liteira grossa em florestas de contato no Parque Nacional do Viru{á}, Roraima}
+      \field{year}{2013}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2013_Barbosaetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Jaramilloetal2014}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=fdbfbce1320e255febe453d92d924b11}{%
+           family={Jaramillo},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9ff17e708b878c6721a4e513fecf02b5}{%
+           family={Turcios},
+           familyi={T\bibinitperiod},
+           given={M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f95481fb5622871751f0db4bda18645e}{%
+           family={Brasil},
+           familyi={B\bibinitperiod},
+           given={Sociedade\bibnamedelima Bot{â}nica},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={do},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{fullhash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{bibnamehash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{authorbibnamehash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{authornamehash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{authorfullhash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{editorbibnamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editornamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editorfullhash}{f95481fb5622871751f0db4bda18645e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do LXV Congresso Nacional de Bot{â}nica}}
+      \field{title}{Riqueza e diversidade de espécies arbóreas de ilhas de mata na savana de Roraima, Amazônia brasileira}
+      \field{year}{2014}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2014_Jaramilloetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{PerdizCastilho2015}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d4d45bbbbf3073d5175b4b15551b8557}{%
+           family={Castilho},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi Volkmer},
+           giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e27e7193a4242e7669aabdfb62594173}
+      \strng{fullhash}{e27e7193a4242e7669aabdfb62594173}
+      \strng{bibnamehash}{e27e7193a4242e7669aabdfb62594173}
+      \strng{authorbibnamehash}{e27e7193a4242e7669aabdfb62594173}
+      \strng{authornamehash}{e27e7193a4242e7669aabdfb62594173}
+      \strng{authorfullhash}{e27e7193a4242e7669aabdfb62594173}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Livro de resumos do III Simp{ó}sio CENBAM e PPBio Amaz{ô}nia Ocidental}}
+      \field{title}{Diversidade arb{ó}rea em florestas n{ã}o inund{á}veis na grade Viru{á}, Roraima, Brasil: resultados preliminares}
+      \field{year}{2015}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2015_PerdizCastilho.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Jaramilloetal2017}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=fdbfbce1320e255febe453d92d924b11}{%
+           family={Jaramillo},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0a7645747cec13457acccd4397b4c68c}{%
+           family={Turcios},
+           familyi={T\bibinitperiod},
+           given={Maryory\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=ad325a12455bfc8fcae2d7f45f9080ff}{%
+           family={Ara{ú}jo},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi A.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e64fe4774766b7bfc2ecb76b9473545d}{%
+           family={Pinheiro},
+           familyi={P\bibinitperiod},
+           given={N.\bibnamedelimi M.\bibnamedelimi B.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {UFV, Viçosa, MG}%
+      }
+      \strng{namehash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \strng{fullhash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \strng{bibnamehash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \strng{authorbibnamehash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \strng{authornamehash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \strng{authorfullhash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{XIII Congresso de Ecologia do Brasil and III International Symposium of Ecology and Evolution. M{ú}ltiplas ecologias: evoluç{ã}o e diversidade}}
+      \field{title}{Riqueza e diversidade de esp{é}cies arb{ó}reas de ilhas de mata na savana de {Roraima}, {Amaz{ô}nia} {Brasileira}}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2017_Jaramilloetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Silvaetal2018a}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=3dddd0b1a6d33b46865acab3f0e61834}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={W.\bibnamedelimi R.},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bf99ec5dda645988564480cc66fe00f5}{%
+           family={Villacorta},
+           familyi={V\bibinitperiod},
+           given={C.\bibnamedelimi D.\bibnamedelimi A.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=f411cc76e023316f081fcc8e4a8a4f3a}{%
+           family={Farias},
+           familyi={F\bibinitperiod},
+           given={H.\bibnamedelimi L.\bibnamedelimi S.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=fe2747470d759310b9fc47570a3c5604}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi C.\bibnamedelimi S.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f14e8ee917d25290ab60b0dab073a383}{%
+           family={UERR},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {UERR, Boa Vista}%
+      }
+      \strng{namehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{fullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{bibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorbibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authornamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorfullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{editorbibnamehash}{f14e8ee917d25290ab60b0dab073a383}
+      \strng{editornamehash}{f14e8ee917d25290ab60b0dab073a383}
+      \strng{editorfullhash}{f14e8ee917d25290ab60b0dab073a383}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais da XIII Semana Nacional de Ci{ê}ncia e Tecnologia}}
+      \field{title}{Riqueza e diversidade de esp{é}cies arb{ó}reas das florestas ecotonais do leste da Ilha de {Marac{á}}: resultados preliminares.}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+    \entry{Silvaetal2018b}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=3dddd0b1a6d33b46865acab3f0e61834}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={W.\bibnamedelimi R.},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bf99ec5dda645988564480cc66fe00f5}{%
+           family={Villacorta},
+           familyi={V\bibinitperiod},
+           given={C.\bibnamedelimi D.\bibnamedelimi A.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=f411cc76e023316f081fcc8e4a8a4f3a}{%
+           family={Farias},
+           familyi={F\bibinitperiod},
+           given={H.\bibnamedelimi L.\bibnamedelimi S.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=fe2747470d759310b9fc47570a3c5604}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi C.\bibnamedelimi S.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{fullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{bibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorbibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authornamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorfullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do IV Simp{ó}sio CENBAM e PPBio Amaz{ô}nia Ocidental}}
+      \field{title}{Riqueza e diversidade de esp{é}cies arb{ó}reas das florestas ecotonais do leste da Ilha de {Marac{á}}: resultados preliminares.}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+    \entry{Silvaetal2018c}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=3dddd0b1a6d33b46865acab3f0e61834}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={W.\bibnamedelimi R.},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bf99ec5dda645988564480cc66fe00f5}{%
+           family={Villacorta},
+           familyi={V\bibinitperiod},
+           given={C.\bibnamedelimi D.\bibnamedelimi A.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=f411cc76e023316f081fcc8e4a8a4f3a}{%
+           family={Farias},
+           familyi={F\bibinitperiod},
+           given={H.\bibnamedelimi L.\bibnamedelimi S.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=fe2747470d759310b9fc47570a3c5604}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi C.\bibnamedelimi S.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Manaus, Amazonas, Brasil}%
+      }
+      \strng{namehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{fullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{bibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorbibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authornamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorfullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do IV Simp{ó}sio CENBAM e PPBio Amaz{ô}nia Ocidental}}
+      \field{title}{Estrutura arb{ó}rea das florestas ecotonais (mosaico ombr{ó}fila com estacional) no extremo norte da {Amaz{ô}nia}: resultados preliminares}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+  \enddatalist
+  \datalist[entry]{ynt/global//global/global}
+    \entry{Perdizetal2019}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=24f81a98a86091a4a565ba51a1d18558}{%
+           family={Daly},
+           familyi={D\bibinitperiod},
+           given={D.\bibnamedelimi C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6d08b591b7e7b0a1ceb99b14b62e3057}{%
+           family={Vicentini},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=91009630880951cf358d060fe6af13a5}{%
+           family={Fine},
+           familyi={F\bibinitperiod},
+           given={P.\bibnamedelimi V.\bibnamedelimi A.},
+           giveni={P\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4cbab2e70d143dc65edd8307809839ce}
+      \strng{fullhash}{4cbab2e70d143dc65edd8307809839ce}
+      \strng{bibnamehash}{4cbab2e70d143dc65edd8307809839ce}
+      \strng{authorbibnamehash}{4cbab2e70d143dc65edd8307809839ce}
+      \strng{authornamehash}{4cbab2e70d143dc65edd8307809839ce}
+      \strng{authorfullhash}{4cbab2e70d143dc65edd8307809839ce}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phytotaxa}
+      \field{title}{A new species of \textit{{Protium}} ({Burseraceae}) from the {Pacific} {Coast} of {Costa} {Rica}}
+      \field{year}{\noop{3002}submitted}
+      \true{nocite}
+    \endentry
+    \entry{PerdizAmorim2008}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{fullhash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{bibnamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authorbibnamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authornamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authorfullhash}{a6280cd11b435650e15653a5693e6c39}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Resumos do XIV Seminário de Iniciação Científica da UESC}}
+      \field{title}{Chave digital para identificaç{ã}o de {Orchidaceae} em florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{year}{2008}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2008_PerdizAmorim.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Amorimetal2009}{article}{}
+      \name{author}{7}{}{%
+        {{uniquename=1,uniquepart=given,hash=f549a03cf76168c85a15ef0df5f6610b}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={Andr{é}\bibnamedelima M{á}rcio},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=1,uniquepart=given,hash=6a27f542fdb3badbcced8a45ef0f40a6}{%
+           family={Jardim},
+           familyi={J\bibinitperiod},
+           given={Jomar\bibnamedelima Gomes},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=677b96c46218a8b0a1e845029b36bd37}{%
+           family={Lopes},
+           familyi={L\bibinitperiod},
+           given={M{á}rdel\bibnamedelimb Miranda\bibnamedelima Mendes},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3ce08235c27d60953e8fa72a954f3b39}{%
+           family={Fiaschi},
+           familyi={F\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=692613290ee572614fef60f712c43cf7}{%
+           family={Borges},
+           familyi={B\bibinitperiod},
+           given={Rafael\bibnamedelimb Augusto\bibnamedelima Xavier},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim X\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=abc65ca2586620fb5ab301e1dc7ec1d0}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={William\bibnamedelima Wayt},
+           giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{130a16d763705046801e7bce3a23f8ff}
+      \strng{fullhash}{130a16d763705046801e7bce3a23f8ff}
+      \strng{bibnamehash}{130a16d763705046801e7bce3a23f8ff}
+      \strng{authorbibnamehash}{130a16d763705046801e7bce3a23f8ff}
+      \strng{authornamehash}{130a16d763705046801e7bce3a23f8ff}
+      \strng{authorfullhash}{130a16d763705046801e7bce3a23f8ff}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biota {Neotropica}}
+      \field{number}{3}
+      \field{title}{Angiospermas em remanescentes de floresta montana no sul da {Bahia}, {Brasil}}
+      \field{volume}{9}
+      \field{year}{2009}
+      \true{nocite}
+      \field{pages}{313\bibrangedash 348}
+      \range{pages}{36}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2009_Amorimetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdiz2011}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universidade Estadual de Feira de Santana}%
+      }
+      \strng{namehash}{3188f8833d259db28f2dc027ae98eed8}
+      \strng{fullhash}{3188f8833d259db28f2dc027ae98eed8}
+      \strng{bibnamehash}{3188f8833d259db28f2dc027ae98eed8}
+      \strng{authorbibnamehash}{3188f8833d259db28f2dc027ae98eed8}
+      \strng{authornamehash}{3188f8833d259db28f2dc027ae98eed8}
+      \strng{authorfullhash}{3188f8833d259db28f2dc027ae98eed8}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Este trabalho apresenta um tratamento taxonômico de Sapindaceae em remanescentes de florestas montanas do sul da Bahia, Brasil. O objetivo principal foi realizar o levantamento de Sapindaceae em três remanescentes de floresta montana na região sul do estado da Bahia. O primeiro capítulo apresenta uma visão geral da morfologia do grupo, baseada nas espécies amostradas no estudo florístico. O segundo capítulo trata da descrição de uma nova espécie (Paullinia unifoliolata) encontrada neste inventário. O terceiro capítulo apresenta o resultado do levantamento florístico. Foram encontradas 21 espécies em seis gêneros. Paullinia apresentou a maior riqueza de espécies (7 spp.), seguido de Cupania (5 spp.), Allophylus (4 spp.), Matayba e Serjania (2 spp. cada) e Talisia (1 sp.). Allophylus leucoclados ̧ Cupania furfuracea, Matayba intermedia e Paullinia micrantha representam novos registros para a região Nordeste. Paullinia unifoliolata, espécie recém-descrita a partir deste estudo, é conhecida de uma região entre Arataca e Una. Apenas um espécime não foi determinado especificamente, por não se enquadrar em nenhuma das espécies descritas do gênero (Cupania sp. 1). Todas as espécies de Cupania e cinco de Paullinia são endêmicas do domínio Atlântico. As áreas amostradas neste estudo apresentaram a maior diversidade de espécies de Sapindaceae para o domínio Atlântico, em comparação com outros estudos no mesmo domínio. São apresentadas chave de identificação das espécies, descrições, e informações sobre floração, frutificação, distribuição geográfica e hábitat.}
+      \field{title}{Sapindaceae em remanescentes de floresta montana no sul da {Bahia}, {Brasil}}
+      \field{type}{Master's thesis}
+      \field{year}{2011}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/teses/2011_Perdiz-mestrado.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2012a}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=5cba86b0a43bcd83fb730d2883ed39fe}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={Andr{é}\bibnamedelimb M{á}rcio\bibnamedelima Ara{ú}jo},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=c38f8b4a39215b7e3bc4d18da8b9c60f}{%
+           family={Ferrucci},
+           familyi={F\bibinitperiod},
+           given={Maria\bibnamedelima Silvia},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ede805d15cf0d4e412110cdfae08ad87}
+      \strng{fullhash}{ede805d15cf0d4e412110cdfae08ad87}
+      \strng{bibnamehash}{ede805d15cf0d4e412110cdfae08ad87}
+      \strng{authorbibnamehash}{ede805d15cf0d4e412110cdfae08ad87}
+      \strng{authornamehash}{ede805d15cf0d4e412110cdfae08ad87}
+      \strng{authorfullhash}{ede805d15cf0d4e412110cdfae08ad87}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brittonia}
+      \field{number}{2}
+      \field{title}{\textit{Paullinia unifoliolata}, a remarkable new species of {Sapindaceae} from the {Atlantic} {Forest} of southern {Bahia}, {Brazil}}
+      \field{volume}{64}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{114\bibrangedash 118}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1007/s12228-011-9213-1
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2012a_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2012b}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=661b56f5b0283012df649bb0783ae28b}{%
+           family={{S{ã}o-Mateus}},
+           familyi={S\bibinitperiod},
+           given={Wallace\bibnamedelimb Messias\bibnamedelima Barbosa},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=f549a03cf76168c85a15ef0df5f6610b}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={Andr{é}\bibnamedelima M{á}rcio},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{15562ceed909924b09f9fc895b14b307}
+      \strng{fullhash}{15562ceed909924b09f9fc895b14b307}
+      \strng{bibnamehash}{15562ceed909924b09f9fc895b14b307}
+      \strng{authorbibnamehash}{15562ceed909924b09f9fc895b14b307}
+      \strng{authornamehash}{15562ceed909924b09f9fc895b14b307}
+      \strng{authorfullhash}{15562ceed909924b09f9fc895b14b307}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sitientibus S{é}rie Ciências Biol{ó}gicas}
+      \field{number}{1}
+      \field{title}{Flora da {Bahia}: {Caryocaraceae}}
+      \field{volume}{12}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{109\bibrangedash 113}
+      \range{pages}{5}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2012b_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{PerdizPaganucci2013}{inbook}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b4474ab4949c0ca3fdfb7b5ff6a8d5ea}{%
+           family={Queiroz},
+           familyi={Q\bibinitperiod},
+           given={Luciano\bibnamedelima Paganucci},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{4}{%
+        {França, Fl{á}vio}%
+        {Melo, Efig{ê}nia}%
+        {Souza, Isys}%
+        {Pugliesi, Lara}%
+      }
+      \list{publisher}{1}{%
+        {Universidade Estadual de Feira de Santana, Feira de Santana}%
+      }
+      \strng{namehash}{444fc5b6d91c70c8cf17377f422b697b}
+      \strng{fullhash}{444fc5b6d91c70c8cf17377f422b697b}
+      \strng{bibnamehash}{444fc5b6d91c70c8cf17377f422b697b}
+      \strng{authorbibnamehash}{444fc5b6d91c70c8cf17377f422b697b}
+      \strng{authornamehash}{444fc5b6d91c70c8cf17377f422b697b}
+      \strng{authorfullhash}{444fc5b6d91c70c8cf17377f422b697b}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{chapter}{Meliaceae}
+      \field{isbn}{9788562465123}
+      \field{title}{Flora de {Morro} do {Chap{é}u}}
+      \field{volume}{1}
+      \field{year}{2013}
+      \true{nocite}
+      \field{pages}{172\bibrangedash 174}
+      \range{pages}{3}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2013_PerdizPaganucci.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdiz2014}{inbook}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=e3e83069f007b3a4a16d4bdcca670455}{%
+           family={Flores},
+           familyi={F\bibinitperiod},
+           given={Andr{é}ia\bibnamedelima Silva},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1bd388512ffc127c5ba3a64a0ce26e19}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={Rodrigo\bibnamedelima Sch{ü}tz},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {UERR edic{õ}es, {Boa} {Vista}}%
+      }
+      \strng{namehash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{fullhash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{bibnamehash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{authorbibnamehash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{authornamehash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{authorfullhash}{2dc9417e980d065f4952b98e37b7c27b}
+      \strng{editorbibnamehash}{44eb14e00b707c777dbaf8efdfaf3513}
+      \strng{editornamehash}{44eb14e00b707c777dbaf8efdfaf3513}
+      \strng{editorfullhash}{44eb14e00b707c777dbaf8efdfaf3513}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{chapter}{As Unidades de Conservaç{ã}o e a preservaç{ã}o da diversidade biol{ó}gica}
+      \field{isbn}{9788561924065}
+      \field{title}{Ensinando bot{â}nica nas florestas no sul do Estado de {Roraima}}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{45\bibrangedash 48}
+      \range{pages}{4}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2014_Perdiz.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2014}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=c38f8b4a39215b7e3bc4d18da8b9c60f}{%
+           family={Ferrucci},
+           familyi={F\bibinitperiod},
+           given={Maria\bibnamedelima Silvia},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=5cba86b0a43bcd83fb730d2883ed39fe}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={Andr{é}\bibnamedelimb M{á}rcio\bibnamedelima Ara{ú}jo},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{0fa52b63f686e763f74e3512f90e061d}
+      \strng{fullhash}{0fa52b63f686e763f74e3512f90e061d}
+      \strng{bibnamehash}{0fa52b63f686e763f74e3512f90e061d}
+      \strng{authorbibnamehash}{0fa52b63f686e763f74e3512f90e061d}
+      \strng{authornamehash}{0fa52b63f686e763f74e3512f90e061d}
+      \strng{authorfullhash}{0fa52b63f686e763f74e3512f90e061d}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Rodrigu{é}sia}
+      \field{number}{4}
+      \field{title}{Sapindaceae em remanescentes de florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{volume}{65}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{987\bibrangedash 1002}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1590/2175-7860201465410
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2014_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{BFG2015}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=47b1a4d706adeac54b7b87f14d08230b}{%
+           family={BFG},
+           familyi={B\bibinitperiod}}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{fullhash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{bibnamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authorbibnamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authornamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authorfullhash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Rodrigu{é}sia}
+      \field{number}{4}
+      \field{title}{Growing knowledge: an overview of Seed Plant diversity in {Brazil}}
+      \field{volume}{66}
+      \field{year}{2015}
+      \true{nocite}
+      \field{pages}{1085\bibrangedash 1113}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1590/2175-7860201566411
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2015_BFG.pdf:PDF
+      \endverb
+    \endentry
+    \entry{PerdizCastilho2015}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d4d45bbbbf3073d5175b4b15551b8557}{%
+           family={Castilho},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi Volkmer},
+           giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e27e7193a4242e7669aabdfb62594173}
+      \strng{fullhash}{e27e7193a4242e7669aabdfb62594173}
+      \strng{bibnamehash}{e27e7193a4242e7669aabdfb62594173}
+      \strng{authorbibnamehash}{e27e7193a4242e7669aabdfb62594173}
+      \strng{authornamehash}{e27e7193a4242e7669aabdfb62594173}
+      \strng{authorfullhash}{e27e7193a4242e7669aabdfb62594173}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Livro de resumos do III Simp{ó}sio CENBAM e PPBio Amaz{ô}nia Ocidental}}
+      \field{title}{Diversidade arb{ó}rea em florestas n{ã}o inund{á}veis na grade Viru{á}, Roraima, Brasil: resultados preliminares}
+      \field{year}{2015}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2015_PerdizCastilho.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2015}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=eb06c42a7a3c51291f0ee0012269fdae}{%
+           family={Giulietti},
+           familyi={G\bibinitperiod},
+           given={Ana\bibnamedelima Maria},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=0b1969fe7797fdb11f38a92564af1e4d}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Reyjane\bibnamedelima Patr{í}cia},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \strng{fullhash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \strng{bibnamehash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \strng{authorbibnamehash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \strng{authornamehash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \strng{authorfullhash}{2e56aee04ab3601a942dab3ea4f60cf5}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sitientibus S{é}rie Ciências Biol{ó}gicas}
+      \field{title}{Flora da {Bahia}: {Clethraceae}}
+      \field{volume}{15}
+      \field{year}{2015}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.13102/scb342
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2015_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Lavoretal2016}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=1918aecdec855b18f443717ffe16ceb8}{%
+           family={Lavor},
+           familyi={L\bibinitperiod},
+           given={Pamela},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=75205194f65b012599ca8c3295eaed66}{%
+           family={Versieux},
+           familyi={V\bibinitperiod},
+           given={Leonardo\bibnamedelima Melo},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=00ff61bf02646f35c039f510b793be5d}{%
+           family={Calvente},
+           familyi={C\bibinitperiod},
+           given={Alice},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ab9a161d741969299ba04c56304f2560}
+      \strng{fullhash}{ab9a161d741969299ba04c56304f2560}
+      \strng{bibnamehash}{ab9a161d741969299ba04c56304f2560}
+      \strng{authorbibnamehash}{ab9a161d741969299ba04c56304f2560}
+      \strng{authornamehash}{ab9a161d741969299ba04c56304f2560}
+      \strng{authorfullhash}{ab9a161d741969299ba04c56304f2560}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cactus and Succulent Journal}
+      \field{number}{3}
+      \field{title}{Rediscovery of {\textit{Pilosocereus oligolepsis}} ({Cactaceae}) in the state of {Roraima}, {Brazil}}
+      \field{volume}{88}
+      \field{year}{2016}
+      \true{nocite}
+      \field{pages}{137\bibrangedash 143}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.2985/015.088.0306
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2016_Lavoretal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Barbosaetal2016}{article}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=bd08751da88c2ab8b25b38bd9f3b1164}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={Reinaldo\bibnamedelima Imbrozio},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=1891d902ab50504977017fb0ee587ec7}{%
+           family={Castilho},
+           familyi={C\bibinitperiod},
+           given={Carolina\bibnamedelima Volkmer},
+           giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e4e11c55792befa4545bf261280c43ba}{%
+           family={Damasco},
+           familyi={D\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=02a0d7e2ca2dfc6087cf93fb26888011}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=af9db1271bb50de53a9452c0ea4e0424}{%
+           family={Fearnside},
+           familyi={F\bibinitperiod},
+           given={Philip\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \strng{fullhash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \strng{bibnamehash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \strng{authorbibnamehash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \strng{authornamehash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \strng{authorfullhash}{8ca8fca2be0a3f6133f8387349d676c9}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Forest Ecology and Management}
+      \field{title}{Decomposition rates of coarse woody debris in undisturbed Amazonian seasonally flooded and unflooded forests in the Rio Negro-Rio Branco Basin in Roraima, Brazil}
+      \field{volume}{397}
+      \field{year}{2017}
+      \true{nocite}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.foreco.2017.04.026
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2017_Barbosaetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Jaramilloetal2017}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=fdbfbce1320e255febe453d92d924b11}{%
+           family={Jaramillo},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0a7645747cec13457acccd4397b4c68c}{%
+           family={Turcios},
+           familyi={T\bibinitperiod},
+           given={Maryory\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=ad325a12455bfc8fcae2d7f45f9080ff}{%
+           family={Ara{ú}jo},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi A.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e64fe4774766b7bfc2ecb76b9473545d}{%
+           family={Pinheiro},
+           familyi={P\bibinitperiod},
+           given={N.\bibnamedelimi M.\bibnamedelimi B.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {UFV, Viçosa, MG}%
+      }
+      \strng{namehash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \strng{fullhash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \strng{bibnamehash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \strng{authorbibnamehash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \strng{authornamehash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \strng{authorfullhash}{f1a54e8b995f5506aa5359c57eb17b88}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{XIII Congresso de Ecologia do Brasil and III International Symposium of Ecology and Evolution. M{ú}ltiplas ecologias: evoluç{ã}o e diversidade}}
+      \field{title}{Riqueza e diversidade de esp{é}cies arb{ó}reas de ilhas de mata na savana de {Roraima}, {Amaz{ô}nia} {Brasileira}}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2017_Jaramilloetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Oliveiraetal2017}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=1,uniquepart=given,hash=2bca50f8243a73b76e901646359a52d3}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=1,uniquepart=given,hash=44cee9de742b7253ea01cba40c18ca8b}{%
+           family={Farias},
+           familyi={F\bibinitperiod},
+           given={Hugo\bibnamedelima Sousa},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8e747e7c8908e2c8db1503034ac93075}{%
+           family={Scudeller},
+           familyi={S\bibinitperiod},
+           given={Veridiana},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bd08751da88c2ab8b25b38bd9f3b1164}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={Reinaldo\bibnamedelima Imbrozio},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{97373c67247cef27ac937116ea4e9884}
+      \strng{fullhash}{97373c67247cef27ac937116ea4e9884}
+      \strng{bibnamehash}{97373c67247cef27ac937116ea4e9884}
+      \strng{authorbibnamehash}{97373c67247cef27ac937116ea4e9884}
+      \strng{authornamehash}{97373c67247cef27ac937116ea4e9884}
+      \strng{authorfullhash}{97373c67247cef27ac937116ea4e9884}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biodiversity Data Journal}
+      \field{title}{Structure and tree species composition in different habitats of savanna used by indigenous people in the {Northern} {Brazilian} {Amazon}}
+      \field{volume}{5}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.3897/BDJ.5.e20044
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2017_Oliveiraetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Rodriguesetal2017}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=1,uniquepart=given,hash=1bd388512ffc127c5ba3a64a0ce26e19}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={Rodrigo\bibnamedelima Sch{ü}tz},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e3e83069f007b3a4a16d4bdcca670455}{%
+           family={Flores},
+           familyi={F\bibinitperiod},
+           given={Andr{é}ia\bibnamedelima Silva},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dd35faee34d73c02eb36ec8b58362674}
+      \strng{fullhash}{dd35faee34d73c02eb36ec8b58362674}
+      \strng{bibnamehash}{dd35faee34d73c02eb36ec8b58362674}
+      \strng{authorbibnamehash}{dd35faee34d73c02eb36ec8b58362674}
+      \strng{authornamehash}{dd35faee34d73c02eb36ec8b58362674}
+      \strng{authorfullhash}{dd35faee34d73c02eb36ec8b58362674}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Rodrigu{é}sia}
+      \field{number}{2}
+      \field{title}{Novas ocorr{ê}ncias de angiospermas para o estado de {Roraima}, {Brasil}}
+      \field{volume}{68}
+      \field{year}{2017}
+      \true{nocite}
+      \field{pages}{783\bibrangedash 790}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1590/2175-7860201768229
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2017_Rodriguesetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{BFG2018}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=47b1a4d706adeac54b7b87f14d08230b}{%
+           family={BFG},
+           familyi={B\bibinitperiod}}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{fullhash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{bibnamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authorbibnamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authornamehash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \strng{authorfullhash}{15d7722b41099455ac7d6ebc13ed67c6}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Rodrigu{é}sia}
+      \field{number}{4}
+      \field{title}{Brazilian {Flora} 2020: {Innovation} and collaboration to meet Target 1 of the Global Strategy for Plant Conservation ({GSPC})}
+      \field{volume}{69}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{1513\bibrangedash 1527}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1590/2175-7860201869402
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2018_BFG.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Farronayetal2018}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=af2a6d2ad8166aa80df8f26d1fda0129}{%
+           family={Farro{ñ}ay},
+           familyi={F\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=fb9377c711901642d2bcb3be7df4f179}{%
+           family={Adrianz{é}n},
+           familyi={A\bibinitperiod},
+           given={Marisabel\bibnamedelima U.},
+           giveni={M\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9d256dcf76eea81eb0295a896ced68e3}{%
+           family={Vicentini},
+           familyi={V\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \strng{fullhash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \strng{bibnamehash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \strng{authorbibnamehash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \strng{authornamehash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \strng{authorfullhash}{e35a1f28c5ab6e43f2f2b27d7875138d}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phytotaxa}
+      \field{number}{1}
+      \field{title}{A new species of {\textit{Macrolobium}} ({Fabaceae}, {Detarioideae}) endemic on a {Tepui} of the {Guyana} shield in {Brazil}}
+      \field{volume}{361}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{97\bibrangedash 105}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.11646/phytotaxa.361.1.8
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2018_Farronayetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Silvaetal2018c}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=3dddd0b1a6d33b46865acab3f0e61834}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={W.\bibnamedelimi R.},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bf99ec5dda645988564480cc66fe00f5}{%
+           family={Villacorta},
+           familyi={V\bibinitperiod},
+           given={C.\bibnamedelimi D.\bibnamedelimi A.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=f411cc76e023316f081fcc8e4a8a4f3a}{%
+           family={Farias},
+           familyi={F\bibinitperiod},
+           given={H.\bibnamedelimi L.\bibnamedelimi S.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=fe2747470d759310b9fc47570a3c5604}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi C.\bibnamedelimi S.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Manaus, Amazonas, Brasil}%
+      }
+      \strng{namehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{fullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{bibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorbibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authornamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorfullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do IV Simp{ó}sio CENBAM e PPBio Amaz{ô}nia Ocidental}}
+      \field{title}{Estrutura arb{ó}rea das florestas ecotonais (mosaico ombr{ó}fila com estacional) no extremo norte da {Amaz{ô}nia}: resultados preliminares}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+    \entry{Silvaetal2018a}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=3dddd0b1a6d33b46865acab3f0e61834}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={W.\bibnamedelimi R.},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bf99ec5dda645988564480cc66fe00f5}{%
+           family={Villacorta},
+           familyi={V\bibinitperiod},
+           given={C.\bibnamedelimi D.\bibnamedelimi A.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=f411cc76e023316f081fcc8e4a8a4f3a}{%
+           family={Farias},
+           familyi={F\bibinitperiod},
+           given={H.\bibnamedelimi L.\bibnamedelimi S.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=fe2747470d759310b9fc47570a3c5604}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi C.\bibnamedelimi S.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f14e8ee917d25290ab60b0dab073a383}{%
+           family={UERR},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {UERR, Boa Vista}%
+      }
+      \strng{namehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{fullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{bibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorbibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authornamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorfullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{editorbibnamehash}{f14e8ee917d25290ab60b0dab073a383}
+      \strng{editornamehash}{f14e8ee917d25290ab60b0dab073a383}
+      \strng{editorfullhash}{f14e8ee917d25290ab60b0dab073a383}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais da XIII Semana Nacional de Ci{ê}ncia e Tecnologia}}
+      \field{title}{Riqueza e diversidade de esp{é}cies arb{ó}reas das florestas ecotonais do leste da Ilha de {Marac{á}}: resultados preliminares.}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+    \entry{Silvaetal2018b}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=3dddd0b1a6d33b46865acab3f0e61834}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={W.\bibnamedelimi R.},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bf99ec5dda645988564480cc66fe00f5}{%
+           family={Villacorta},
+           familyi={V\bibinitperiod},
+           given={C.\bibnamedelimi D.\bibnamedelimi A.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=f411cc76e023316f081fcc8e4a8a4f3a}{%
+           family={Farias},
+           familyi={F\bibinitperiod},
+           given={H.\bibnamedelimi L.\bibnamedelimi S.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=fe2747470d759310b9fc47570a3c5604}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi C.\bibnamedelimi S.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{fullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{bibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorbibnamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authornamehash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \strng{authorfullhash}{aeafab3bcbb34df2cc49eb9b71b38544}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do IV Simp{ó}sio CENBAM e PPBio Amaz{ô}nia Ocidental}}
+      \field{title}{Riqueza e diversidade de esp{é}cies arb{ó}reas das florestas ecotonais do leste da Ilha de {Marac{á}}: resultados preliminares.}
+      \field{year}{2018}
+      \true{nocite}
+    \endentry
+    \entry{Farronayetal2019a}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=595e20c956b5ea9b58c66c840f627cb6}{%
+           family={Farro{ñ}ay},
+           familyi={F\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9f4050fabd769716c6b5206ce02372a3}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={F.\bibnamedelimi M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e006241cb0efa2e262d1a56711e5ef87}{%
+           family={Prata},
+           familyi={P\bibinitperiod},
+           given={E.\bibnamedelimi M.\bibnamedelimi B.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6d08b591b7e7b0a1ceb99b14b62e3057}{%
+           family={Vicentini},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9085f8eee173c044efea3cb2cf6f39af}
+      \strng{fullhash}{9085f8eee173c044efea3cb2cf6f39af}
+      \strng{bibnamehash}{9085f8eee173c044efea3cb2cf6f39af}
+      \strng{authorbibnamehash}{9085f8eee173c044efea3cb2cf6f39af}
+      \strng{authornamehash}{9085f8eee173c044efea3cb2cf6f39af}
+      \strng{authorfullhash}{9085f8eee173c044efea3cb2cf6f39af}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{\textit{{Schoepfia} clarkii} is a rare species of Schoepfiaceae that to date has been known only from the single flowering specimen used in the original description from white-sand vegeta- tion in Venezuela. Here we report new records for this species collected from the lower Negro River basin in Brazil, ca. 900 km from the type locality, but also from white-sand vegetation. We provide a more detailed description of the species, including the first observations of fruit characters, as well as illustrations, photographs, a distribution map, and discussion of its conservation status. We also provide a key for the identification of the South American species of {\textit{Schoepfia}}.}
+      \field{journaltitle}{Brittonia}
+      \field{title}{New record and emended description of a rare white-sand {Amazonian} species: \textit{{Schoepfia} clarkii} ({Schoepfiaceae})}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/s12228-019-09571-2
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2019_Farronayetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Farronayetal2019b}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=595e20c956b5ea9b58c66c840f627cb6}{%
+           family={Farro{ñ}ay},
+           familyi={F\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e006241cb0efa2e262d1a56711e5ef87}{%
+           family={Prata},
+           familyi={P\bibinitperiod},
+           given={E.\bibnamedelimi M.\bibnamedelimi B.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6d08b591b7e7b0a1ceb99b14b62e3057}{%
+           family={Vicentini},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \strng{fullhash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \strng{bibnamehash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \strng{authorbibnamehash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \strng{authornamehash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \strng{authorfullhash}{b2734a0c55765daa8ff8a7bdadfcce38}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phytotaxa}
+      \field{number}{4}
+      \field{title}{Notes on morphology and distribution of {\textit{Acmanthera}} ({Adr}. {Juss}.) {Griseb.} ({Malpighiaceae}), an endemic genus from {Brazil}}
+      \field{volume}{415}
+      \field{year}{2019}
+      \true{nocite}
+      \field{pages}{199\bibrangedash 207}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.11646/phytotaxa.415.4.4
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2019b_Farronayetal_Acmanthera.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Pivaetal2019}{article}{}
+      \name{author}{9}{}{%
+        {{uniquename=0,uniquepart=base,hash=0fa88781f036a3c91049cf3b822f776b}{%
+           family={Piva},
+           familyi={P\bibinitperiod},
+           given={Luani\bibnamedelimb Rosa\bibnamedelimb de\bibnamedelima Oliveira},
+           giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=533f0d0ac68f2042d3b2646a59b3b5f4}{%
+           family={Jardine},
+           familyi={J\bibinitperiod},
+           given={Kolby\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=05f5c5e83e1b8f450ebf5ba58b26d97f}{%
+           family={Gimenez},
+           familyi={G\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2dc9417e980d065f4952b98e37b7c27b}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={Ricardo\bibnamedelima Oliveira},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6b6033fc809422a55bdb11d6511554e5}{%
+           family={Menezes},
+           familyi={M\bibinitperiod},
+           given={Valdiek\bibnamedelima S.},
+           giveni={V\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=152bd6d48d944acc24b4e9f95e49f932}{%
+           family={Durgante},
+           familyi={D\bibinitperiod},
+           given={Flavia},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=7a97475b3cf3f10cda682b982a02764e}{%
+           family={Cobello},
+           familyi={C\bibinitperiod},
+           given={Leticia\bibnamedelima Oliveira},
+           giveni={L\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=38fc6d18e47bccd802bbc058641eef20}{%
+           family={Higuchi},
+           familyi={H\bibinitperiod},
+           given={Niro},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f99317d6eaadb2c1d5bed5cf50d9be29}{%
+           family={Chambers},
+           familyi={C\bibinitperiod},
+           given={Jeffrey\bibnamedelima Q.},
+           giveni={J\bibinitperiod\bibinitdelim Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \strng{fullhash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \strng{bibnamehash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \strng{authorbibnamehash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \strng{authornamehash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \strng{authorfullhash}{2024c731ebfdb34c6d8b67e63b344fa8}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Volatile terpenoid resins represent a diverse group of plant defense chemicals involved in defense against her- bivory, abiotic stress, and communication. However, their composition in tropical forests remains poorly characterized. As a part of tree identification, the ‘smell’ of damaged trunks is widely used, but is highly sub- jective. Here, we analyzed trunk volatile monoterpene emissions from 15 species of the genus Protium in the central Amazon. By normalizing the abundances of 28 monoterpenes, 9 monoterpene ‘fingerprint’ patterns emerged, characterized by a distinct dominant monoterpene. While 4 of the ‘fingerprint’ patterns were composed of multiple species, 5 were composed of a single species. Moreover, among individuals of the same species, 6 species had a single ‘fingerprint’ pattern, while 9 species had two or more ‘fingerprint’ patterns among in- dividuals. A comparison of ‘fingerprints’ between 2015 and 2017 from 15 individuals generally showed excellent agreement, demonstrating a strong dependence on species identity, but not time of collection. The results are consistent with a previous study that found multiple divergent copies of monoterpene synthase enzymes in Protium. We conclude that the monoterpene ‘fingerprint’ database has important implications for constraining Protium species identification and phylogenetic relationships and enhancing understanding of physiological and ecological functions of resins and their potential commercial applications.}
+      \field{journaltitle}{Phytochemistry}
+      \field{title}{Volatile monoterpene 'fingerprints’ of resinous {\textit{Protium}} tree species in the {Amazon} {Rainforest}}
+      \field{volume}{160}
+      \field{year}{2019}
+      \true{nocite}
+      \field{pages}{61\bibrangedash 70}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.phytochem.2019.01.014
+      \endverb
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2019_Pivaetal.pdf:PDF
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0031942218302620
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0031942218302620
+      \endverb
+    \endentry
+    \entry{PerdizAmorim2007}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d4cd0dabcf4caa22ad92fab40844c786}{%
+           family={{NA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{fullhash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{bibnamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authorbibnamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authornamehash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{authorfullhash}{a6280cd11b435650e15653a5693e6c39}
+      \strng{editorbibnamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editornamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editorfullhash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Resumos do XIII Seminário de Iniciação Científica e IX Semana de Pesquisa e Pós-graduação da UESC}}
+      \field{title}{{Chave} interativa de m{ú}ltiplos acessos para identificaç{ã}o de {Orchidaceae} em florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{year}{2007}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2007_PerdizAmorim.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2007a}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=7991ea3b309fb7e9e54a2c741d2bdcd0}{%
+           family={Fontana},
+           familyi={F\bibinitperiod},
+           given={A.\bibnamedelimi P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d4cd0dabcf4caa22ad92fab40844c786}{%
+           family={{NA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{fullhash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{bibnamehash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{authorbibnamehash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{authornamehash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{authorfullhash}{6ae1d799c5c2bd2df24f6d986118a3e5}
+      \strng{editorbibnamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editornamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editorfullhash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do XXVII Encontro Regional de Bot{â}nicos}}
+      \field{title}{Checklist de {Orchidaceae} em duas {á}reas de florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{year}{2007}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2007a_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2007b}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=84a59586577c922524e5c6715af982d0}{%
+           family={Lopes},
+           familyi={L\bibinitperiod},
+           given={M.\bibnamedelimi M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=57c9c3af6cde55126ec713c29342e87f}{%
+           family={Jardim},
+           familyi={J\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f95481fb5622871751f0db4bda18645e}{%
+           family={Brasil},
+           familyi={B\bibinitperiod},
+           given={Sociedade\bibnamedelima Bot{â}nica},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={do},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{848d936f378664054f3dfc916df65f69}
+      \strng{fullhash}{848d936f378664054f3dfc916df65f69}
+      \strng{bibnamehash}{848d936f378664054f3dfc916df65f69}
+      \strng{authorbibnamehash}{848d936f378664054f3dfc916df65f69}
+      \strng{authornamehash}{848d936f378664054f3dfc916df65f69}
+      \strng{authorfullhash}{848d936f378664054f3dfc916df65f69}
+      \strng{editorbibnamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editornamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editorfullhash}{f95481fb5622871751f0db4bda18645e}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do 58° Congresso Nacional de Bot{â}nica}}
+      \field{title}{{Chave} interativa de m{ú}ltiplos acessos para identificaç{ã}o de {Orchidaceae} em florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{year}{2007}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2007b_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Lopesetal2007}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=84a59586577c922524e5c6715af982d0}{%
+           family={Lopes},
+           familyi={L\bibinitperiod},
+           given={M.\bibnamedelimi M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=57c9c3af6cde55126ec713c29342e87f}{%
+           family={Jardim},
+           familyi={J\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f95481fb5622871751f0db4bda18645e}{%
+           family={Brasil},
+           familyi={B\bibinitperiod},
+           given={Sociedade\bibnamedelima Bot{â}nica},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={do},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{fullhash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{bibnamehash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{authorbibnamehash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{authornamehash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{authorfullhash}{666cc71cb441202a6b80afd68f8737c1}
+      \strng{editorbibnamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editornamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editorfullhash}{f95481fb5622871751f0db4bda18645e}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do 58° Congresso Nacional de Bot{â}nica}}
+      \field{title}{{Chave} interativa para identificação de famílias e gêneros de angiospermas em florestas montanas no sul da {Bahia}, {Brasil}}
+      \field{year}{2007}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2007_Lopesetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2008}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8fb59c737c975093673ca0a954f5b78e}{%
+           family={S{ã}o-Mateus},
+           familyi={S\bibinithyphendelim M\bibinitperiod},
+           given={W.\bibnamedelimi M.\bibnamedelimi B.},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f95481fb5622871751f0db4bda18645e}{%
+           family={Brasil},
+           familyi={B\bibinitperiod},
+           given={Sociedade\bibnamedelima Bot{â}nica},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={do},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{fullhash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{bibnamehash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{authorbibnamehash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{authornamehash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{authorfullhash}{dfce7d999b0ded9a598832895189dff0}
+      \strng{editorbibnamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editornamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editorfullhash}{f95481fb5622871751f0db4bda18645e}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do 59° Congresso Nacional de Bot{â}nica}}
+      \field{title}{Caryocaraceae para a Flora da {Bahia}, {Brasil}}
+      \field{year}{2008}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2008_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Perdizetal2010}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=c86743ee81b90ca1b5410d60873e0ba5}{%
+           family={Ferrucci},
+           familyi={F\bibinitperiod},
+           given={M.\bibnamedelimi S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=ac9349493f3e92a5e34960da442faae6}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d4cd0dabcf4caa22ad92fab40844c786}{%
+           family={{NA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{fullhash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{bibnamehash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{authorbibnamehash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{authornamehash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{authorfullhash}{d2b88141cde3514f080bf8ecf9ad46d3}
+      \strng{editorbibnamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editornamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editorfullhash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do X Congreso Latinoamericano de Bot{á}nica}}
+      \field{title}{\textit{Paullinia} {L}. ({Sapindaceae}) em áreas de floresta montana no sul da {Bahia}, {Brasil}}
+      \field{year}{2010}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2010_Perdizetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Barbosaetal2013}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=779ae35e318dc11927dc6d530d1721fe}{%
+           family={Castilho},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi V.},
+           giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a78294e54dde4e3d79f4f3f9ca122efb}{%
+           family={Toledo},
+           familyi={T\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5e942b17346b73cc0094f91c2651327f}{%
+           family={Fearnside},
+           familyi={F\bibinitperiod},
+           given={P.\bibnamedelimi M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=a9846b40c6336e45e002c0852862aa6e}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod},
+           givenun=1}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d4cd0dabcf4caa22ad92fab40844c786}{%
+           family={{NA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{fullhash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{bibnamehash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{authorbibnamehash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{authornamehash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{authorfullhash}{24cd4462a917cfb6c2ceaf8b0d8dded0}
+      \strng{editorbibnamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editornamehash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \strng{editorfullhash}{d4cd0dabcf4caa22ad92fab40844c786}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do II Simp{ó}sio CENBAM e PPBio Amaz{ô}nia Ocidental} (27-29 novembro, 2013)}
+      \field{title}{Decomposição da liteira grossa em florestas de contato no Parque Nacional do Viru{á}, Roraima}
+      \field{year}{2013}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2013_Barbosaetal.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Jaramilloetal2014}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=fdbfbce1320e255febe453d92d924b11}{%
+           family={Jaramillo},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9ff17e708b878c6721a4e513fecf02b5}{%
+           family={Turcios},
+           familyi={T\bibinitperiod},
+           given={M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3188f8833d259db28f2dc027ae98eed8}{%
+           family={Perdiz},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5c9f654d0df0a62fe7d2cd755a11ba9}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f95481fb5622871751f0db4bda18645e}{%
+           family={Brasil},
+           familyi={B\bibinitperiod},
+           given={Sociedade\bibnamedelima Bot{â}nica},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={do},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{fullhash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{bibnamehash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{authorbibnamehash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{authornamehash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{authorfullhash}{43f275e5a2b9637ec97fcdf9715e753a}
+      \strng{editorbibnamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editornamehash}{f95481fb5622871751f0db4bda18645e}
+      \strng{editorfullhash}{f95481fb5622871751f0db4bda18645e}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Anais do LXV Congresso Nacional de Bot{â}nica}}
+      \field{title}{Riqueza e diversidade de espécies arbóreas de ilhas de mata na savana de Roraima, Amazônia brasileira}
+      \field{year}{2014}
+      \true{nocite}
+      \verb{file}
+      \verb :/Users/ricoperdiz/Documents/producao_cientifica/pubs/2014_Jaramilloetal.pdf:PDF
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

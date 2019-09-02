@@ -1,0 +1,21 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'CV_en.blg'
+[61] biber-darwin:315> INFO - === Mon Sep  2, 2019, 11:46:05
+[96] Biber.pm:371> INFO - Reading 'CV_en.bcf'
+[234] Biber.pm:889> INFO - Found 33 citekeys in bib section 0
+[271] Biber.pm:4093> INFO - Processing section 0
+[292] Biber.pm:4254> INFO - Looking for bibtex format file '/Users/ricoperdiz/Documents/CV/pubs.bib' for section 0
+[296] bibtex.pm:1523> INFO - LaTeX decoding ...
+[392] bibtex.pm:1340> INFO - Found BibTeX data source '/Users/ricoperdiz/Documents/CV/pubs.bib'
+[460] Utils.pm:193> WARN - year field '\noop{3002}submitted' in entry 'Perdizetal2019' is not an integer - this will probably not sort properly.
+[922] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[922] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[922] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[923] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[1031] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1032] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1032] Biber.pm:3921> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[1032] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[1107] bbl.pm:636> INFO - Writing 'CV_en.bbl' with encoding 'UTF-8'
+[1220] bbl.pm:739> INFO - Output to CV_en.bbl
+[1221] Biber.pm:110> INFO - WARNINGS: 1
