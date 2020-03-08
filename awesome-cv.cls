@@ -76,6 +76,8 @@
 % (https://github.com/posquit0/latex-fontawesome)
 \defaultfontfeatures{Extension = .otf}
 \RequirePackage{fontawesome}
+% Add support of academia icons
+\usepackage{academicons}
 \RequirePackage[default,opentype]{sourcesanspro}
 % Needed for the photo ID
 \RequirePackage[skins]{tcolorbox}
@@ -286,6 +288,22 @@
 % Usage: \homepage{<url>}
 \newcommand*{\homepage}[1]{\def\@homepage{#1}}
 
+% Defines writer's orcid (optional)
+% Usage: \orcid{<orcid>}
+\newcommand*{\orcid}[1]{\def\@orcid{#1}}
+
+% Defines writer's Publons account (optional)
+% Usage: \publons{<publons>}
+\newcommand*{\publons}[1]{\def\@publons{#1}}
+
+% Defines writer's googlescholar account (optional)
+% Usage: \googlescholar{<googlescholar-user-id>}
+\newcommand*{\googlescholar}[1]{\def\@googlescholar{#1}}
+
+% Defines writer's scobus account (optional)
+% Usage: \researchgate{<researchgate-name>}
+\newcommand*{\researchgate}[1]{\def\@researchgate{#1}}
+
 % Defines writer's github (optional)
 % Usage: \github{<github-nick>}
 \newcommand*{\github}[1]{\def\@github{#1}}
@@ -455,6 +473,30 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{http://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
         }%
+      \ifthenelse{\isundefined{\@orcid}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://orcid.org/\@orcid}{\aiOrcidSquare\acvHeaderIconSep\@orcid}%
+        }%
+      \ifthenelse{\isundefined{\@publons}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://publons.com/researcher/\@publons}{\aiPublonsSquare\acvHeaderIconSep\@publons}%
+        }%
+      \ifthenelse{\isundefined{\@googlescholar}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://scholar.google.com/citations?user=\@googlescholar}{\aiGoogleScholarSquare\acvHeaderIconSep\@googlescholar}%
+        }%
+      \ifthenelse{\isundefined{\@researchgate}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.researchgate.net/profile/\@researchgate}{\aiResearchGateSquare\acvHeaderIconSep\@researchgate}%
+        }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
         {%
@@ -566,16 +608,15 @@
 }
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \ifempty{#2#3}
-      {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+\newcommand*{\cventry}[5]{
+%  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}%
+  \setlength{\extrarowheight}{0pt}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}%
+    \ifempty{#2#3}{\entrypositionstyle{#1} & \entrydatestyle{#4} \\}%
+      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\%
+      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}%
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}%
   \end{tabular*}%
 }
 
