@@ -1,0 +1,348 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{414141}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Ricardo de Oliveira Perdiz}{}
+
+\position{Doutor em Ciências Biológicas (Botânica)}
+\address{Programa de Pós-graduação em Ciências Biológicas (Botânica), INPA, Amazonas, Brasil}
+
+\mobile{+55 95 98126 2633}
+\email{\href{mailto:ricoperdiz@gmail.com}{\nolinkurl{ricoperdiz@gmail.com}}}
+\github{ricoperdiz}
+\twitter{ricoperdiz}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+% Templates for detailed entries
+% Arguments: what when with where why
+\usepackage{etoolbox}
+\def\detaileditem#1#2#3#4#5{%
+\cventry{#1}{#3}{#4}{#2}{\ifx#5\empty\else{\begin{cvitems}#5\end{cvitems}}\fi}\ifx#5\empty{\vspace{-4.0mm}}\else\fi}
+\def\detailedsection#1{\begin{cventries}#1\end{cventries}}
+
+% Templates for brief entries
+% Arguments: what when with
+\def\briefitem#1#2#3{\cvhonor{}{#1}{#3}{#2}}
+\def\briefsection#1{\begin{cvhonors}#1\end{cvhonors}}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {Março 2020}
+    {Ricardo de Oliveira Perdiz~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{sumuxe1rio-profissional}{%
+\section{Sumário profissional}\label{sumuxe1rio-profissional}}
+
+Sou particularmente interessado na evolução, taxonomia e sistemática de plantas com flores, e possuo muita experiência em inventários botânicos na Amazônia e na Floresta Atlântica. Minha pesquisa botânica é mais focada em um grupo de plantas conhecidas na Amazônia como breus, plantas de elevada diversidade e abundância na Amazônia, família a qual sou responsável pelo tratamento taxonômico para o Brasil no projeto \href{http://floradobrasil.jbrj.gov.br/reflora/listaBrasil/PrincipalUC/PrincipalUC.do}{Flora do Brasil 2020}, em conjunto com o Dr.~Douglas Daly (NYBG). Desenvolvi habilidades relacionadas ao manejo de linguagens de programação e bancos de dados. Recentemente defendi minha tese de doutorado junto ao Programa de Pós-graduação em Ciências Biológicas (Botânica) do Instituto Nacional de Pesquisas da Amazônia (INPA).
+
+\hypertarget{dados-profissionais}{%
+\section{Dados profissionais}\label{dados-profissionais}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://orcid.org/0000-0002-2333-6549}{Orcid} \includegraphics{orcid_16x16.png}: \href{https://orcid.org/0000-0002-2333-6549}{0000-0002-2333-6549}
+\item
+  \href{http://lattes.cnpq.br/2115845365136873}{Lattes CV}: \url{http://lattes.cnpq.br/2115845365136873}
+\item
+  \href{https://www.researchgate.net/profile/Ricardo_Perdiz}{ResearchGate}: \url{https://www.researchgate.net/profile/Ricardo_Perdiz}
+\end{itemize}
+
+\hypertarget{formauxe7uxe3o-acaduxeamica}{%
+\section{Formação acadêmica}\label{formauxe7uxe3o-acaduxeamica}}
+
+\detailedsection{\detaileditem{Bacharelado}{2005--2008}{Universidade Estadual de Santa Cruz (UESC)}{Bahia, Brasil}{\item{Título da monografia de conclusão de curso: Maxillariinae s.l. (Orchidaceae) em três remanescentes de florestas montanas no sul da Bahia, Brasil}\item{Orientador: Dr. André Amorim (UESC, Bahia, Brasil)}}\detaileditem{Mestrado}{2009--2011}{Universidade Estadual de Feira de Santana (UEFS)}{Bahia, Brasil}{\item{Título da dissertação: Sapindaceae Juss. em remanescentes de floresta montana no sul da Bahia, Brasil}\item{Financiamento: CNPq}\item{Orientador: Dr. André Amorim (UESC, Bahia, Brasil)}\item{Coorientadora: Dra. María Silvia Ferrucci (IBONE, Corrientes, Argentina)}}\detaileditem{Doutorado}{2015--2019}{INPA}{Amazonas, Brasil}{\item{Título da tese: Delimitação de espécies e filogeografia do complexo Protium aracouchini (Aubl.) Marchand (Burseraceae)}\item{Financiamento: CNPq e CAPES}\item{Parte do doutorado executada na Universidade da Califórnia, Berkeley (UC Berkeley), EUA, como parte de doutorado sanduíche financiado pela CAPES}\item{Orientador: Paul V.A. Fine (UC Berkeley)}\item{Coorientadores: Dr. Alberto Vicentini (INPA) e Dr. Douglas Daly (New York Botanical Garden, EUA)}}}
+
+\hypertarget{experiuxeancia-de-ensino}{%
+\section{Experiência de ensino}\label{experiuxeancia-de-ensino}}
+
+\detailedsection{\detaileditem{Organizador e professor de um curso de campo chamado \textit{Métodos de herborização e identificação de angiospermas neotropicais arbóreas, com ênfase nos caracteres vegetativos}}{2013}{Centro de Estudos da Biodiversidade Amazônica (CENBAM)}{Roraima, Brasil}{\item{Curso feito em parceria com o Programa de pós-graduação em Recursos Naturais (PRONAT), Universidade Federal de Roraima (UFRR), Brasil}\item{Atuei como professor de curso durante meu período como gestor de dados e metadados do CENBAM em RR}\item{ Duração de nove dias}\item{Lições de taxonomia e sistemática de angiospermas lenhosas neotropicais, com ênfase especial na identificação de famílias e gêneros através do uso de caracteres vegetativos}}\detaileditem{Monitor da disciplina PRN 235 \textit{Preparação de dados para análise estatística}}{2015}{PRONAT UFRR}{Roraima, Brasil}{\item{Professor: Dr. Reinaldo Imbrozio Barbosa (INPA), Lidiany Carvalho (UFRR)}\item{Auxiliei discentes em lidar com o ambiente R}\item{Contribuí ativamente para o ensino do curso através de reuniões com o professor}\item{Criei um \href{http://www.botanicaamazonica.wiki.br/labotam/doku.php?id=alunos:r.perdiz:disciplina:inicio}{sítio web} para auxiliar os discentes no aprendizado do R}}\detaileditem{Monitor da disciplina BOT-89 \textit{Preparação de dados para análise estatística  e Introdução ao uso de linguagem R}}{2016-2017}{Programa de pós-graduação em Ciências Biológicas (Botânica) INPA, Brasil}{Amazonas, Brasil}{\item{Professor: Dr. Alberto Vicentini (INPA)}\item{Atuei como monitor por dois anos consecutivos}\item{Criei um \href{botanicaamazonica.wiki.br/labotam/doku.php?id=disciplinas:bot89:inicio}{sítio web} para auxiliar os discentes no aprendizado da disciplina}}\detaileditem{Monitor da disciplina \textit{Uso de espectroscopia para reconhecimento da Biodiversidade}}{2018}{Programa de pós-graduação em Ciências Biológicas (Botânica) INPA}{Amazonas, Brasil}{\item{Professora: Dra. Flávia Durgante (INPA)}\item{Auxiliei discentes em lidar com o ambiente R e na aplicação de técnicas estatísticas para responder algumas de suas perguntas durante a segunda semana de classe}}}
+
+\hypertarget{produuxe7uxe3o-cientuxedfica}{%
+\section{Produção científica}\label{produuxe7uxe3o-cientuxedfica}}
+
+\hypertarget{capuxedtulo-de-livro}{%
+\subsection{Capítulo de livro}\label{capuxedtulo-de-livro}}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  \textbf{Perdiz, R. O.} 2014. Ensinando botânica nas florestas no sul do Estado de Roraima. In: Flores, A. S. \& Rodrigues, R. S. (Eds.) \emph{As Unidades de Conservação e a preservação da diversidade biológica}. UERR edicões, Boa Vista. Pp. 45---48.
+\item
+  \textbf{Perdiz, R. O.} \& Queiroz, L. P. 2013. Meliaceae. In: França, F., Melo, E., Souza, I. \& Pugliesi, L. (Eds.) \emph{Flora de Morro do Chapéu}. Universidade Estadual de Feira de Santana, Feira de Santana. Pp. 172---174.
+\end{enumerate}
+
+\hypertarget{artigos-cientuxedficos-publicados}{%
+\subsection{Artigos científicos publicados}\label{artigos-cientuxedficos-publicados}}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  \textbf{Perdiz, R. O.}, Daly, D. C., Vicentini, A. \& Fine, P. V. A. 2020. A new species of Protium (Burseraceae) from the Pacific Coast of Costa Rica. \emph{Phytotaxa} 434(2): 183--194.
+  DOI: 10.11646/phytotaxa.434.2.4
+\item
+  Farroñay, F., \textbf{Perdiz, R. O.}, Costa, F. M., Prata, E. M. B. \& Vicentini, A. 2019. New record and emended description of a rare white-sand Amazonian species: Schoepfia clarkii (Schoepfiaceae). \emph{Brittonia} 71(3): 312--317.
+  DOI: 10.1007/s12228-019-09571-2
+\item
+  Farroñay, F., \textbf{Perdiz, R. O.}, Prata, E. M. B. \& Vicentini, A. 2019. Notes on morphology and distribution of Acmanthera (Adr. Juss.) Griseb. (Malpighiaceae), an endemic genus from Brazil. \emph{Phytotaxa} 415(4): 199--207.
+  DOI: 10.11646/phytotaxa.415.4.4
+\item
+  Piva, L. R. d.~O., Jardine, K. J., Gimenez, B., \textbf{Perdiz, R. O.}, Menezes, V. S., Durgante, F., Cobello, L. O., Higuchi, N. \& Chambers, J. Q. 2019. Volatile monoterpene `fingerprints' of resinous Protium tree species in the Amazon Rainforest. \emph{Phytochemistry} 160: 61--70.
+  DOI: 10.1016/j.phytochem.2019.01.014
+\item
+  Silva, W. R., Villacorta, C. D. A., \textbf{Perdiz, R. O.}, Farias, H. L. S., Oliveira, A. S., Citó, A. C., Carvalho, L. C. S. \& Barbosa, R. I. 2019. Floristic composition in ecotone forests in northern Brazilian Amazonia: preliminary data. \emph{Biodiversity Data Journal} 7: e47025.
+  DOI: 10.3897/BDJ.7.e47025
+\item
+  BFG and \emph{Perdiz, R. O.} 2018. Brazilian Flora 2020: Innovation and collaboration to meet Target 1 of the Global Strategy for Plant Conservation (GSPC). \emph{Rodriguésia} 69(4): 1513--1527.
+  DOI: 10.1590/2175-7860201869402
+\item
+  Farroñay, F., Adrianzén, M. U., \textbf{Perdiz, R. O.} \& Vicentini, A. 2018. A new species of Macrolobium (Fabaceae, Detarioideae) endemic on a Tepui of the Guyana shield in Brazil. \emph{Phytotaxa} 361(1): 97--105.
+  DOI: 10.11646/phytotaxa.361.1.8
+\item
+  Barbosa, R. I., Castilho, C. V., \textbf{Perdiz, R. O.}, Damasco, G., Rodrigues, R. \& Fearnside, P. M. 2017. Decomposition rates of coarse woody debris in undisturbed Amazonian seasonally flooded and unflooded forests in the Rio Negro-Rio Branco Basin in Roraima, Brazil. \emph{Forest Ecology and Management} 397: 1---9.
+  DOI: 10.1016/j.foreco.2017.04.026
+\item
+  Oliveira, R., Farias, H. S., \textbf{Perdiz, R. O.}, Scudeller, V. \& Barbosa, R. I. 2017. Structure and tree species composition in different habitats of savanna used by indigenous people in the Northern Brazilian Amazon. \emph{Biodiversity Data Journal}.
+  DOI: 10.3897/BDJ.5.e20044
+\item
+  Rodrigues, R. S., \textbf{Perdiz, R. O.} \& Flores, A. S. 2017. Novas ocorrências de angiospermas para o estado de Roraima, Brasil. \emph{Rodriguésia} 68(2): 783---790.
+  DOI: 10.1590/2175-7860201768229
+\item
+  Lavor, P., \textbf{Perdiz, R. O.}, Versieux, L. M. \& Calvente, A. 2016. Rediscovery of Pilosocereus oligolepsis (Cactaceae) in the state of Roraima, Brazil. \emph{Cactus and Succulent Journal} 88(3): 137---143.
+  DOI: 10.2985/015.088.0306
+\item
+  BFG and \emph{Perdiz, R. O.} 2015. Growing knowledge: an overview of Seed Plant diversity in Brazil. \emph{Rodriguésia} 66(4): 1085--1113.
+  DOI: 10.1590/2175-7860201566411
+\item
+  \textbf{Perdiz, R. O.}, Giulietti, A. M. \& Oliveira, R. P. 2015. Flora da Bahia: Clethraceae. \emph{Sitientibus Série Ciências Biológicas}.
+  DOI: 10.13102/scb342
+\item
+  \textbf{Perdiz, R. O.}, Ferrucci, M. S. \& Amorim, A. M. A. 2014. Sapindaceae em remanescentes de florestas montanas no sul da Bahia, Brasil. \emph{Rodriguésia} 65(4): 987---1002.
+  DOI: 10.1590/2175-7860201465410
+\item
+  \textbf{Perdiz, R. O.}, Amorim, A. M. A. \& Ferrucci, M. S. 2012. Paullinia unifoliolata, a remarkable new species of Sapindaceae from the Atlantic Forest of southern Bahia, Brazil. \emph{Brittonia} 64(2): 114---118.
+  DOI: 10.1007/s12228-011-9213-1
+\item
+  \textbf{Perdiz, R. O.}, São-Mateus, W. M. B. \& Amorim, A. M. 2012. Flora da Bahia: Caryocaraceae. \emph{Sitientibus Série Ciências Biológicas} 12(1): 109---113.
+\item
+  Amorim, A. M., Jardim, J. G., Lopes, M. M. M., Fiaschi, P., Borges, R. A. X., \textbf{Perdiz, R. O.} \& Thomas, W. W. 2009. Angiospermas em remanescentes de floresta montana no sul da Bahia, Brasil. \emph{Biota Neotropica} 9(3): 313---348.
+\end{enumerate}
+
+\hypertarget{artigos-cientuxedficos-no-prelo}{%
+\subsection{Artigos científicos no prelo}\label{artigos-cientuxedficos-no-prelo}}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{17}
+\tightlist
+\item
+  Farias, H. L. S., Silva, W. R., Citó, A. C., \textbf{Perdiz, R. O.}, Carvalho, L. C. S. \& Barbosa, R. I. no prelo. Dataset on Wood Density of Trees in Ecotone Forests of the Northern Brazilian Amazonia. \emph{Data in Brief}.
+  DOI: 10.1016/j.dib.2020.105378
+\end{enumerate}
+
+\hypertarget{artigos-cientuxedficos-submetidos}{%
+\subsection{Artigos científicos submetidos}\label{artigos-cientuxedficos-submetidos}}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{18}
+\item
+  Draper, F. e múltiplos autores {[}incluindo \textbf{Perdiz, R. O.}{]} submetido. Contrasting phylogenetic structure of Amazonian hyperdominance across tree strata. \emph{Nature}.
+\item
+  Souza, D., Toledo, J., Castilho, C., Damasco, G., \textbf{Perdiz, R. O.}, Zartman, C., Pimentel, T. \& Nascimento, H. submetido. Disentangling Edaphic, Hydrological and Floristic Effects on Wood Density Variation Between Two Dominant Forest Types in the Amazon. \emph{Anais da Academia Brasileira de Ciências}.
+\end{enumerate}
+
+\hypertarget{conjunto-de-dados}{%
+\subsection{Conjunto de dados}\label{conjunto-de-dados}}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\tightlist
+\item
+  Jaramillo, M. M. A., Turcios, M. M., \textbf{Perdiz, R. O.}, Carvalho, L. C. S. \& Barbosa, R. I. 2019. Tree species composition of natural forest islands in a savanna matrix in the northern Brazilian Amazonia. v1.9. Dataset published by Sistema de Informação sobre a Biodiversidade Brasileira - SiBBr. Available for download at: \url{https://ipt.sibbr.gov.br/sibbr/resource?r=forest-island_floristic\&v=1.9}.
+  DOI: 10.15468/n8yolk
+\item
+  Silva, W. R., Villacorta, C. D. A., Carvalho, L. C. S., Farias, H. L. S., \textbf{Perdiz, R. O.} \& Barbosa, R. I. 2019. Tree species composition in ecotone forests on Maracá Island, Roraima, northern Brazilian Amazonia: preliminary data. V1.12.. Dataset published by Sistema de Informação sobre a Biodiversidade Brasileira - SiBBr. Available for download at: \url{https://ipt.sibbr.gov.br/sibbr/resource?r=maraca_comp_floristic\&v=1.12}.
+  DOI: 10.15468/xa5lrb
+\end{enumerate}
+
+\hypertarget{dissertauxe7uxe3o-de-mestrado}{%
+\subsection{Dissertação de mestrado}\label{dissertauxe7uxe3o-de-mestrado}}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\tightlist
+\item
+  \textbf{Perdiz, R. O.} 2011. Sapindaceae em remanescentes de floresta montana no sul da Bahia, Brasil. Universidade Estadual de Feira de Santana, Feira de Santana, Bahia, Brasil. Pp. 140 pp.~
+\end{enumerate}
+
+\hypertarget{resumos}{%
+\subsection{Resumos}\label{resumos}}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\tightlist
+\item
+  Silva, W. R., Villacorta, C. D. A., Farias, H. L. S., Carvalho, L. C. S., \textbf{Perdiz, R. O.} \& Barbosa, R. I. 2018. Riqueza e diversidade de espécies arbóreas das florestas ecotonais do leste da Ilha de Maracá: resultados preliminares.. In: \emph{Anais da XIII Semana Nacional de Ciência e Tecnologia}. UERR, Boa Vista.
+\item
+  Silva, W. R., Villacorta, C. D. A., Farias, H. L. S., Carvalho, L. C. S., \textbf{Perdiz, R. O.} \& Barbosa, R. I. 2018. Riqueza e diversidade de espécies arbóreas das florestas ecotonais do leste da Ilha de Maracá: resultados preliminares.. In: \emph{Anais do IV Simpósio CENBAM e PPBio Amazônia Ocidental}.
+\item
+  Silva, W. R., Villacorta, C. D. A., Farias, H. L. S., Carvalho, L. C. S., \textbf{Perdiz, R. O.} \& Barbosa, R. I. 2018. Estrutura arbórea das florestas ecotonais (mosaico ombrófila com estacional) no extremo norte da Amazônia: resultados preliminares. In: \emph{Anais do IV Simpósio CENBAM e PPBio Amazônia Ocidental}. Amazonas, Manaus Brasil.
+\item
+  Jaramillo, M. M. A., Turcios, M. M., \textbf{Perdiz, R. O.}, Barbosa, R. I., Araújo, M. A. M. \& Pinheiro, N. M. B. 2017. Riqueza e diversidade de espécies arbóreas de ilhas de mata na savana de Roraima, Amazônia Brasileira. In: \emph{XIII Congresso de Ecologia do Brasil and III International Symposium of Ecology and Evolution. M'ultiplas ecologias: evolução e diversidade}. UFV, Viçosa, MG.
+\item
+  \textbf{Perdiz, R. O.} \& Castilho, C. V. 2015. Diversidade arbórea em florestas não inundáveis na grade Viruá, Roraima, Brasil: resultados preliminares. In: \emph{Livro de resumos do III Simpósio CENBAM e PPBio Amazônia Ocidental}.
+\item
+  Jaramillo, M. M. A., Turcios, M. M., \textbf{Perdiz, R. O.} \& Barbosa, R. I. 2014. Riqueza e diversidade de espécies arbóreas de ilhas de mata na savana de Roraima, Amazônia brasileira. In: \emph{Anais do LXV Congresso Nacional de Botânica}.
+\item
+  Barbosa, R. I., \textbf{Perdiz, R. O.}, Castilho, C. V., Toledo, J. J., Fearnside, P. M. \& Rodrigues, R. 2013. Decomposição da liteira grossa em florestas de contato no Parque Nacional do Viruá, Roraima. In: \emph{Anais do II Simpósio CENBAM e PPBio Amazônia Ocidental (27-29 novembro, 2013)}.
+\item
+  \textbf{Perdiz, R. O.}, Ferrucci, M. S. \& Amorim, A. M. A. 2010. Paullinia L. (Sapindaceae) em áreas de floresta montana no sul da Bahia, Brasil. In: \emph{Anais do X Congreso Latinoamericano de Botánica}.
+\item
+  \textbf{Perdiz, R. O.} \& Amorim, A. M. A. 2008. Chave digital para identificação de Orchidaceae em florestas montanas no sul da Bahia, Brasil. In: \emph{Resumos do XIV Seminário de Iniciação Científica da UESC}.
+\item
+  \textbf{Perdiz, R. O.}, São-Mateus, W. M. B. \& Amorim, A. M. A. 2008. Caryocaraceae para a Flora da Bahia, Brasil. In: \emph{Anais do 59° Congresso Nacional de Botânica}.
+\item
+  \textbf{Perdiz, R. O.} \& Amorim, A. M. A. 2007. Chave interativa de m'ultiplos acessos para identificação de Orchidaceae em florestas montanas no sul da Bahia, Brasil. In: \emph{Resumos do XIII Seminário de Iniciação Científica e IX Semana de Pesquisa e Pós-graduação da UESC}.
+\item
+  \textbf{Perdiz, R. O.}, Amorim, A. M. A., Lopes, M. M. M. \& Jardim, A. B. 2007. Chave interativa de m'ultiplos acessos para identificação de Orchidaceae em florestas montanas no sul da Bahia, Brasil. In: \emph{Anais do 58° Congresso Nacional de Botânica}.
+\item
+  \textbf{Perdiz, R. O.}, Fontana, A. P. \& Amorim, A. M. A. 2007. Checklist de Orchidaceae em duas áreas de florestas montanas no sul da Bahia, Brasil. In: \emph{Anais do XXVII Encontro Regional de Botânicos}.
+\item
+  Lopes, M. M. M., Amorim, A. M. A., \textbf{Perdiz, R. O.} \& Jardim, A. B. 2007. Chave interativa para identificação de famílias e gêneros de angiospermas em florestas montanas no sul da Bahia, Brasil. In: \emph{Anais do 58° Congresso Nacional de Botânica}.
+\end{enumerate}
+
+\hypertarget{pruxeamios-e-conquistas}{%
+\section{Prêmios e conquistas}\label{pruxeamios-e-conquistas}}
+
+\hypertarget{bolsas-de-estudo}{%
+\subsection{Bolsas de estudo}\label{bolsas-de-estudo}}
+
+\begin{tabular}{rl}
+  2015 & Alwyn H. Gentry Fellowship for Latin American Botanists, Missouri Botanical Garden, St. Louis MO \\ 
+  2016 & José Cuatrecasas Fellowship Award, Smithsonian Institution, Washington DC \\ 
+  \end{tabular}
+
+\hypertarget{financiamentos}{%
+\section{Financiamentos}\label{financiamentos}}
+
+\begingroup\fontsize{10}{16}
+\begin{tabular}{lll}
+   \hline
+2016 & José Cuatrecasas Fellowship Award & US\$3000 \\ 
+   \\[-0.2cm]2017 & ASPT Research Grant for Graduate students & US\$800 \\ 
+   \\[-0.2cm]2018 & IAPT Research Grant & US\$2000 \\ 
+   \\[-0.2cm] \hline
+\end{tabular}
+\endgroup
+
+\hypertarget{experiuxeancia-profissional}{%
+\section{Experiência profissional}\label{experiuxeancia-profissional}}
+
+\begin{itemize}
+\tightlist
+\item
+  Gestor de dados e metadados do PPBio, núcleo regional Roraima, Centro de Estudos Integrados da Biodiversidade Amazônica - CENBAM. Projeto financiado pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), Brasil. Período: 2011--2014.
+\end{itemize}
+
+\hypertarget{habilidades-em-programauxe7uxe3o}{%
+\section{Habilidades em programação}\label{habilidades-em-programauxe7uxe3o}}
+
+\begin{itemize}
+\tightlist
+\item
+  Domino linguagens R e shell, e trabalho frequentemente com Python.
+\item
+  Cursos recentes: Python for Data Science (IBM), Data Science Methodology (IBM), Open Source tools for Data Science (IBM), What is Data Science (IBM).
+\end{itemize}
+
+\hypertarget{software-pacotes-de-r}{%
+\section{Software (pacotes de R)}\label{software-pacotes-de-r}}
+
+\briefsection{\briefitem{\textbf{NIRtools: Tools to deal with near infrared (NIR) spectroscopy data} \newline Desenvolvedor principal (e único!) \newline www.github.com/ricoperdiz/NIRtools}{Em desenvolvimento}{}}
+
+\end{document}
