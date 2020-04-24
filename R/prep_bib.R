@@ -1,3 +1,20 @@
+clean_latex <- function(col) {
+  vetor <- 
+    gsub("{\\'a}", "á", col, fixed = TRUE) %>% 
+    gsub("{\\'e}", "é", ., fixed = TRUE) %>% 
+    gsub("{\\'i}", "í", ., fixed = TRUE) %>% 
+    gsub("\\'i", "í", ., fixed = TRUE) %>% 
+    gsub("{\\'u}", "ú", ., fixed = TRUE) %>% 
+    gsub("{\\^a}", "â", ., fixed = TRUE) %>% 
+    gsub("{\\^e}", "ê", ., fixed = TRUE) %>% 
+    gsub("{\\^o}", "ô", ., fixed = TRUE) %>% 
+    gsub("{\\'o}", "ó", ., fixed = TRUE) %>% 
+    gsub("{\\~a}", "ã", ., fixed = TRUE) %>% 
+    gsub("\\cc", "ç", ., fixed = TRUE)
+  vetor <- gsub("\\{|\\}|\\\\textit", "", vetor)
+  return(vetor)
+}
+
 split_authors <- function(authors) {
   list_authors <- 
     stringr::str_split(authors, " and ") %>%
