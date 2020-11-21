@@ -1,22 +1,22 @@
 clean_latex <- function(col) {
-  vetor <- 
-    gsub("{\\'a}", "á", col, fixed = TRUE) %>% 
-    gsub("{\\'e}", "é", ., fixed = TRUE) %>% 
-    gsub("{\\'i}", "í", ., fixed = TRUE) %>% 
-    gsub("\\'i", "í", ., fixed = TRUE) %>% 
-    gsub("{\\'u}", "ú", ., fixed = TRUE) %>% 
-    gsub("{\\^a}", "â", ., fixed = TRUE) %>% 
-    gsub("{\\^e}", "ê", ., fixed = TRUE) %>% 
-    gsub("{\\^o}", "ô", ., fixed = TRUE) %>% 
-    gsub("{\\'o}", "ó", ., fixed = TRUE) %>% 
-    gsub("{\\~a}", "ã", ., fixed = TRUE) %>% 
+  vetor <-
+    gsub("{\\'a}", "á", col, fixed = TRUE) %>%
+    gsub("{\\'e}", "é", ., fixed = TRUE) %>%
+    gsub("{\\'i}", "í", ., fixed = TRUE) %>%
+    gsub("\\'i", "í", ., fixed = TRUE) %>%
+    gsub("{\\'u}", "ú", ., fixed = TRUE) %>%
+    gsub("{\\^a}", "â", ., fixed = TRUE) %>%
+    gsub("{\\^e}", "ê", ., fixed = TRUE) %>%
+    gsub("{\\^o}", "ô", ., fixed = TRUE) %>%
+    gsub("{\\'o}", "ó", ., fixed = TRUE) %>%
+    gsub("{\\~a}", "ã", ., fixed = TRUE) %>%
     gsub("\\cc", "ç", ., fixed = TRUE)
   vetor <- gsub("\\{|\\}|\\\\textit", "", vetor)
   return(vetor)
 }
 
 split_authors <- function(authors) {
-  list_authors <- 
+  list_authors <-
     stringr::str_split(authors, " and ") %>%
     lapply(., function(x) {
       sapply(x, function(x) {
@@ -30,8 +30,8 @@ split_authors <- function(authors) {
               substr(x, 1, 1) %>%
                 paste0(., ".")
             }) %>%
-            glue_collapse(., sep = " ")
-          outnames <- glue(lastname, othernames, .sep = ", ")
+            glue::glue_collapse(., sep = " ")
+          outnames <- glue::glue(lastname, othernames, .sep = ", ")
         })
       })
     })
@@ -41,58 +41,55 @@ bib_entries <- function(file) {
   bib <-
     RefManageR::ReadBib(file, check = FALSE)
   family <-
-    map_chr(bib, function(x) {
-      map_chr(x$author, function(names) {
+    purrr::map_chr(bib, function(x) {
+      purrr::map_chr(x$author, function(names) {
         paste(names$family, collapse = " ")
       }) %>%
         paste(collapse = ", ")
     })
   out <-
-    dplyr::as_tibble(bib) %>% mutate(surnames = family)
+    dplyr::as_tibble(bib) %>% dplyr::mutate(surnames = family)
   list_authors <-
     split_authors(out$author)
   out$authors_sep <-
     sapply(list_authors, function(x) {
-      glue_collapse(x, sep = ", ", last = " & ")
+      glue::glue_collapse(x, sep = ", ", last = " & ")
     })
-  out$authors_sep <- gsub("Perdiz, R. O.", "**Perdiz, R. O.**", out$authors_sep)
+  out$authors_sep <-
+    gsub("Perdiz, R. O.", "**Perdiz, R. O.**", out$authors_sep)
   # Editors
   if (any(is.na(unique(out$editor)))) {
     out$eds_sep <- out$editor
     out$eds_sep[grepl(" and ", out$eds_sep)] <-
-      out$eds_sep[grepl(" and ", out$eds_sep)] %>% 
-      split_authors(.) %>% 
+      out$eds_sep[grepl(" and ", out$eds_sep)] %>%
+      split_authors(.) %>%
       sapply(., function(x) {
-        glue_collapse(x, sep = ", ", last = " & ")
+        glue::glue_collapse(x, sep = ", ", last = " & ")
       })
   }
   
   return(out)
 }
 prep_bib <- function(out) {
+  # Teste # Comentar apos testar
+  # out = bib_entries(file)
+  # out %>% View
+  # ########
   
   prep_bibdf <-
-    out %>% 
-    mutate(
-      pub_numb = pmap_chr(list(bibtype, volume, number, pages), function(bibtype, volume, number, pages) {
-        
+    out %>%
+    dplyr::mutate(
+      pub_numb = purrr::pmap_chr(list(bibtype, volume, number, pages), function(bibtype, volume, number, pages) {
         if (bibtype == "Article") {
-          
           if (!is.na(number) & !is.na(pages)) {
-            pub_numb_pre <- 
-              glue(
-                "{volume}({number}): {pages}"
-              )
+            pub_numb_pre <-
+              glue::glue("{volume}({number}): {pages}")
           } else if (is.na(number) & !is.na(pages)) {
-            pub_numb_pre <-  
-              glue(
-                "{volume}: {pages}"
-              )
+            pub_numb_pre <-
+              glue::glue("{volume}: {pages}")
           } else if (is.na(number) & is.na(pages)) {
-            pub_numb_pre <- 
-              glue(
-                "{volume}"
-              )
+            pub_numb_pre <-
+              glue::glue("{volume}")
           } else {
             pub_numb_pre <- ""
           }
@@ -100,11 +97,11 @@ prep_bib <- function(out) {
           
         } else if (bibtype == "InCollection") {
           if (is.na(volume) & !is.na(pages)) {
-            pub_numb_pre <- glue("{pages}")
+            pub_numb_pre <- glue::glue("{pages}")
           } else if (is.na(number) & !is.na(pages)) {
-            pub_numb_pre <- glue("{volume}: {pages}")
+            pub_numb_pre <- glue::glue("{volume}: {pages}")
           } else {
-            ""
+            pub_numb_pre <- ""
           }
           return(pub_numb_pre)
         } else {
@@ -112,11 +109,12 @@ prep_bib <- function(out) {
         }
         
       }),
-      is_year = map_lgl(year, function(x) {
+      is_year = purrr::map_lgl(year, function(x) {
         xx <- as.numeric(x)
-        return(!is.na(xx))
+        vetor_lgl <- as.logical(!is.na(xx))
+        return(vetor_lgl)
       }),
-      year_up = map2_chr(year, is_year, function(year, is_year) {
+      year_up = purrr::map2_chr(year, is_year, function(year, is_year) {
         if (is_year) {
           year_up <- year
         } else {
@@ -124,25 +122,34 @@ prep_bib <- function(out) {
         }
         return(year_up)
       }),
-      doi_text = map_chr(doi, function(doi) {
-        if(is.na(doi)) {
-          return(glue(""))
+      doi_text = purrr::map_chr(doi, function(doi) {
+        if (is.na(doi)) {
+          return(glue::glue(""))
         } else {
-          return(glue("{doi}"))
+          return(glue::glue("{doi}"))
         }
-      })#,title2 = map_chr(title, ~gsub("\\{|\\}", "", .x))
+      })#,title2 = purrr::map_chr(title, ~gsub("\\{|\\}", "", .x))
     )
   return(prep_bibdf)
 }
 print_bib <- function(bibdf) {
-  
-  # out <- 
-  #   bib_entries(file) %>% 
+  # Teste # Comentar depois de testar #####
+  # out <-
+  #   bib_entries(file) %>%
   #   prep_bib(.)
   # bibdf <- out
   # bibdf <-
   #   out %>%
-  #   filter(bibtype == "MastersThesis")
+  #   #   # filter(bibtype == "MastersThesis")
+  #   #   # filter(bibtype == "Article")
+  #   #   filter(bibtype == "Misc")
+  #   # filter(bibtype == "InCollection")
+  #   filter(bibtype == "Article") %>%
+  #   filter(grepl("preprint", comment)) %>%
+  #   filter(is_year)
+  # bibdf
+  ######################
+  
   
   if (!is.data.frame(bibdf) | !is_tibble(bibdf)) {
     stop("bibdf must be a dataframe.")
@@ -151,80 +158,138 @@ print_bib <- function(bibdf) {
   }
   bibtype <- unique(bibdf$bibtype)
   note <- unique(bibdf$note)
+  url <- unique(bibdf$url)
+  comment <- unique(bibdf$comment)
   
   if (bibtype == "Article") {
-    bib_out <- 
-      bibdf %>% 
-      arrange(desc(year), authors_sep) %>% 
-      glue_data(
-        "(@) {authors_sep} {year_up}. {title}. _{journal}_ {pub_numb}.\\
+    # ARTIGOS PUBLICADOS
+    if (!grepl("dataset|preprint", comment)) {
+      # Se acabou de ser publicado e ainda nao possui numero do volume
+      if (bibdf$pub_numb == "NA") {
+        bib_out <-
+          bibdf %>%
+          dplyr::arrange(desc(year), authors_sep) %>%
+          glue::glue_data("(@) {authors_sep} {year_up}. {title}. _{journal}_.\\
         {doi_text}\\
 \n
 ")
-    } else if (bibtype == "InCollection") {
-    bib_out <- 
-      bibdf %>% 
-      arrange(desc(year), authors_sep) %>% 
+        # Publicacao normal, com NUMERO DO VOLUME
+      } else {
+        bib_out <-
+          bibdf %>%
+          dplyr::arrange(desc(year), authors_sep) %>%
+          glue::glue_data(
+            "(@) {authors_sep} {year_up}. {title}. _{journal}_ {pub_numb}.\\
+        {doi_text}\\
+\n
+"
+          )
+      }
+      # PREPRINT
+    } else if (grepl("preprint", comment)) {
+      bib_out <-
+        bibdf %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        glue::glue_data("(@) {authors_sep} {year_up}. {title}. _{journal}_.\\
+        {doi_text}\\
+\n
+")
+    } else if (grepl("dataset", comment)) {
+      # se for conjunto de dados publicados em periodico!
+      bib_out <-
+        bibdf %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        # select(authors_sep, year_up)
+        glue::glue_data(
+          "(1) {authors_sep} {year_up}. {title}. Dataset published by _{journal}_ {pub_numb}.\\
+            {doi_text} \\
+\n
+"
+        )
+    }
+    
+  } else if (bibtype == "InCollection" && is.na(url)) {
+    bib_out <-
+      bibdf %>%
+      dplyr::arrange(desc(year), authors_sep) %>%
       # select(authors_sep, year_up)
-      glue_data(
+      glue::glue_data(
         "(1) {authors_sep} {year_up}. {title}. In: {eds_sep} (Eds.) _{booktitle}_. {publisher}, {address}. Pp. {pages}. \\
 \n
         "
       )
-  } else if (bibtype == "InProceedings") {
-    bib_out <- 
-      bibdf %>% 
-      arrange(desc(year), authors_sep) %>% 
+  } else if (bibtype == "InCollection" && !is.na(url)) {
+    bib_out <-
+      bibdf %>%
+      # dplyr::arrange(desc(year), authors_sep) %>%
       # select(authors_sep, year_up)
-      glue_data(
+      glue::glue_data(
+        "(1) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {publisher}, {address}. Available at: <{url}>. Accessed on {note}. \\
+\n
+        "
+      )
+  } else if (bibtype == "InProceedings") {
+    bib_out <-
+      bibdf %>%
+      dplyr::arrange(desc(year), authors_sep) %>%
+      # select(authors_sep, year_up)
+      glue::glue_data(
         "(1) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {publisher}, {address}. \\
         \n"
       )
   } else if (bibtype == "Misc" & note == "Dataset/Occurrence") {
-    bib_out <- 
-      bibdf %>% 
-      arrange(desc(year), authors_sep) %>% 
+    bib_out <-
+      bibdf %>%
+      dplyr::arrange(desc(year), authors_sep) %>%
       # select(authors_sep, year_up)
-      glue_data(
+      glue::glue_data(
         "(1) {authors_sep} {year_up}. {title}. Dataset published by {howpublished}. Available for download at: {url}{doi_text} \\
         \n"
       )
-  } else if (bibtype == "Misc" & note == "Documentario") {
-    bib_out <- 
-      bibdf %>%
-      mutate_at("year", as.numeric) %>% 
-      mutate_at("title", ~gsub("^\\{|\\}$", "", .)) %>%
-      arrange(desc(year), authors_sep) %>% 
-      glue_data(
-        "+ {year}. {title} \\
-      \n"
-      )
+  } else if (bibtype == "Misc") {
+    if (note == "Dataset/Occurrence") {
+      bib_out <-
+        bibdf %>%
+        dplyr::mutate_at("year", as.numeric) %>%
+        dplyr::mutate_at("title", ~ gsub("^\\{|\\}$", "", .)) %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        glue::glue_data("* {year}. {title} \\
+      \n")
+    } else if (any(note  %in% c("Documentario", "Interview"))) {
+      bib_out <-
+        bibdf %>%
+        dplyr::mutate_at("year", as.numeric) %>%
+        dplyr::mutate_at("title", ~ gsub("^\\{|\\}$", "", .)) %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        glue::glue_data("* {year}. {title} \\
+      \n")
+      
+    }
+    
     
   } else if (bibtype == "MastersThesis") {
-  bib_out <- 
-    bibdf %>% 
-    arrange(desc(year), authors_sep) %>% 
-    # select(authors_sep, year_up)
-    glue_data(
-      "(1) {authors_sep} {year_up}. {title}. {school}, {address}, Brasil. Pp. {pages} \\
+    bib_out <-
+      bibdf %>%
+      dplyr::arrange(desc(year), authors_sep) %>%
+      # select(authors_sep, year_up)
+      glue::glue_data(
+        "(1) {authors_sep} {year_up}. {title}. {school}, {address}, Brasil. Pp. {pages} \\
       \n"
-    )
+      )
   } else if (bibtype == "TechReport") {
     # revout$authors_sep
-    # revout %>% 
+    # revout %>%
     #   filter((bibtype == "TechReport" & grepl("revisão", note)))
-    bib_out <- 
+    bib_out <-
       bibdf %>%
       # revout %>%
       # filter((bibtype == "TechReport" & grepl("revisão", note))) %>%
-      mutate_at("year", as.numeric) %>% 
-      mutate_at("title", ~gsub("^\\{|\\}$", "", .)) %>%
-      arrange(desc(year), authors_sep) %>% 
-      glue_data(
-        "(1) {authors_sep} {year}. {title}. \\
-      \n"
-      )
-}
+      dplyr::mutate_at("year", as.numeric) %>%
+      dplyr::mutate_at("title", ~ gsub("^\\{|\\}$", "", .)) %>%
+      dplyr::arrange(desc(year), authors_sep) %>%
+      glue::glue_data("(1) {authors_sep} {year}. {title}. \\
+      \n")
+  }
   # bibdf$bibtype
   #   bib_out
   #   bibdf %>% names
