@@ -67,7 +67,7 @@ bib_entries <- function(file) {
         glue::glue_collapse(x, sep = ", ", last = " & ")
       })
   }
-  
+
   return(out)
 }
 prep_bib <- function(out) {
@@ -75,7 +75,7 @@ prep_bib <- function(out) {
   # out = bib_entries(file)
   # out %>% View
   # ########
-  
+
   prep_bibdf <-
     out %>%
     dplyr::mutate(
@@ -94,7 +94,6 @@ prep_bib <- function(out) {
             pub_numb_pre <- ""
           }
           return(pub_numb_pre)
-          
         } else if (bibtype == "InCollection") {
           if (is.na(volume) & !is.na(pages)) {
             pub_numb_pre <- glue::glue("{pages}")
@@ -107,7 +106,6 @@ prep_bib <- function(out) {
         } else {
           return("")
         }
-        
       }),
       is_year = purrr::map_lgl(year, function(x) {
         xx <- as.numeric(x)
@@ -128,7 +126,7 @@ prep_bib <- function(out) {
         } else {
           return(glue::glue("{doi}"))
         }
-      })#,title2 = purrr::map_chr(title, ~gsub("\\{|\\}", "", .x))
+      }) # ,title2 = purrr::map_chr(title, ~gsub("\\{|\\}", "", .x))
     )
   return(prep_bibdf)
 }
@@ -137,145 +135,244 @@ print_bib <- function(bibdf) {
   # out <-
   #   bib_entries(file) %>%
   #   prep_bib(.)
-  # bibdf <- out
+  # # # bibdf <- out
   # bibdf <-
   #   out %>%
-  #   #   # filter(bibtype == "MastersThesis")
-  #   #   # filter(bibtype == "Article")
-  #   #   filter(bibtype == "Misc")
-  #   # filter(bibtype == "InCollection")
   #   filter(bibtype == "Article") %>%
-  #   filter(grepl("preprint", comment)) %>%
-  #   filter(is_year)
+  #   filter(grepl("dataset", comment))
+  # #   #   #   # filter(bibtype == "MastersThesis")
+  #   filter(bibtype == "Book")
+  # # filter(bibtype == "Misc")
+  # #   # filter(bibtype == "InCollection")
+  # #   filter(bibtype == "Article") %>%
+  # #   filter(grepl("preprint", comment)) %>%
+  # #   filter(is_year)
   # bibdf
   ######################
-  
-  
+
+
   if (!is.data.frame(bibdf) | !is_tibble(bibdf)) {
     stop("bibdf must be a dataframe.")
   } else {
     message("bibdf is ready to rumble")
   }
+
+  # combinacoes <- distinct(out, bibtype, comment) %>% arrange(bibtype)
+  # combinacoes
+
+
   bibtype <- unique(bibdf$bibtype)
   note <- unique(bibdf$note)
   url <- unique(bibdf$url)
   comment <- unique(bibdf$comment)
   
   if (bibtype == "Article") {
-    # ARTIGOS PUBLICADOS
+    #                             #
+    ### # ARTIGOS PUBLICADOS ----
+    #                             #
+    
+    #                             #
+    ### # NO DATAPAPER ----
+    #                             #
     if (!grepl("dataset|preprint", comment)) {
       # Se acabou de ser publicado e ainda nao possui numero do volume
       if (bibdf$pub_numb == "NA") {
         bib_out <-
           bibdf %>%
           dplyr::arrange(desc(year), authors_sep) %>%
-          glue::glue_data("(@) {authors_sep} {year_up}. {title}. _{journal}_.\\
+          glue::glue_data("(@) {authors_sep} {year_up}. {title}. _{journal}_. \\
         {doi_text}\\
 \n
 ")
-        # Publicacao normal, com NUMERO DO VOLUME
+        #                             #
+        ### Publicacao normal, com NUMERO DO VOLUME
+        #                             #
       } else {
         bib_out <-
           bibdf %>%
           dplyr::arrange(desc(year), authors_sep) %>%
           glue::glue_data(
-            "(@) {authors_sep} {year_up}. {title}. _{journal}_ {pub_numb}.\\
+            "(@) {authors_sep} {year_up}. {title}. _{journal}_ {pub_numb}. \\
         {doi_text}\\
 \n
 "
           )
       }
-      # PREPRINT
+      #                             #
+      ### PREPRINT ----
+      #                             #
     } else if (grepl("preprint", comment)) {
       bib_out <-
         bibdf %>%
         dplyr::arrange(desc(year), authors_sep) %>%
-        glue::glue_data("(@) {authors_sep} {year_up}. {title}. _{journal}_.\\
+        glue::glue_data("(@) {authors_sep} {year_up}. {title}. _{journal}_. \\
         {doi_text}\\
 \n
 ")
+      #                             #
+      ### # DATAPAPER ----
+      #                             #
     } else if (grepl("dataset", comment)) {
-      # se for conjunto de dados publicados em periodico!
       bib_out <-
         bibdf %>%
         dplyr::arrange(desc(year), authors_sep) %>%
-        # select(authors_sep, year_up)
         glue::glue_data(
-          "(1) {authors_sep} {year_up}. {title}. Dataset published by _{journal}_ {pub_numb}.\\
-            {doi_text} \\
+          "(@) {authors_sep} {year_up}. {title}. _{journal}_ {pub_numb}.\\
+        {doi_text}\\
 \n
 "
         )
     }
-    
+    #                             #
+    ### CAPITULO DE LIVROS ----
+    #                             #
   } else if (bibtype == "InCollection" && is.na(url)) {
     bib_out <-
       bibdf %>%
       dplyr::arrange(desc(year), authors_sep) %>%
       # select(authors_sep, year_up)
       glue::glue_data(
-        "(1) {authors_sep} {year_up}. {title}. In: {eds_sep} (Eds.) _{booktitle}_. {publisher}, {address}. Pp. {pages}. \\
+        "(@) {authors_sep} {year_up}. {title}. In: {eds_sep} (Eds.) _{booktitle}_. {publisher}, {address}. Pp. {pages}. \\
 \n
         "
       )
+    #                             #
+    ### CAPITULOS DE LIVROS ----
+    #                             #
   } else if (bibtype == "InCollection" && !is.na(url)) {
-    bib_out <-
-      bibdf %>%
-      # dplyr::arrange(desc(year), authors_sep) %>%
-      # select(authors_sep, year_up)
-      glue::glue_data(
-        "(1) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {publisher}, {address}. Available at: <{url}>. Accessed on {note}. \\
+    if (note == "portuguese") {
+      bib_out <-
+        bibdf %>%
+        # dplyr::arrange(desc(year), authors_sep) %>%
+        # select(authors_sep, year_up)
+        glue::glue_data(
+          "(@) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {publisher}, {address}. Disponível em: <{url}>. \\
 \n
         "
-      )
-  } else if (bibtype == "InProceedings") {
-    bib_out <-
-      bibdf %>%
-      dplyr::arrange(desc(year), authors_sep) %>%
-      # select(authors_sep, year_up)
-      glue::glue_data(
-        "(1) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {publisher}, {address}. \\
-        \n"
-      )
-  } else if (bibtype == "Misc" & note == "Dataset/Occurrence") {
-    bib_out <-
-      bibdf %>%
-      dplyr::arrange(desc(year), authors_sep) %>%
-      # select(authors_sep, year_up)
-      glue::glue_data(
-        "(1) {authors_sep} {year_up}. {title}. Dataset published by {howpublished}. Available for download at: {url}{doi_text} \\
-        \n"
-      )
-  } else if (bibtype == "Misc") {
-    if (note == "Dataset/Occurrence") {
+        )
+    } else {
       bib_out <-
         bibdf %>%
-        dplyr::mutate_at("year", as.numeric) %>%
-        dplyr::mutate_at("title", ~ gsub("^\\{|\\}$", "", .)) %>%
-        dplyr::arrange(desc(year), authors_sep) %>%
-        glue::glue_data("* {year}. {title} \\
-      \n")
-    } else if (any(note  %in% c("Documentario", "Interview"))) {
-      bib_out <-
-        bibdf %>%
-        dplyr::mutate_at("year", as.numeric) %>%
-        dplyr::mutate_at("title", ~ gsub("^\\{|\\}$", "", .)) %>%
-        dplyr::arrange(desc(year), authors_sep) %>%
-        glue::glue_data("* {year}. {title} \\
-      \n")
-      
+        # dplyr::arrange(desc(year), authors_sep) %>%
+        # select(authors_sep, year_up)
+        glue::glue_data(
+          "(@) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {publisher}, {address}. Available at: <{url}>. \\
+\n
+        "
+        )
     }
-    
-    
+    #                             #
+    ### LIVROS ----
+    #                             #
+  } else if (bibtype == "Book" && !is.na(url)) {
+    if (note == "portuguese") {
+      bib_out <-
+        bibdf %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        # select(authors_sep, year_up)
+        glue::glue_data(
+          "(@) {authors_sep} {year_up}. {title}. Disponível em: <{url}>. \\
+\n
+        "
+        )
+    } else {
+      bib_out <-
+        bibdf %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        # select(authors_sep, year_up)
+        glue::glue_data(
+          "(@) {authors_sep} {year_up}. {title}. Available at: <{url}>. \\
+\n
+        "
+        )
+    }
+    #                             #
+    ### RESUMOS ----
+    #                             #
+  } else if (bibtype == "InProceedings") {
+        bib_out <-
+          bibdf %>%
+          dplyr::arrange(desc(year), authors_sep) %>%
+          # select(authors_sep, year_up)
+          glue::glue_data(
+            "(@) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {address}. \\
+        \n"
+          )
+    #                             #
+    ### DATASETS WITHOUT DATAPAPER----
+    #                             #
+  } else if (grepl("dataset", comment)) {
+      bib_out <-
+        bibdf %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        # select(authors_sep, year_up)
+        glue::glue_data(
+          "(@) {authors_sep} {year_up}. {title}. Dataset published by {howpublished}. Available for download at: {url}{doi_text} \\
+        \n"
+        )
+    #                             #
+    ### DOCUMENTARIOS - ENTREVISTAS  ----
+    #                             #
+  } else if (bibtype == "Misc") {
+    if (any(note %in% c("Documentario", "Interview"))) {
+      bib_out <-
+        bibdf %>%
+        dplyr::mutate_at("year", as.numeric) %>%
+        dplyr::mutate_at("title", ~ gsub("^\\{|\\}$", "", .)) %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        glue::glue_data("* {title} {year}. \\
+      \n")
+    }
+    #                             #
+    ### Dissertacao MESTRADO ----
+    #                             #
   } else if (bibtype == "MastersThesis") {
-    bib_out <-
-      bibdf %>%
-      dplyr::arrange(desc(year), authors_sep) %>%
-      # select(authors_sep, year_up)
-      glue::glue_data(
-        "(1) {authors_sep} {year_up}. {title}. {school}, {address}, Brasil. Pp. {pages} \\
+    if (note == "portuguese") {
+      bib_out <-
+        bibdf %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        # select(authors_sep, year_up)
+        glue::glue_data(
+          "(@) {authors_sep} {year_up}. {title}. Dissertação de mestrado, {school}, {address}. Pp. {pages}. Disponível em: <{url}>. \\
       \n"
-      )
+        )
+    } else {
+      bib_out <-
+        bibdf %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        # select(authors_sep, year_up)
+        glue::glue_data(
+          "(@) {authors_sep} {year_up}. {title}. Master's Thesis, {school}, {address}, Brasil. Pp. {pages}. Available at: <{url}>. \\
+      \n"
+        )
+    }
+
+    #                             #
+    ### Tese de DOUTORADO ----
+    #                             #
+  } else if (bibtype == "PhdThesis") {
+    if (note == "portuguese") {
+      bib_out <-
+        bibdf %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        # select(authors_sep, year_up)
+        glue::glue_data(
+          "(@) {authors_sep} {year_up}. {title}. Tese de doutorado, {school}, {address}. Pp. {pages}. Disponível em: <{url}>. \\
+      \n"
+        )
+    } else {
+      bib_out <-
+        bibdf %>%
+        dplyr::arrange(desc(year), authors_sep) %>%
+        # select(authors_sep, year_up)
+        glue::glue_data(
+          "(@) {authors_sep} {year_up}. {title}. PhD thesis, {school}, {address}. Pp. {pages}. Available at: <{url}>. \\
+      \n"
+        )
+    }
+    #                             #
+    ### PARECERES
+    #                             #
   } else if (bibtype == "TechReport") {
     # revout$authors_sep
     # revout %>%
@@ -287,7 +384,7 @@ print_bib <- function(bibdf) {
       dplyr::mutate_at("year", as.numeric) %>%
       dplyr::mutate_at("title", ~ gsub("^\\{|\\}$", "", .)) %>%
       dplyr::arrange(desc(year), authors_sep) %>%
-      glue::glue_data("(1) {authors_sep} {year}. {title}. \\
+      glue::glue_data("(@) {authors_sep} {year}. {title}. \\
       \n")
   }
   # bibdf$bibtype
@@ -295,5 +392,6 @@ print_bib <- function(bibdf) {
   #   bibdf %>% names
   # bibdf$pages
   # bibdf %>% View
+  
   return(bib_out)
 }
