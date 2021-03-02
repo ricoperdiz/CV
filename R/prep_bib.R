@@ -1,20 +1,45 @@
+#' Limpa códigos LaTeX para texto simples.
+#'
+#' @param col Vetor de texto de tamanho 1 indicando o nome da coluna
+#'
+#' @return
+#' @export
+#'
+#' @examples
 clean_latex <- function(col) {
-  vetor <-
-    gsub("{\\'a}", "á", col, fixed = TRUE) %>%
-    gsub("{\\'e}", "é", ., fixed = TRUE) %>%
-    gsub("{\\'i}", "í", ., fixed = TRUE) %>%
-    gsub("\\'i", "í", ., fixed = TRUE) %>%
-    gsub("{\\'u}", "ú", ., fixed = TRUE) %>%
-    gsub("{\\^a}", "â", ., fixed = TRUE) %>%
-    gsub("{\\^e}", "ê", ., fixed = TRUE) %>%
-    gsub("{\\^o}", "ô", ., fixed = TRUE) %>%
-    gsub("{\\'o}", "ó", ., fixed = TRUE) %>%
-    gsub("{\\~a}", "ã", ., fixed = TRUE) %>%
-    gsub("\\cc", "ç", ., fixed = TRUE)
-  vetor <- gsub("\\{|\\}|\\\\textit", "", vetor)
+  vetor <- gsub("\\'a", "á", col, fixed = TRUE)
+  vetor <- gsub("\\'e", "é", vetor, fixed = TRUE)
+  vetor <- gsub("\\'i", "í", vetor, fixed = TRUE)
+  vetor <- gsub("\\'i", "í", vetor, fixed = TRUE)
+  vetor <- gsub("\\'u", "ú", vetor, fixed = TRUE)
+  vetor <- gsub("\\^a", "â", vetor, fixed = TRUE)
+  vetor <- gsub("\\^e", "ê", vetor, fixed = TRUE)
+  vetor <- gsub("\\^o", "ô", vetor, fixed = TRUE)
+  vetor <- gsub("\\'o", "ó", vetor, fixed = TRUE)
+  vetor <- gsub("\\~a", "ã", vetor, fixed = TRUE)
+  vetor <- gsub("\\~n", "ñ", vetor, fixed = TRUE)
+  vetor <- gsub("\\cc", "ç", vetor, fixed = TRUE)
+  vetor <- gsub("\\{|\\}|\\\\textit|\\\\textbf", "", vetor)
   return(vetor)
 }
 
+# Teste
+library("testit")
+assert('clean latex works', {
+  
+  (clean_latex("Francisco Farro{\\~n}ay") == "Francisco Farroñay")
+  
+  (clean_latex("Amorim, Andr{\\'e} M{\\'a}rcio") == "Amorim, André Márcio")
+})
+
+#' Quebra lista de autores em um vetor de texto
+#'
+#' @param authors 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 split_authors <- function(authors) {
   list_authors <-
     stringr::str_split(authors, " and ") %>%

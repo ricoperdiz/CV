@@ -1,0 +1,449 @@
+---
+name: Ricardo de Oliveira Perdiz
+position: "PhD in Botany"
+
+www: "ricardoperdiz.com"
+phone: +55 95 98126 2633
+email: "ricoperdiz@gmail.com"
+github: ricoperdiz
+twitter: ricoperdiz
+
+date: "`r format(lubridate::today(), '%B %Y')`"
+headcolor: 414141
+output: vitae::awesomecv
+---
+
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+
+```{r setup, include=FALSE}
+options(encoding = "UTF-8")
+# headcolor: "000088"
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(vitae)
+library(GetLattesData)
+library(RefManageR)
+library(glue)
+source("R/baretable.R")
+source("R/prep_bib.R")
+file <- "/Users/ricoperdiz/Documents/CV/pubs.bib"
+reviews <- "/Users/ricoperdiz/Documents/PROFISSIONAL/producao_cientifica/08_pareceres/reviews.bib"
+out <-
+  bib_entries(file) %>%
+  prep_bib(.)
+out$authors_sep[grep("BFG", out$author)] <- "{BFG} and **Perdiz, R. O.**"
+revout <-
+  bib_entries(reviews)
+```
+
+```{r lattes, include = FALSE, eval = FALSE}
+dados <- gld_get_lattes_data_from_zip("2115845365136873.zip")
+tpesq <- dados$tpesq
+```
+
+# Professional summary
+
+Experience in tropical botany, botanical surveys in the Amazon and Atlantic Forests, angiosperm taxonomy and systematics (especially Burseraceae, Caryocaraceae and Sapindaceae), interactive keys of identification, ecological data and metadata management, laboratory work (DNA extraction and library preparation for NGS), general computational and bioinformatics for data wrangling and analysis.
+
+# Professional data
+
+  * [Orcid](https://orcid.org/0000-0002-2333-6549) ![Orcid](/Users/ricoperdiz/Documents/CV/orcid_16x16.png){height=0.5%,width=0.05%}: [0000-0002-2333-6549](https://orcid.org/0000-0002-2333-6549)
+  * [Brazilian CNPq Lattes CV](http://lattes.cnpq.br/2115845365136873)
+  * [ResearchGate](https://www.researchgate.net/profile/Ricardo_Perdiz)
+
+# Academic Formation
+
+```{r degrees, results= 'asis'}
+tribble(
+  ~Period, ~Degree, ~Institution, ~region, ~country, ~why,
+  "2015--2019", "Ph.D.", "INPA", "Amazonas", "Brazil", "Thesis title: Species delimitation and phylogeography of the Protium aracouchini (Aubl.) Marchand species complex (Burseraceae);Funding: CNPq and CAPES;Partially executed in the University of California, Berkeley (UC Berkeley), EUA, with a CAPES scholarship;Supervisor: Paul V.A. Fine (UC Berkeley);Co-supervisors: Dr. Alberto Vicentini (INPA) and Dr. Douglas Daly (New York Botanical Garden, EUA)",
+  "2009--2011", "M.S.", "State University of Feira de Santana (UEFS)", "Bahia", "Brazil", "Dissertation title: Sapindaceae Juss. in remnants of montane forests in southern Bahia, Brazil;Funding: CNPq;Supervisor: Dr. André Amorim (UESC, Bahia, Brazil);Co-supervisor: Dra. María Silvia Ferrucci (IBONE, Corrientes, Argentina)",
+  "2005--2008", "B.Sc.", "State University of Santa Cruz (UESC)", "Bahia", "Brazil", "Undergraduate thesis title: Maxillariinae s.l. (Orchidaceae) em três remanescentes de florestas montanas no sul da Bahia, Brasil;Supervisor: Dr. André Amorim (UESC, Bahia, Brazil)"
+) %>%
+  separate_rows(why, sep = ";") %>%
+  detailed_entries(
+    what = Degree,
+    when = as.character(glue("{Period}")),
+    with = Institution,
+    where = glue("{region}, {country}"),
+    why = why
+  )
+```
+
+
+```{r degrees_byOrcid, eval = FALSE}
+myorcid <- "0000-0002-2333-6549"
+edu <- rorcid::orcid_educations(myorcid)
+edu[[myorcid]]$`education-summary` %>%
+  mutate_at("end-date.year.value", ~ ifelse(is.na(.x), "in progress", .x)) %>%
+  detailed_entries(
+    what = `role-title`,
+    when = glue::glue("{`start-date.year.value`}- {`end-date.year.value`}"),
+    with = organization.name,
+    where = organization.address.city
+  )
+```
+
+# Professional skills
+
+  * Field work and herbarium activities
+  * Plant identification of the Amazon flora, especially angiosperms
+  * Laboratory work - DNA extraction, PCR, library preparation for ddRADseq method
+  * General computational and data skills in bioinformatics
+  * Intermediate (Python, SQL) to advanced (R, bash) knowledge of programming languages for data science
+  * Advanced knowledge in reproducible reports using HTML, CSS, LaTeX, R Markdown, Markdown, Jupyter Notebooks and pandoc
+  * Advanced knowledge of Git for version-control system
+
+<!-- I could test my R package named NIRtools in class -->
+
+# Scientific Production
+
+## Research papers - published
+
+```{r research-papers, results="asis"}
+filter(out, bibtype == "Article") %>%
+  filter(!grepl("dataset|preprint", comment)) %>%
+  filter(is_year) %>%
+  print_bib(.) %>%
+  gsub("Journal_ \\.", "Journal_\\.", .) %>%
+  gsub("Brief_ \\.", "Brief_\\.", .) %>%
+  gsub("gicas_ \\.", "gicas_\\.", .) %>%
+  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
+  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  gsub("\\\\\'a", "á", .) %>%
+  gsub("\\\\\\^o", "ô", .) %>%
+  gsub("\\\\\\^a", "â", .) %>%
+  gsub("\\\\\\~a", "ã", .) %>%
+  gsub("\\. NA, NA\\.", "\\.", .) %>%
+  gsub(", NA\\.", "\\.", .)
+```
+
+## Research papers - in press
+
+```{r research-papers-in-press, results="asis"}
+filter(out, bibtype == "Article") %>%
+  filter(year_up == "in press") %>%
+  # mutate_at("year_up", ~ifelse(.x == "submitted", "submetido", .x)) %>%
+  print_bib(.) %>%
+  gsub("Journal_ \\.", "Journal_\\.", .) %>%
+  gsub("Brief_ \\.", "Brief_\\.", .) %>%
+  gsub("gicas_ \\.", "gicas_\\.", .) %>%
+  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
+  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  # gsub("Draper, F.", "Draper, F. and multiple authors [including **Perdiz, R. O.**]", .) %>%
+  gsub(" NA.", ".", .)
+```
+
+## Research papers - submitted
+
+```{r research-papers-submitted, results="asis"}
+filter(out, bibtype == "Article") %>%
+  filter(year_up == "submitted") %>%
+  # mutate_at("year_up", ~ifelse(.x == "submitted", "submetido", .x)) %>%
+  print_bib(.) %>%
+  gsub("Journal_ \\.", "Journal_\\.", .) %>%
+  gsub("Brief_ \\.", "Brief_\\.", .) %>%
+  gsub("gicas_ \\.", "gicas_\\.", .) %>%
+  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
+  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  # gsub("Draper, F.", "Draper, F. and multiple authors [including **Perdiz, R. O.**]", .) %>%
+  gsub(" NA.", ".", .)
+```
+
+## Preprints
+
+```{r preprint, results="asis"}
+filter(out, bibtype == "Article") %>%
+  filter(grepl("preprint", comment)) %>%
+  filter(is_year) %>%
+  print_bib(.) %>%
+  gsub("Journal_ \\.", "Journal_\\.", .) %>%
+  gsub("Brief_ \\.", "Brief_\\.", .) %>%
+  gsub("gicas_ \\.", "gicas_\\.", .) %>%
+  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
+  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  gsub("\\\\\'a", "á", .) %>%
+  gsub("\\\\\\^o", "ô", .) %>%
+  gsub("\\\\\\^a", "â", .) %>%
+  gsub("\\\\\\~a", "ã", .) %>%
+  gsub("\\. NA, NA\\.", "\\.", .) %>%
+  gsub(", NA\\.", "\\.", .)
+```
+
+## Online checklists
+
+```{r online-checklist,  results="asis"}
+filter(out, bibtype == "InCollection" & !is.na(url) & !grepl("portuguese", note)) %>%
+  print_bib(.) %>%
+  gsub("Journal_ \\.", "Journal_\\.", .) %>%
+  gsub("Brief_ \\.", "Brief_\\.", .) %>%
+  gsub("gicas_ \\.", "gicas_\\.", .) %>%
+  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
+  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  gsub("\\\\\'a", "á", .) %>%
+  gsub("\\\\\\^o", "ô", .) %>%
+  gsub("\\\\\\^a", "â", .) %>%
+  gsub("\\\\\\~a", "ã", .) %>%
+  gsub("\\\\\\~o", "õ", .) %>%
+  gsub("\\. NA, NA\\.", "\\.", .) %>%
+  gsub(", NA\\.", "\\.", .)
+```
+
+## Online book
+
+```{r book, results='asis'}
+filter(out, bibtype == "Book" & grepl("english", note)) %>%
+  print_bib(.) %>%
+  gsub("\\\\textit|\\{|\\}", "", .)
+```
+
+
+## Book chapters
+
+```{r book-chapters,  results="asis"}
+filter(out, bibtype == "InCollection" & is.na(url)) %>%
+  print_bib(.) %>%
+  gsub("Journal_ \\.", "Journal_\\.", .) %>%
+  gsub("Brief_ \\.", "Brief_\\.", .) %>%
+  gsub("gicas_ \\.", "gicas_\\.", .) %>%
+  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
+  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  gsub("\\\\\'a", "á", .) %>%
+  gsub("\\\\\\^o", "ô", .) %>%
+  gsub("\\\\\\^a", "â", .) %>%
+  gsub("\\\\\\~a", "ã", .) %>%
+  gsub("\\\\\\~o", "õ", .) %>%
+  gsub("\\. NA, NA\\.", "\\.", .) %>%
+  gsub(", NA\\.", "\\.", .)
+```
+
+## Datasets
+
+```{r datasets-paper, results = "asis"}
+filter(out, bibtype == "Article") %>%
+  filter(grepl("dataset", comment)) %>%
+  print_bib(.) %>%
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  gsub("\\\\\'a", "á", .)
+```
+
+
+```{r datasets-repo, results = "asis"}
+filter(out, bibtype == "Misc") %>%
+  filter(grepl("dataset", comment)) %>%
+  print_bib(.) %>%
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  gsub("\\\\\'a", "á", .)
+```
+
+## Scientific reviews
+
+```{r sci-rev, results = "asis"}
+filter(revout, (bibtype == "TechReport" & grepl("review", note))) %>%
+  print_bib(.)
+```
+
+## Master's thesis
+
+```{r master-thesis,  results="asis"}
+filter(out, bibtype == "MastersThesis" & grepl("english", note)) %>%
+  print_bib(.) %>%
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  gsub("\\\\\'a", "á", .) %>%
+  gsub("Brasil", "Brazil", .)
+```
+
+## PhD Thesis
+
+```{r PhD-thesis, results="asis"}
+filter(out, bibtype == "PhdThesis" & grepl("english", note)) %>%
+  print_bib(.) %>%
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  gsub("\\\\\'a", "á", .)
+```
+
+## Proceedings
+
+```{r proceedings,  results="asis"}
+filter(out, bibtype == "InProceedings") %>%
+  print_bib(.) %>%
+  # acentos
+  gsub("\\\\textit|\\{|\\}", "", .) %>%
+  # acentos
+  gsub("\\\\\'e", "é", .) %>%
+  gsub("\\\\\\^e", "ê", .) %>%
+  gsub("\\\\\'o", "ó", .) %>%
+  gsub("\\\\\'a", "á", .) %>%
+  gsub("\\\\\\^o", "ô", .) %>%
+  gsub("\\\\\\^a", "â", .) %>%
+  gsub("\\\\\\~a", "ã", .) %>%
+  gsub("\\. NA\\.", "\\.", .)
+```
+
+# Awards and Achievements
+
+## Fellowships & Grants
+
+```{r awards-grants, results = 'asis'}
+awards <-
+  tribble(
+    ~Year, ~Award, ~Amount,
+    2015, "Alwyn H. Gentry Fellowship for Latin American Botanists, Missouri Botanical Garden, St. Louis MO", "--",
+    2016, "José Cuatrecasas Fellowship Award", "US\\$3000",
+    2017, "ASPT Research Grant for Graduate students", "US\\$800",
+    2018, "IAPT Research Grant", "US\\$2000"
+  )
+baretable(awards)
+# brief_entries(
+#   what = Award,
+#   when = Year,
+#   with =
+# )
+# baretable(align='llll',
+#           hline.after=c(0,NROW(.)),
+#           size="\\fontsize{10}{16}",
+#           add.to.row=list(
+#             pos=as.list(seq(NROW(.))),
+#             command=rep("\\\\[-0.2cm]",NROW(.))))
+```
+
+# Teaching experience
+
+```{r teaching_experience, results='asis'}
+tribble(
+  ~year, ~role, ~institution, ~region, ~pais, ~why,
+  "6--17 Apr 2020", "Teacher in BOT-89 \\textit{Preparação de dados para análise estatística  e Introdução ao uso de linguagem R}", "Programa de Pós-graduação em Ciências Biológicas (Botânica) INPA", "Amazonas", "Brazil", "Teachers:  Dr. Alberto Vicentini (INPA) and myself;This course provides skills for students dealing with basic R operations and perform exploratory data analysis in their datasets",
+  "21--30 Jan 2020", "Teacher in \\textit{Técnicas de coleta e identificação botânica de espécies arbóreas da Amazônia}", "EMBRAPA", "Roraima", "Brazil", "Teachers:  Dr. Ricardo de Oliveira Perdiz, M.Sc. Herison Medeiros, Bachelor Daniel Silva, and Adriano Souza;Course done in collaboration with EMBRAPA-Roraima, Brazil; Lessons ranging botanical collections, basic knowledge of plant morphology, good pratices in collecting and documenting botanical collections, and taxonomy and systematics of neotropical woody angiosperms, with special emphasis on how to identify plant families and genera through the use of vegetative characters",
+  "19--30 Nov 2018", "Graduate teaching assistant in \\textit{Uso de espectroscopia para reconhecimento da Biodiversidade}", "Programa de Pós-graduação em Ciências Biológicas (Botânica) INPA", "Amazonas", "Brazil", "Teacher: Dra. Flávia Durgante (INPA)",
+  "2016-2017", "Graduate teaching assistant in BOT-89 \\textit{Preparação de dados para análise estatística  e Introdução ao uso de linguagem R}", "Programa de Pós-graduação em Ciências Biológicas (Botânica) INPA", "Amazonas", "Brazil", "Teacher: Dr. Alberto Vicentini (INPA);Check the \\href{http://www.botanicaamazonica.wiki.br/labotam/doku.php?id=disciplinas:bot89:inicio}{website}",
+  "9--13 Nov 2015", "Graduate teaching assistant in PRN 235 \\textit{Preparação de dados para análise estatística}", "Programa de Pós-graduação em Recursos Naturais, UFRR, Brazil", "Roraima", "Brazil", "Teacher: Dr. Reinaldo Imbrozio Barbosa (INPA), Lidiany Carvalho (UFRR);Assisted students in dealing with R environment;Actively contributed to lecture course design through meetings with instructor;Created a \\href{http://www.botanicaamazonica.wiki.br/labotam/doku.php?id=alunos:r.perdiz:disciplina:inicio}{website} to help students in learning R",
+  "8--16 Aug 2013", "Organizer and teacher of field course called \\textit{Métodos de herborização e identificação de angiospermas neotropicais arbóreas, com ênfase nos caracteres vegetativos}", "Centro de Estudos da Biodiversidade Amazônica (CENBAM)", "Roraima", "Brazil", "Course done in collaboration with Programa de Pós-graduação in Natural Resources from Federal University of Roraima (PRONAT UFRR), Brazil;Lessons of taxonomy and systematics of neotropical woody angiosperms, with special emphasis on how to identify plant families and genera through the use of vegetative characters"
+) %>%
+  separate_rows(why, sep = ";") %>%
+  detailed_entries(
+    what = role,
+    when = year,
+    with = institution,
+    where = glue("{region}, {pais}"),
+    why = why,
+    .protect = FALSE
+  )
+```
+
+# Professional experience
+
+* PPBio Data Repository manager, Regional Center Roraima, Centro de Estudos Integrados da Biodiversidade Amazônica - CENBAM. Project funded by the National Council for Scientific and Technological Development (CNPq), Brazil. Period: 2011--2014.
+
+<!-- # Current memberships -->
+
+  <!-- * Member, American Society of Plant Taxonomists (ASPT) -->
+  <!-- * Member, International Association for Plant Taxonomy (IAPT) -->
+
+# Media appearance and interviews
+
+```{r media, results = "asis"}
+filter(revout, bibtype == "Misc" & note == "Interview" | bibtype == "Misc" & note == "Documentary") %>%
+  filter(grepl("engl", comment)) %>%
+  print_bib(.)
+```
+
+# Certifications
+
+```{r}
+tribble(
+  ~period, ~title, ~who, ~where,
+  "Mar 2019", "\\href{http://coursera.org/verify/GSS6YV4VMABV}{Python for Data Science}", "IBM", "Coursera",
+  "Feb 2019", "\\href{http://coursera.org/verify/6GK8A8662Z7C}{Data Science Methodology}", "IBM", "Coursera",
+  "Feb 2019", "\\href{http://coursera.org/verify/WF46AQV8XSME}{Open Source tools for Data Science}", "IBM", "Coursera",
+  "Feb 2019", "\\href{http://coursera.org/verify/QU8KJ9AZVFND}{What is Data Science}", "IBM", "Coursera"
+) %>%
+  detailed_entries(
+    what = title,
+    when = as.character(period),
+    with = who,
+    where = where,
+    .protect = FALSE
+  )
+```
+
+
+# Software (R packages)
+
+```{r r_packages}
+tribble(
+  ~Year, ~Author, ~Name, ~URL,
+  "In development", "Perdiz, R.O.", "NIRtools: Tools to deal with near infrared (NIR) spectroscopy data", "github.com/ricoperdiz/NIRtools"
+) %>%
+  detailed_entries(
+    with = Name,
+    what = "R package for dealing with NIR spectroscopy data and providing wraper functions for turning NIR data analysis easier.",
+    when = as.character(glue("{Year}")),
+    where = URL,
+    why = "Lead developer"
+    # .open = "<", .close = ">"),
+    # .protect = FALSE
+  )
+```
+
+
+# References
+
+Dr. Alberto Vicentini  
+Instituto Nacional de Pesquisas da Amazônia, Amazonas, Brazil (INPA)  
+Email: <vicentini.beto@gmail.com>  
+
+Dr. Paul Fine  
+University of California, Berkeley  
+Email: <paulfine@berkeley.edu>  
+
+Dr. Douglas C. Daly  
+New York Botanical Garden (NYBG)  
+Email: <douglas.daly@gmail.com>  
