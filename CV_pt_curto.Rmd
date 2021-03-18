@@ -289,57 +289,6 @@ filter(revout, (bibtype == "TechReport" & grepl("pares", note))) %>%
   print_bib(.)
 ```
 
-## Pareceres para a Lista Vermelha da IUCN
-
-```{r iucn, results = "asis"}
-filter(revout, (bibtype == "Article" & grepl("iucn", comment))) %>% 
-  print_bib(.)
-```
-
-## Dissertação de mestrado
-
-```{r master-thesis, results="asis"}
-filter(out, bibtype == "MastersThesis" & grepl("portuguese", note)) %>%
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .)
-```
-
-## Tese de doutorado
-
-```{r PhD-thesis, results="asis"}
-filter(out, bibtype == "PhdThesis" & grepl("portuguese", note)) %>%
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .)
-```
-
-## Resumos
-<!-- ## Proceedings -->
-
-```{r proceedings,  results="asis"}
-filter(out, bibtype == "InProceedings") %>%
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("\\\\\\^o", "ô", .) %>%
-  gsub("\\\\\\^a", "â", .) %>%
-  gsub("\\\\\\~a", "ã", .) %>%
-  gsub("\\. NA\\.", "\\.", .)
-```
-
 # Prêmios e conquistas
 
 ## Financiamentos e bolsas de estudo

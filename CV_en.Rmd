@@ -58,9 +58,9 @@ Experience in tropical botany, botanical surveys in the Amazon and Atlantic Fore
 ```{r degrees, results= 'asis'}
 tribble(
   ~Period, ~Degree, ~Institution, ~region, ~country, ~why,
-  "2015--2019", "Ph.D.", "INPA", "Amazonas", "Brazil", "Thesis title: Species delimitation and phylogeography of the Protium aracouchini (Aubl.) Marchand species complex (Burseraceae);Funding: CNPq and CAPES;Partially executed in the University of California, Berkeley (UC Berkeley), EUA, with a CAPES scholarship;Supervisor: Paul V.A. Fine (UC Berkeley);Co-supervisors: Dr. Alberto Vicentini (INPA) and Dr. Douglas Daly (New York Botanical Garden, EUA)",
-  "2009--2011", "M.S.", "State University of Feira de Santana (UEFS)", "Bahia", "Brazil", "Dissertation title: Sapindaceae Juss. in remnants of montane forests in southern Bahia, Brazil;Funding: CNPq;Supervisor: Dr. André Amorim (UESC, Bahia, Brazil);Co-supervisor: Dra. María Silvia Ferrucci (IBONE, Corrientes, Argentina)",
-  "2005--2008", "B.Sc.", "State University of Santa Cruz (UESC)", "Bahia", "Brazil", "Undergraduate thesis title: Maxillariinae s.l. (Orchidaceae) em três remanescentes de florestas montanas no sul da Bahia, Brasil;Supervisor: Dr. André Amorim (UESC, Bahia, Brazil)"
+  "2015--2019", "Ph.D. in Botany", "INPA", "Amazonas", "Brazil", "Thesis title: Species delimitation and phylogeography of the Protium aracouchini (Aubl.) Marchand species complex (Burseraceae);Funding: CNPq and CAPES;Partially executed in the University of California, Berkeley (UC Berkeley), EUA, with a CAPES scholarship;Supervisor: Paul V.A. Fine (UC Berkeley);Co-supervisors: Dr. Alberto Vicentini (INPA) and Dr. Douglas Daly (New York Botanical Garden, EUA)",
+  "2009--2011", "M.S. in Botany", "State University of Feira de Santana (UEFS)", "Bahia", "Brazil", "Dissertation title: Sapindaceae Juss. in remnants of montane forests in southern Bahia, Brazil;Funding: CNPq;Supervisor: Dr. André Amorim (UESC, Bahia, Brazil);Co-supervisor: Dra. María Silvia Ferrucci (IBONE, Corrientes, Argentina)",
+  "2005--2008", "B.Sc. in Biological Sciences", "State University of Santa Cruz (UESC)", "Bahia", "Brazil", "Undergraduate thesis title: Maxillariinae s.l. (Orchidaceae) em três remanescentes de florestas montanas no sul da Bahia, Brasil;Supervisor: Dr. André Amorim (UESC, Bahia, Brazil)"
 ) %>%
   separate_rows(why, sep = ";") %>%
   detailed_entries(
@@ -280,6 +280,13 @@ filter(out, bibtype == "Misc") %>%
 
 ```{r sci-rev, results = "asis"}
 filter(revout, (bibtype == "TechReport" & grepl("review", note))) %>%
+  print_bib(.)
+```
+
+## IUCN Red List Assessments
+
+```{r iucn, results = "asis"}
+filter(revout, (bibtype == "Article" & grepl("iucn", comment))) %>% 
   print_bib(.)
 ```
 
