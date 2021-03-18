@@ -26,7 +26,6 @@ clean_latex <- function(col) {
 # Teste
 library("testit")
 assert('clean latex works', {
-  
   (clean_latex("Francisco Farro{\\~n}ay") == "Francisco Farroñay")
   
   (clean_latex("Amorim, Andr{\\'e} M{\\'a}rcio") == "Amorim, André Márcio")
@@ -34,35 +33,78 @@ assert('clean latex works', {
 
 #' Quebra lista de autores em um vetor de texto
 #'
-#' @param authors 
+#' @param authors
 #'
 #' @return
 #' @export
 #'
 #' @examples
 split_authors <- function(authors) {
-  list_authors <-
-    stringr::str_split(authors, " and ") %>%
-    lapply(., function(x) {
-      sapply(x, function(x) {
-        names <- stringr::str_split(x, pattern = " ")
-        sapply(names, function(x) {
-          maxnames <- length(x)
-          lastname <- x[maxnames]
-          othernames <-
-            x[-maxnames] %>%
-            sapply(., function(x) {
-              substr(x, 1, 1) %>%
-                paste0(., ".")
-            }) %>%
-            glue::glue_collapse(., sep = " ")
-          outnames <- glue::glue(lastname, othernames, .sep = ", ")
-        })
-      })
-    })
-  return(list_authors)
+  list_authors <- stringr::str_split(authors, " and ")
+  list_authors_collapsed <- NULL
+  for (i in seq_along(list_authors)) {
+    # i = 30
+    one_row_author <- list_authors[[i]]
+    one_row_author_split <-
+      vapply(one_row_author, split_author_names, list(1))
+    collapsed <- lapply(one_row_author_split, collapse_author_names)
+    list_authors_collapsed <-
+      c(list_authors_collapsed, list(collapsed))
+  }
+  return(list_authors_collapsed)
 }
+split_author_names <- function(one_row_author) {
+  if (any(grepl("\\{", one_row_author))) {
+    pos <- grep("\\{", one_row_author)
+    list_of_names <- NULL
+    for (i in seq_along(one_row_author)) {
+      # i = 3
+      if (!i %in% pos) {
+        list_of_names_simple <-
+          stringr::str_split(one_row_author[i], pattern = " ")
+        list_of_names <- c(list_of_names, list_of_names_simple)
+      } else {
+        list_of_names_simple <-
+          stringr::str_split(one_row_author[i], pattern = "\\{") %>%
+          unlist(.) %>%
+          gsub("\\}", "", .) %>%
+          list(.)
+        list_of_names <- c(list_of_names, list_of_names_simple)
+      }
+    }
+    
+    return(list_of_names)
+  } else {
+    list_of_names <- stringr::str_split(one_row_author, pattern = " ")
+    return(list_of_names)
+  }
+  
+  
+}
+prepare_first_names <- function(first_names) {
+  extract_first_letters <- substr(first_names, 1, 1)
+  res <- paste0(extract_first_letters, ".")
+  return(res)
+}
+collapse_author_names <- function(author_names_split) {
+  maxnames <- length(author_names_split)
+  lastname <- author_names_split[maxnames]
+  othernames <-
+    glue::glue_collapse(
+      vapply(
+        author_names_split[-maxnames],
+        FUN =  prepare_first_names,
+        FUN.VALUE = character(1)
+      ),
+      sep = " "
+    )
+  outnames <- glue::glue(lastname, othernames, .sep = ", ")
+  return(outnames)
+}
+
+
 bib_entries <- function(file) {
+  # reviews <- "/Users/ricoperdiz/Documents/PROFISSIONAL/producao_cientifica/08_pareceres/reviews.bib"
   bib <-
     RefManageR::ReadBib(file, check = FALSE)
   family <-
@@ -81,7 +123,7 @@ bib_entries <- function(file) {
       glue::glue_collapse(x, sep = ", ", last = " & ")
     })
   out$authors_sep <-
-    gsub("Perdiz, R. O.", "**Perdiz, R. O.**", out$authors_sep)
+    gsub("Perdiz, R. O.|Perdiz, R.", "**Perdiz, R. O.**", out$authors_sep)
   # Editors
   if (any(is.na(unique(out$editor)))) {
     out$eds_sep <- out$editor
@@ -92,18 +134,24 @@ bib_entries <- function(file) {
         glue::glue_collapse(x, sep = ", ", last = " & ")
       })
   }
-
+  
   return(out)
 }
 prep_bib <- function(out) {
   # Teste # Comentar apos testar
-  # out = bib_entries(file)
+  # out = bib_entries(reviews)
   # out %>% View
   # ########
-
+  if ("volume"  %in% colnames(out)) {
+    df_input <- mutate(out,
+                       volume = "",
+                       number = "")
+  } else {
+    df_input <- out
+  }
   prep_bibdf <-
-    out %>%
     dplyr::mutate(
+      df_input,
       pub_numb = purrr::pmap_chr(list(bibtype, volume, number, pages), function(bibtype, volume, number, pages) {
         if (bibtype == "Article") {
           if (!is.na(number) & !is.na(pages)) {
@@ -158,13 +206,14 @@ prep_bib <- function(out) {
 print_bib <- function(bibdf) {
   # Teste # Comentar depois de testar #####
   # out <-
-  #   bib_entries(file) %>%
+  #   bib_entries(reviews) %>%
   #   prep_bib(.)
-  # # # bibdf <- out
+  # # # # bibdf <- out
   # bibdf <-
   #   out %>%
   #   filter(bibtype == "Article") %>%
-  #   filter(grepl("dataset", comment))
+  #   filter((bibtype == "Article" & grepl("iucn", comment)))
+  #
   # #   #   #   # filter(bibtype == "MastersThesis")
   #   filter(bibtype == "Book")
   # # filter(bibtype == "Misc")
@@ -174,18 +223,19 @@ print_bib <- function(bibdf) {
   # #   filter(is_year)
   # bibdf
   ######################
-
-
+  
+  # bibdf <- dad
+  
   if (!is.data.frame(bibdf) | !is_tibble(bibdf)) {
     stop("bibdf must be a dataframe.")
   } else {
     message("bibdf is ready to rumble")
   }
-
+  
   # combinacoes <- distinct(out, bibtype, comment) %>% arrange(bibtype)
   # combinacoes
-
-
+  
+  
   bibtype <- unique(bibdf$bibtype)
   note <- unique(bibdf$note)
   url <- unique(bibdf$url)
@@ -197,9 +247,9 @@ print_bib <- function(bibdf) {
     #                             #
     
     #                             #
-    ### # NO DATAPAPER ----
+    ### # SEM DATAPAPER ----
     #                             #
-    if (!grepl("dataset|preprint", comment)) {
+    if (!grepl("dataset|preprint|iucn", comment)) {
       # Se acabou de ser publicado e ainda nao possui numero do volume
       if (bibdf$pub_numb == "NA") {
         bib_out <-
@@ -235,7 +285,7 @@ print_bib <- function(bibdf) {
 \n
 ")
       #                             #
-      ### # DATAPAPER ----
+      ### # COM DATAPAPER ----
       #                             #
     } else if (grepl("dataset", comment)) {
       bib_out <-
@@ -247,6 +297,19 @@ print_bib <- function(bibdf) {
 \n
 "
         )
+      #                             #
+      ### IUCN ----
+      #                             #
+    } else if (grepl("iucn", comment)) {
+      # if (!"pub_numb"  %in% colnames(bibdf)) {
+        bib_out <-
+          bibdf %>%
+          dplyr::arrange(desc(year), authors_sep) %>%
+          glue::glue_data("(@) {authors_sep} {year}. _{title}_. _{journal}_ {year}: {pages}.\\
+        https://doi.org/{doi}\\
+\n
+")
+      # }
     }
     #                             #
     ### CAPITULO DE LIVROS ----
@@ -295,46 +358,40 @@ print_bib <- function(bibdf) {
         bibdf %>%
         dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
-        glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. Disponível em: <{url}>. \\
+        glue::glue_data("(@) {authors_sep} {year_up}. {title}. Disponível em: <{url}>. \\
 \n
-        "
-        )
+        ")
     } else {
       bib_out <-
         bibdf %>%
         dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
-        glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. Available at: <{url}>. \\
+        glue::glue_data("(@) {authors_sep} {year_up}. {title}. Available at: <{url}>. \\
 \n
-        "
-        )
+        ")
     }
     #                             #
     ### RESUMOS ----
     #                             #
   } else if (bibtype == "InProceedings") {
-        bib_out <-
-          bibdf %>%
-          dplyr::arrange(desc(year), authors_sep) %>%
-          # select(authors_sep, year_up)
-          glue::glue_data(
-            "(@) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {address}. \\
-        \n"
-          )
+    bib_out <-
+      bibdf %>%
+      dplyr::arrange(desc(year), authors_sep) %>%
+      # select(authors_sep, year_up)
+      glue::glue_data("(@) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {address}. \\
+        \n")
     #                             #
     ### DATASETS WITHOUT DATAPAPER----
     #                             #
   } else if (grepl("dataset", comment)) {
-      bib_out <-
-        bibdf %>%
-        dplyr::arrange(desc(year), authors_sep) %>%
-        # select(authors_sep, year_up)
-        glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. Dataset published by {howpublished}. Available for download at: {url}{doi_text} \\
+    bib_out <-
+      bibdf %>%
+      dplyr::arrange(desc(year), authors_sep) %>%
+      # select(authors_sep, year_up)
+      glue::glue_data(
+        "(@) {authors_sep} {year_up}. {title}. Dataset published by {howpublished}. Available for download at: {url}{doi_text} \\
         \n"
-        )
+      )
     #                             #
     ### DOCUMENTARIOS - ENTREVISTAS  ----
     #                             #
@@ -371,7 +428,7 @@ print_bib <- function(bibdf) {
       \n"
         )
     }
-
+    
     #                             #
     ### Tese de DOUTORADO ----
     #                             #
