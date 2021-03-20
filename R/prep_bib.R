@@ -142,19 +142,20 @@ prep_bib <- function(out) {
   # out = bib_entries(reviews)
   # out %>% View
   # ########
-  if ("volume"  %in% colnames(out)) {
+  if (!"volume"  %in% colnames(out)) {
     df_input <- mutate(out,
                        volume = "",
                        number = "")
   } else {
     df_input <- out
   }
+  
   prep_bibdf <-
     dplyr::mutate(
       df_input,
       pub_numb = purrr::pmap_chr(list(bibtype, volume, number, pages), function(bibtype, volume, number, pages) {
         if (bibtype == "Article") {
-          if (!is.na(number) & !is.na(pages)) {
+          if (!is.na(number) && !is.na(pages)) {
             pub_numb_pre <-
               glue::glue("{volume}({number}): {pages}")
           } else if (is.na(number) & !is.na(pages)) {
@@ -197,7 +198,7 @@ prep_bib <- function(out) {
         if (is.na(doi)) {
           return(glue::glue(""))
         } else {
-          return(glue::glue("{doi}"))
+          return(glue::glue("https://doi.org/{doi}"))
         }
       }) # ,title2 = purrr::map_chr(title, ~gsub("\\{|\\}", "", .x))
     )
@@ -208,11 +209,11 @@ print_bib <- function(bibdf) {
   # out <-
   #   bib_entries(reviews) %>%
   #   prep_bib(.)
-  # # # # bibdf <- out
+  # bibdf <- out
   # bibdf <-
   #   out %>%
-  #   filter(bibtype == "Article") %>%
-  #   filter((bibtype == "Article" & grepl("iucn", comment)))
+  # #   filter(bibtype == "Article") %>%
+  #   filter((bibtype == "Article" & grepl("dataset", comment)))
   #
   # #   #   #   # filter(bibtype == "MastersThesis")
   #   filter(bibtype == "Book")
@@ -247,7 +248,7 @@ print_bib <- function(bibdf) {
     #                             #
     
     #                             #
-    ### # SEM DATAPAPER ----
+    ### # SEM DATAPAPER PREPRINT IUCN DATAPAPER----
     #                             #
     if (!grepl("dataset|preprint|iucn", comment)) {
       # Se acabou de ser publicado e ainda nao possui numero do volume
@@ -285,7 +286,7 @@ print_bib <- function(bibdf) {
 \n
 ")
       #                             #
-      ### # COM DATAPAPER ----
+      ### # COM DATAPAPER PREPRINT IUCN DATAPAPER ----
       #                             #
     } else if (grepl("dataset", comment)) {
       bib_out <-
