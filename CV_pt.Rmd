@@ -261,6 +261,7 @@ filter(out, bibtype == "InCollection" & is.na(url)) %>%
 ```{r datasets-paper, results = "asis"}
 filter(out, bibtype == "Article") %>%
   filter(grepl("dataset", comment)) %>%
+  mutate(note = "portuguese") %>% 
   print_bib(.) %>%
   gsub("\\\\textit|\\{|\\}", "", .) %>%
   # acentos
@@ -273,6 +274,7 @@ filter(out, bibtype == "Article") %>%
 ```{r datasets-repo, results = "asis"}
 filter(out, bibtype == "Misc") %>%
   filter(grepl("dataset", comment)) %>%
+  mutate(note = "portuguese") %>% 
   print_bib(.) %>%
   gsub("\\\\textit|\\{|\\}", "", .) %>%
   # acentos
