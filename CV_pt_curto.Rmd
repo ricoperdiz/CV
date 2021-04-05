@@ -106,189 +106,85 @@ edu[[myorcid]]$`education-summary` %>%
 ## Artigos científicos publicados
 
 ```{r research-papers, results="asis"}
-filter(out, bibtype == "Article") %>%
-  filter(!grepl("dataset|preprint", comment)) %>%
-  filter(is_year) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("\\\\\\^o", "ô", .) %>%
-  gsub("\\\\\\^a", "â", .) %>%
-  gsub("\\\\\\~a", "ã", .) %>%
-  gsub("\\. NA, NA\\.", "\\.", .) %>%
-  gsub(", NA\\.", "\\.", .)
+art_pub <- 
+  filter(out, bibtype == "Article") %>%
+  filter(!grepl("dataset|preprint|iucn", comment)) %>%
+  filter(is_year) %>% 
+  arrange(desc(year))
+print_published_data(art_pub)
 ```
 
 ## Artigos científicos no prelo
 
 ```{r research-papers-in-press, results="asis"}
-filter(out, bibtype == "Article") %>%
+art_press <- 
+  filter(out, bibtype == "Article") %>%
   filter(year_up == "in press") %>%
-  mutate_at("year_up", ~ ifelse(.x == "in press", "no prelo", .x)) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub(" NA.", ".", .)
+  mutate_at("year_up", ~ ifelse(.x == "in press", "*No prelo*", .x))
+print_published_data(art_press)
 ```
 
 ## Artigos científicos submetidos
 
 ```{r research-papers-submitted, results="asis"}
-filter(out, bibtype == "Article") %>%
+art_subm <- 
+  filter(out, bibtype == "Article") %>%
   filter(year_up == "submitted") %>%
-  mutate_at("year_up", ~ ifelse(.x == "submitted", "submetido", .x)) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  # gsub("Draper, F.", "Draper, F. e múltiplos autores [incluindo **Perdiz, R. O.**]", .) %>%
-  gsub(" NA.", ".", .)
+  mutate_at("year_up", ~ ifelse(.x == "submitted", "*Submetido*", .x))
+print_published_data(art_subm)
 ```
-
 
 ## Pré-publicação
 
 ```{r preprint, results="asis"}
-filter(out, bibtype == "Article") %>%
-  filter(grepl("preprint", comment)) %>%
-  filter(is_year) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("\\\\\\^o", "ô", .) %>%
-  gsub("\\\\\\^a", "â", .) %>%
-  gsub("\\\\\\~a", "ã", .) %>%
-  gsub("\\. NA, NA\\.", "\\.", .) %>%
-  gsub(", NA\\.", "\\.", .)
+art_preprint <- 
+  filter(out, bibtype == "Article") %>%
+  filter(grepl("preprint", comment))
+print_published_data(art_preprint)
 ```
 
 ## Catálogos digitais online
 
 ```{r online-checklist,  results="asis"}
-filter(out, bibtype == "InCollection" & !is.na(url) & grepl("portuguese", note)) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("\\\\\\^o", "ô", .) %>%
-  gsub("\\\\\\^a", "â", .) %>%
-  gsub("\\\\\\~a", "ã", .) %>%
-  gsub("\\\\\\~o", "õ", .) %>%
-  gsub("\\. NA, NA\\.", "\\.", .) %>%
-  gsub(", NA\\.", "\\.", .)
+online_chklst <- 
+  filter(out, bibtype == "InCollection" & !is.na(url) & grepl("portuguese", note))
+print_published_data(online_chklst)
 ```
-
-<!-- Colli-Silva M, Medeiros H, Obermüller FA, Antar G, Amorim AM, Perdiz R, Lima HC, Gil ASB, Secco R, Lima DF, Almeida T, Delprete PG, Pederneiras L, Moraes PRL, Alves-Araújo AG, Koch I, Lohmann LG, Mello-Silva R, Viana PL, Goldenberg R, Daly D, Forzza RC. 2020. Lista de espécies de plantas vasculares da Estação Ecológica de Maracá. In: Catálogo de Plantas das Unidades de Conservação do Brasil. Jardim Botânico do Rio de Janeiro. Available at: [https://catalogo-ucs-brasil.jbrj.gov.br]. Accessed on Sep 14 2020.   -->
 
 ## Livro digital
 
 ```{r book, results='asis'}
-filter(out, bibtype == "Book" & grepl("portuguese", note)) %>%
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .)
+book <- 
+  filter(out, bibtype == "Book" & grepl("portuguese", note))
+print_published_data(book)
 ```
 
-
 ## Capítulo de livro
-<!-- ## Book chapters -->
 
 ```{r book-chapters, results="asis"}
-filter(out, bibtype == "InCollection" & is.na(url)) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("\\\\\\^o", "ô", .) %>%
-  gsub("\\\\\\^a", "â", .) %>%
-  gsub("\\\\\\~a", "ã", .) %>%
-  gsub("\\\\\\~o", "õ", .) %>%
-  gsub("\\. NA, NA\\.", "\\.", .) %>%
-  gsub(", NA\\.", "\\.", .)
+book_chp <- 
+  filter(out, bibtype == "InCollection" & is.na(url))
+print_published_data(book_chp)
 ```
 
 ## Conjunto de dados
-<!-- ## Datasets -->
 
-```{r datasets-paper, results = "asis"}
-filter(out, bibtype == "Article") %>%
+```{r datasets, results = "asis"}
+dsets <- 
+  filter(out, grepl("Article|Misc", bibtype)) %>%
   filter(grepl("dataset", comment)) %>%
   mutate(note = "portuguese") %>% 
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .)
-```
-
-```{r datasets-repo, results = "asis"}
-filter(out, bibtype == "Misc") %>%
-  filter(grepl("dataset", comment)) %>%
-  mutate(note = "portuguese") %>% 
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .)
+  arrange(desc(year))
+print_published_data(dsets)
 ```
 
 ## Pareceres científicos
 
 ```{r sci-rev, results = "asis"}
-filter(revout, (bibtype == "TechReport" & grepl("pares", note))) %>%
-  print_bib(.)
+pareceres <- 
+  filter(revout, (bibtype == "TechReport" & grepl("pares", note))) %>%
+  arrange(desc(year))
+print_published_data(pareceres, fix_accent = FALSE)
 ```
 
 # Prêmios e conquistas
@@ -354,9 +250,11 @@ tribble(
 # Aparições em mídias e entrevistas
 
 ```{r media, results = "asis"}
-filter(revout, bibtype == "Misc" & note == "entrevista" | bibtype == "Misc" & note == "Documentario") %>%
-  filter(grepl("port", comment)) %>%
-  print_bib(.)
+media_appear <- 
+  filter(revout, bibtype == "Misc" & note == "entrevista" | bibtype == "Misc" & note == "Documentario") %>%
+  filter(grepl("port", comment)) %>% 
+  arrange(desc(year))
+print_published_data(media_appear, fix_accent = FALSE)
 ```
 
 # Certificações
@@ -397,6 +295,7 @@ tribble(
   )
 ```
 
+```{r, eval = FALSE, include = FALSE}
 # Referências
 
 Dr. Alberto Vicentini  
@@ -410,3 +309,5 @@ Email: <paulfine@berkeley.edu>
 Dr. Douglas C. Daly  
 New York Botanical Garden (NYBG)  
 Email: <douglas.daly@gmail.com>  
+```
+

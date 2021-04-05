@@ -408,7 +408,7 @@ print_bib <- function(bibdf) {
     ### DOCUMENTARIOS - ENTREVISTAS  ----
     #                             #
   } else if (bibtype == "Misc") {
-    if (any(note %in% c("Documentario", "Interview"))) {
+    if (any(note %in% c("Documentario", "documentario", "Documentary", "documentary","Interview", "interview","entrevista", "Entrevista"))) {
       bib_out <-
         bibdf %>%
         dplyr::mutate_at("year", as.numeric) %>%
@@ -489,3 +489,50 @@ print_bib <- function(bibdf) {
   
   return(bib_out)
 }
+
+print_bib_data <- function(bib_data, fix_accent = TRUE) {
+  if (fix_accent) {
+    res <- 
+      print_bib(bib_data) %>%
+      fix_accent_papers(.)
+    return(res)
+  } else {
+    res <- 
+      print_bib(bib_data)
+    return(res)
+  }
+  
+}
+
+fix_accent_papers <- function(glued_text) {
+  res <- 
+    gsub("Journal_ \\.", "Journal_\\.", glued_text) %>%
+    gsub("Brief_ \\.", "Brief_\\.", .) %>%
+    gsub("gicas_ \\.", "gicas_\\.", .) %>%
+    gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
+    gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
+    gsub("\\\\textit|\\{|\\}", "", .) %>%
+    # acentos
+    gsub("\\\\\'e", "é", .) %>%
+    gsub("\\\\\\^e", "ê", .) %>%
+    gsub("\\\\\'o", "ó", .) %>%
+    gsub("\\\\\'a", "á", .) %>%
+    gsub("\\\\\\^o", "ô", .) %>%
+    gsub("\\\\\\^a", "â", .) %>%
+    gsub("\\\\\\~a", "ã", .) %>%
+    gsub("\\. NA, NA\\.", "\\.", .) %>%
+    gsub(", NA\\.", "\\.", .) %>% 
+    gsub(" NA.", ".", .)
+  return(res)
+}
+print_published_data <- function(published_data, ...) {
+  # published_data = media_appear
+  published_data_glued <- data.frame(texto = rep(NA, nrow(published_data)))
+  for (i in seq_along(published_data$bibtype)) {
+    # i = 1
+    published_data_glued$texto[i] <- print_bib_data(published_data[i,], ...)
+  }
+  published_data_glued %>% 
+    glue::glue_data("{texto}")
+}
+

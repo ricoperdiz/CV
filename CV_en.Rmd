@@ -72,7 +72,6 @@ tribble(
   )
 ```
 
-
 ```{r degrees_byOrcid, eval = FALSE}
 myorcid <- "0000-0002-2333-6549"
 edu <- rorcid::orcid_educations(myorcid)
@@ -103,238 +102,115 @@ edu[[myorcid]]$`education-summary` %>%
 ## Research papers - published
 
 ```{r research-papers, results="asis"}
-filter(out, bibtype == "Article") %>%
-  filter(!grepl("dataset|preprint", comment)) %>%
-  filter(is_year) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("\\\\\\^o", "ô", .) %>%
-  gsub("\\\\\\^a", "â", .) %>%
-  gsub("\\\\\\~a", "ã", .) %>%
-  gsub("\\. NA, NA\\.", "\\.", .) %>%
-  gsub(", NA\\.", "\\.", .)
+art_pub <- 
+  filter(out, bibtype == "Article") %>%
+  filter(!grepl("dataset|preprint|iucn", comment)) %>%
+  filter(is_year) %>% 
+  arrange(desc(year))
+print_published_data(art_pub)
 ```
 
 ## Research papers - in press
 
 ```{r research-papers-in-press, results="asis"}
-filter(out, bibtype == "Article") %>%
-  filter(year_up == "in press") %>%
-  # mutate_at("year_up", ~ifelse(.x == "submitted", "submetido", .x)) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  # gsub("Draper, F.", "Draper, F. and multiple authors [including **Perdiz, R. O.**]", .) %>%
-  gsub(" NA.", ".", .)
+art_press <- 
+  filter(out, bibtype == "Article") %>%
+  filter(year_up == "in press") %>% 
+  mutate_at("year_up", ~ ifelse(.x == "in press", "*In press*", .x))
+print_published_data(art_press)
 ```
 
 ## Research papers - submitted
 
 ```{r research-papers-submitted, results="asis"}
-filter(out, bibtype == "Article") %>%
-  filter(year_up == "submitted") %>%
-  # mutate_at("year_up", ~ifelse(.x == "submitted", "submetido", .x)) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  # gsub("Draper, F.", "Draper, F. and multiple authors [including **Perdiz, R. O.**]", .) %>%
-  gsub(" NA.", ".", .)
+art_subm <- 
+  filter(out, bibtype == "Article") %>%
+  filter(year_up == "submitted") %>% 
+  mutate_at("year_up", ~ ifelse(.x == "submitted", "*Submitted*", .x))
+print_published_data(art_subm)
 ```
 
 ## Preprints
 
 ```{r preprint, results="asis"}
-filter(out, bibtype == "Article") %>%
-  filter(grepl("preprint", comment)) %>%
-  filter(is_year) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("\\\\\\^o", "ô", .) %>%
-  gsub("\\\\\\^a", "â", .) %>%
-  gsub("\\\\\\~a", "ã", .) %>%
-  gsub("\\. NA, NA\\.", "\\.", .) %>%
-  gsub(", NA\\.", "\\.", .)
+art_preprint <- 
+  filter(out, bibtype == "Article") %>%
+  filter(grepl("preprint", comment))
+print_published_data(art_preprint)
 ```
 
 ## Online checklists
 
 ```{r online-checklist,  results="asis"}
-filter(out, bibtype == "InCollection" & !is.na(url) & !grepl("portuguese", note)) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("\\\\\\^o", "ô", .) %>%
-  gsub("\\\\\\^a", "â", .) %>%
-  gsub("\\\\\\~a", "ã", .) %>%
-  gsub("\\\\\\~o", "õ", .) %>%
-  gsub("\\. NA, NA\\.", "\\.", .) %>%
-  gsub(", NA\\.", "\\.", .)
+online_chklst <- 
+  filter(out, bibtype == "InCollection" & !is.na(url) & grepl("english", note))
+print_published_data(online_chklst)
 ```
 
 ## Online book
 
 ```{r book, results='asis'}
-filter(out, bibtype == "Book" & grepl("english", note)) %>%
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .)
+book <- 
+  filter(out, bibtype == "Book" & grepl("english", note))
+print_published_data(book)
 ```
-
 
 ## Book chapters
 
 ```{r book-chapters,  results="asis"}
-filter(out, bibtype == "InCollection" & is.na(url)) %>%
-  print_bib(.) %>%
-  gsub("Journal_ \\.", "Journal_\\.", .) %>%
-  gsub("Brief_ \\.", "Brief_\\.", .) %>%
-  gsub("gicas_ \\.", "gicas_\\.", .) %>%
-  gsub("_Nature_ \\.", "_Nature_\\.", .) %>%
-  gsub("Ciências_ \\.", "Ciências_\\.", .) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("\\\\\\^o", "ô", .) %>%
-  gsub("\\\\\\^a", "â", .) %>%
-  gsub("\\\\\\~a", "ã", .) %>%
-  gsub("\\\\\\~o", "õ", .) %>%
-  gsub("\\. NA, NA\\.", "\\.", .) %>%
-  gsub(", NA\\.", "\\.", .)
+book_chp <- 
+  filter(out, bibtype == "InCollection" & is.na(url))
+print_published_data(book_chp)
 ```
 
 ## Datasets
 
-```{r datasets-paper, results = "asis"}
-filter(out, bibtype == "Article") %>%
+```{r datasets, results = "asis"}
+dsets <- 
+  filter(out, grepl("Article|Misc", bibtype)) %>%
   filter(grepl("dataset", comment)) %>%
-  mutate(note = "english") %>% 
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .)
-```
-
-
-```{r datasets-repo, results = "asis"}
-filter(out, bibtype == "Misc") %>%
-  filter(grepl("dataset", comment)) %>%
-  mutate(note = "english") %>% 
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .)
+  mutate(note = "english") %>%
+  arrange(desc(year))
+print_published_data(dsets)
 ```
 
 ## Scientific reviews
 
 ```{r sci-rev, results = "asis"}
-filter(revout, (bibtype == "TechReport" & grepl("review", note))) %>%
-  print_bib(.)
+pareceres <- 
+  filter(revout, (bibtype == "TechReport" & grepl("review", note))) %>%
+  arrange(desc(year))
+print_published_data(pareceres, fix_accent = FALSE)
 ```
 
 ## IUCN Red List Assessments
 
 ```{r iucn, results = "asis"}
-filter(revout, (bibtype == "Article" & grepl("iucn", comment))) %>% 
-  print_bib(.)
+iucn_review <- 
+  filter(revout, (bibtype == "Article" & grepl("iucn", comment)))
+print_published_data(iucn_review)
 ```
 
 ## Master's thesis
 
 ```{r master-thesis,  results="asis"}
-filter(out, bibtype == "MastersThesis" & grepl("english", note)) %>%
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("Brasil", "Brazil", .)
+master_th <- 
+  filter(out, bibtype == "MastersThesis" & grepl("english", note))
+print_published_data(master_th)
 ```
 
 ## PhD Thesis
 
 ```{r PhD-thesis, results="asis"}
-filter(out, bibtype == "PhdThesis" & grepl("english", note)) %>%
-  print_bib(.) %>%
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .)
+phd_th <- filter(out, bibtype == "PhdThesis" & grepl("english", note))
+print_published_data(phd_th)
 ```
 
 ## Proceedings
 
 ```{r proceedings,  results="asis"}
-filter(out, bibtype == "InProceedings") %>%
-  print_bib(.) %>%
-  # acentos
-  gsub("\\\\textit|\\{|\\}", "", .) %>%
-  # acentos
-  gsub("\\\\\'e", "é", .) %>%
-  gsub("\\\\\\^e", "ê", .) %>%
-  gsub("\\\\\'o", "ó", .) %>%
-  gsub("\\\\\'a", "á", .) %>%
-  gsub("\\\\\\^o", "ô", .) %>%
-  gsub("\\\\\\^a", "â", .) %>%
-  gsub("\\\\\\~a", "ã", .) %>%
-  gsub("\\. NA\\.", "\\.", .)
+proceedings <- filter(out, bibtype == "InProceedings")
+print_published_data(proceedings)
 ```
 
 # Awards and Achievements
@@ -351,17 +227,6 @@ awards <-
     2018, "IAPT Research Grant", "US\\$2000"
   )
 baretable(awards)
-# brief_entries(
-#   what = Award,
-#   when = Year,
-#   with =
-# )
-# baretable(align='llll',
-#           hline.after=c(0,NROW(.)),
-#           size="\\fontsize{10}{16}",
-#           add.to.row=list(
-#             pos=as.list(seq(NROW(.))),
-#             command=rep("\\\\[-0.2cm]",NROW(.))))
 ```
 
 # Teaching experience
@@ -399,9 +264,11 @@ tribble(
 # Media appearance and interviews
 
 ```{r media, results = "asis"}
-filter(revout, bibtype == "Misc" & note == "Interview" | bibtype == "Misc" & note == "Documentary") %>%
-  filter(grepl("engl", comment)) %>%
-  print_bib(.)
+media_appear <- 
+  filter(revout, bibtype == "Misc" & note == "Interview" | bibtype == "Misc" & note == "Documentary") %>%
+  filter(grepl("port", comment)) %>% 
+  arrange(desc(year))
+print_published_data(media_appear, fix_accent = FALSE)
 ```
 
 # Certifications
