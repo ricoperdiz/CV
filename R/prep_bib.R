@@ -256,7 +256,7 @@ print_bib <- function(bibdf) {
         bib_out <-
           bibdf %>%
           dplyr::arrange(desc(year), authors_sep) %>%
-          glue::glue_data("(@) {authors_sep} {year_up}. {title}. _{journal}_.  \\
+          glue::glue_data("{authors_sep} {year_up}. {title}. _{journal}_.  \\
         {doi_text}\\
 \n
 ")
@@ -268,7 +268,7 @@ print_bib <- function(bibdf) {
           bibdf %>%
           dplyr::arrange(desc(year), authors_sep) %>%
           glue::glue_data(
-            "(@) {authors_sep} {year_up}. {title}. _{journal}_ {pub_numb}.  \\
+            "{authors_sep} {year_up}. {title}. _{journal}_ {pub_numb}.  \\
         {doi_text}\\
 \n
 "
@@ -281,7 +281,7 @@ print_bib <- function(bibdf) {
       bib_out <-
         bibdf %>%
         dplyr::arrange(desc(year), authors_sep) %>%
-        glue::glue_data("(@) {authors_sep} {year_up}. {title}. _{journal}_.  \\
+        glue::glue_data("{authors_sep} {year_up}. {title}. _{journal}_.  \\
         {doi_text}\\
 \n
 ")
@@ -293,7 +293,7 @@ print_bib <- function(bibdf) {
         bibdf %>%
         dplyr::arrange(desc(year), authors_sep) %>%
         glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. _{journal}_ {pub_numb}.  \\
+          "{authors_sep} {year_up}. {title}. _{journal}_ {pub_numb}.  \\
         {doi_text}\\
 \n
 "
@@ -306,7 +306,7 @@ print_bib <- function(bibdf) {
         bib_out <-
           bibdf %>%
           dplyr::arrange(desc(year), authors_sep) %>%
-          glue::glue_data("(@) {authors_sep} {year}. _{title}_. _{journal}_ {year}: {pages}.  \\
+          glue::glue_data("{authors_sep} {year}. _{title}_. _{journal}_ {year}: {pages}.  \\
         https://doi.org/{doi}\\
 \n
 ")
@@ -321,7 +321,7 @@ print_bib <- function(bibdf) {
       dplyr::arrange(desc(year), authors_sep) %>%
       # select(authors_sep, year_up)
       glue::glue_data(
-        "(@) {authors_sep} {year_up}. {title}. In: {eds_sep} (Eds.) _{booktitle}_. {publisher}, {address}. Pp. {pages}.  \\
+        "{authors_sep} {year_up}. {title}. In: {eds_sep} (Eds.) _{booktitle}_. {publisher}, {address}. Pp. {pages}.  \\
 \n
         "
       )
@@ -335,7 +335,7 @@ print_bib <- function(bibdf) {
         # dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
         glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {publisher}, {address}. Disponível em: <{url}>.  \\
+          "{authors_sep} {year_up}. {title}. In: _{booktitle}_. {publisher}, {address}. Disponível em: <{url}>.  \\
 \n
         "
         )
@@ -345,7 +345,7 @@ print_bib <- function(bibdf) {
         # dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
         glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {publisher}, {address}. Available at: <{url}>.  \\
+          "{authors_sep} {year_up}. {title}. In: _{booktitle}_. {publisher}, {address}. Available at: <{url}>.  \\
 \n
         "
         )
@@ -359,7 +359,7 @@ print_bib <- function(bibdf) {
         bibdf %>%
         dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
-        glue::glue_data("(@) {authors_sep} {year_up}. {title}. Disponível em: <{url}>.  \\
+        glue::glue_data("{authors_sep} {year_up}. {title}. Disponível em: <{url}>.  \\
 \n
         ")
     } else {
@@ -367,7 +367,7 @@ print_bib <- function(bibdf) {
         bibdf %>%
         dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
-        glue::glue_data("(@) {authors_sep} {year_up}. {title}. Available at: <{url}>.  \\
+        glue::glue_data("{authors_sep} {year_up}. {title}. Available at: <{url}>.  \\
 \n
         ")
     }
@@ -379,7 +379,7 @@ print_bib <- function(bibdf) {
       bibdf %>%
       dplyr::arrange(desc(year), authors_sep) %>%
       # select(authors_sep, year_up)
-      glue::glue_data("(@) {authors_sep} {year_up}. {title}. In: _{booktitle}_. {address}.  \\
+      glue::glue_data("{authors_sep} {year_up}. {title}. In: _{booktitle}_. {address}.  \\
         \n")
     #                             #
     ### DATASETS WITHOUT DATAPAPER----
@@ -391,7 +391,7 @@ print_bib <- function(bibdf) {
         dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
         glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. Conjunto de dados publicado por {howpublished}. Disponível para baixar em: <{doi_text}>.  \\
+          "{authors_sep} {year_up}. {title}. Conjunto de dados publicado por {howpublished}. Disponível para baixar em: <{doi_text}>.  \\
         \n"
         )
     } else {
@@ -400,7 +400,7 @@ print_bib <- function(bibdf) {
         dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
         glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. Dataset published by {howpublished}. Available for download at: <{doi_text}>.  \\
+          "{authors_sep} {year_up}. {title}. Dataset published by {howpublished}. Available for download at: <{doi_text}>.  \\
         \n"
         )
     }
@@ -427,7 +427,7 @@ print_bib <- function(bibdf) {
         dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
         glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. Dissertação de mestrado, {school}, {address}. Pp. {pages}. Disponível em: <{url}>.  \\
+          "{authors_sep} {year_up}. {title}. Dissertação de mestrado, {school}, {address}. Pp. {pages}. Disponível em: <{url}>.  \\
       \n"
         )
     } else {
@@ -436,7 +436,7 @@ print_bib <- function(bibdf) {
         dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
         glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. Master's Thesis, {school}, {address}, Brasil. Pp. {pages}. Available at: <{url}>.  \\
+          "{authors_sep} {year_up}. {title}. Master's Thesis, {school}, {address}, Brasil. Pp. {pages}. Available at: <{url}>.  \\
       \n"
         )
     }
@@ -451,7 +451,7 @@ print_bib <- function(bibdf) {
         dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
         glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. Tese de doutorado, {school}, {address}. Pp. {pages}. Disponível em: <{url}>.  \\
+          "{authors_sep} {year_up}. {title}. Tese de doutorado, {school}, {address}. Pp. {pages}. Disponível em: <{url}>.  \\
       \n"
         )
     } else {
@@ -460,7 +460,7 @@ print_bib <- function(bibdf) {
         dplyr::arrange(desc(year), authors_sep) %>%
         # select(authors_sep, year_up)
         glue::glue_data(
-          "(@) {authors_sep} {year_up}. {title}. PhD thesis, {school}, {address}. Pp. {pages}. Available at: <{url}>.  \\
+          "{authors_sep} {year_up}. {title}. PhD thesis, {school}, {address}. Pp. {pages}. Available at: <{url}>.  \\
       \n"
         )
     }
@@ -478,7 +478,7 @@ print_bib <- function(bibdf) {
       dplyr::mutate_at("year", as.numeric) %>%
       dplyr::mutate_at("title", ~ gsub("^\\{|\\}$", "", .)) %>%
       dplyr::arrange(desc(year), authors_sep) %>%
-      glue::glue_data("(@) {authors_sep} {year}. {title}.  \\
+      glue::glue_data("{authors_sep} {year}. {title}.  \\
       \n")
   }
   # bibdf$bibtype
@@ -525,14 +525,35 @@ fix_accent_papers <- function(glued_text) {
     gsub(" NA.", ".", .)
   return(res)
 }
-print_published_data <- function(published_data, ...) {
-  # published_data = media_appear
-  published_data_glued <- data.frame(texto = rep(NA, nrow(published_data)))
-  for (i in seq_along(published_data$bibtype)) {
-    # i = 1
-    published_data_glued$texto[i] <- print_bib_data(published_data[i,], ...)
+print_published_data <-
+  function(published_data, list_type = "numbered", ...) {
+    # published_data = media_appear
+    published_data_glued <-
+      data.frame(texto = rep(NA, nrow(published_data)))
+    
+    if (list_type == "numbered") {
+      for (i in seq_along(published_data$bibtype)) {
+        # i = 1
+        published_data_glued$texto[i] <-
+          glue::glue("{i}. {print_bib_data(published_data[i,], ...)}")
+      }
+      published_data_glued %>%
+        glue::glue_data("{texto}")
+    } else if (list_type == "bullet") {
+      for (i in seq_along(published_data$bibtype)) {
+        # i = 1
+        published_data_glued$texto[i] <-
+          glue::glue("* {print_bib_data(published_data[i,], ...)}")
+      }
+      published_data_glued %>%
+        glue::glue_data("{texto}")
+    } else if (list_type == "as_is") {
+      for (i in seq_along(published_data$bibtype)) {
+        # i = 1
+        published_data_glued$texto[i] <-
+          print_bib_data(published_data[i, ], ...)
+      }
+      published_data_glued %>%
+        glue::glue_data("{texto}")
+    }
   }
-  published_data_glued %>% 
-    glue::glue_data("{texto}")
-}
-

@@ -56,7 +56,6 @@ Experiência em botânica tropical, inventários florestais na Amazônia e Mata 
   * [CNPq Lattes](http://lattes.cnpq.br/2115845365136873)
   * [ResearchGate](https://www.researchgate.net/profile/Ricardo_Perdiz)
 
-
 # Formação acadêmica
 
 ```{r degrees, results= 'markup'}
@@ -76,7 +75,6 @@ tribble(
     why = why
   )
 ```
-
 
 ```{r degrees_byOrcid, eval = FALSE}
 myorcid <- "0000-0002-2333-6549"
@@ -114,9 +112,8 @@ art_pub <-
 print_published_data(art_pub)
 ```
 
+```{r research-papers-in-press, results="asis", include = FALSE}
 ## Artigos científicos no prelo
-
-```{r research-papers-in-press, results="asis"}
 art_press <- 
   filter(out, bibtype == "Article") %>%
   filter(year_up == "in press") %>%
@@ -133,7 +130,6 @@ art_subm <-
   mutate_at("year_up", ~ ifelse(.x == "submitted", "*Submetido*", .x))
 print_published_data(art_subm)
 ```
-
 
 ## Pré-publicação
 
@@ -160,12 +156,12 @@ book <-
 print_published_data(book)
 ```
 
-
 ## Capítulo de livro
 
 ```{r book-chapters, results="asis"}
 book_chp <- 
-  filter(out, bibtype == "InCollection" & is.na(url))
+  filter(out, bibtype == "InCollection" & is.na(url)) %>% 
+  arrange(desc(year))
 print_published_data(book_chp)
 ```
 
@@ -193,7 +189,8 @@ print_published_data(pareceres, fix_accent = FALSE)
 
 ```{r iucn, results = "asis"}
 iucn_review <- 
-  filter(revout, (bibtype == "Article" & grepl("iucn", comment)))
+  filter(revout, (bibtype == "Article" & grepl("iucn", comment))) %>% 
+  arrange(desc(year))
 print_published_data(iucn_review)
 ```
 
@@ -213,10 +210,11 @@ print_published_data(phd_th)
 ```
 
 ## Resumos
-<!-- ## Proceedings -->
 
 ```{r proceedings,  results="asis"}
-proceedings <- filter(out, bibtype == "InProceedings")
+proceedings <- 
+  filter(out, bibtype == "InProceedings") %>% 
+  arrange(desc(year))
 print_published_data(proceedings)
 ```
 
@@ -228,10 +226,10 @@ print_published_data(proceedings)
 awards <-
   tribble(
     ~Year, ~Award, ~Amount,
-    2015, "Alwyn H. Gentry Fellowship for Latin American Botanists, Missouri Botanical Garden, St. Louis MO", "--",
-    2016, "José Cuatrecasas Fellowship Award", "US\\$3000",
+    2018, "IAPT Research Grant", "US\\$2000",
     2017, "ASPT Research Grant for Graduate students", "US\\$800",
-    2018, "IAPT Research Grant", "US\\$2000"
+    2016, "José Cuatrecasas Fellowship Award", "US\\$3000",
+    2015, "Alwyn H. Gentry Fellowship for Latin American Botanists, Missouri Botanical Garden, St. Louis MO", "--"
   )
 baretable(awards)
 ```
@@ -276,7 +274,7 @@ media_appear <-
   filter(revout, bibtype == "Misc" & note == "entrevista" | bibtype == "Misc" & note == "Documentario") %>%
   filter(grepl("port", comment)) %>% 
   arrange(desc(year))
-print_published_data(media_appear, fix_accent = FALSE)
+print_published_data(media_appear, list_type = "as_is", fix_accent = FALSE)
 ```
 
 # Certificações
@@ -297,7 +295,6 @@ tribble(
     .protect = FALSE
   )
 ```
-
 
 # Software (pacotes de R)
 

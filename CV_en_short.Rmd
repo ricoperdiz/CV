@@ -110,9 +110,9 @@ art_pub <-
 print_published_data(art_pub)
 ```
 
-## Research papers - in press
 
-```{r research-papers-in-press, results="asis"}
+```{r research-papers-in-press, results="asis", include = FALSE}
+## Research papers - in press
 art_press <- 
   filter(out, bibtype == "Article") %>%
   filter(year_up == "in press") %>% 
@@ -249,9 +249,9 @@ tribble(
 ```{r media, results = "asis"}
 media_appear <- 
   filter(revout, bibtype == "Misc" & note == "Interview" | bibtype == "Misc" & note == "Documentary") %>%
-  filter(grepl("port", comment)) %>% 
+  filter(grepl("engl", comment)) %>% 
   arrange(desc(year))
-print_published_data(media_appear, fix_accent = FALSE)
+print_published_data(media_appear, list_type = "as_is", fix_accent = FALSE)
 ```
 
 # Certifications
@@ -272,7 +272,6 @@ tribble(
     .protect = FALSE
   )
 ```
-
 
 # Software (R packages)
 

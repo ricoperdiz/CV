@@ -110,9 +110,9 @@ art_pub <-
 print_published_data(art_pub)
 ```
 
-## Research papers - in press
 
-```{r research-papers-in-press, results="asis"}
+```{r research-papers-in-press, results="asis", include = FALSE}
+## Research papers - in press
 art_press <- 
   filter(out, bibtype == "Article") %>%
   filter(year_up == "in press") %>% 
@@ -209,7 +209,9 @@ print_published_data(phd_th)
 ## Proceedings
 
 ```{r proceedings,  results="asis"}
-proceedings <- filter(out, bibtype == "InProceedings")
+proceedings <- 
+  filter(out, bibtype == "InProceedings") %>% 
+  arrange(desc(year))
 print_published_data(proceedings)
 ```
 
@@ -221,10 +223,10 @@ print_published_data(proceedings)
 awards <-
   tribble(
     ~Year, ~Award, ~Amount,
-    2015, "Alwyn H. Gentry Fellowship for Latin American Botanists, Missouri Botanical Garden, St. Louis MO", "--",
-    2016, "José Cuatrecasas Fellowship Award", "US\\$3000",
+    2018, "IAPT Research Grant", "US\\$2000",
     2017, "ASPT Research Grant for Graduate students", "US\\$800",
-    2018, "IAPT Research Grant", "US\\$2000"
+    2016, "José Cuatrecasas Fellowship Award", "US\\$3000",
+    2015, "Alwyn H. Gentry Fellowship for Latin American Botanists, Missouri Botanical Garden, St. Louis MO", "--"
   )
 baretable(awards)
 ```
@@ -266,9 +268,9 @@ tribble(
 ```{r media, results = "asis"}
 media_appear <- 
   filter(revout, bibtype == "Misc" & note == "Interview" | bibtype == "Misc" & note == "Documentary") %>%
-  filter(grepl("port", comment)) %>% 
+  filter(grepl("engl", comment)) %>% 
   arrange(desc(year))
-print_published_data(media_appear, fix_accent = FALSE)
+print_published_data(media_appear, list_type = "as_is", fix_accent = FALSE)
 ```
 
 # Certifications
@@ -308,7 +310,6 @@ tribble(
     # .protect = FALSE
   )
 ```
-
 
 # References
 
