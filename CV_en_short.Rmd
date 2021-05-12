@@ -110,13 +110,13 @@ art_pub <-
 print_published_data(art_pub)
 ```
 
-
-```{r research-papers-in-press, results="asis", include = FALSE}
 ## Research papers - in press
+
+```{r research-papers-in-press, results="asis", include = TRUE}
 art_press <- 
   filter(out, bibtype == "Article") %>%
-  filter(year_up == "in press") %>% 
-  mutate_at("year_up", ~ ifelse(.x == "in press", "*In press*", .x))
+  filter(grepl("in press|accepted", year_up)) %>% 
+  mutate_at("year_up", ~ ifelse(grepl("in press|accepted", .x), "*In press*", .x))
 print_published_data(art_press)
 ```
 
