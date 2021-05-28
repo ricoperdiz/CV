@@ -1,0 +1,265 @@
+---
+name: Ricardo de Oliveira Perdiz
+position: "Doutor em Ciências Biológicas (Botânica)"
+
+phone: +55 95 98126 2633
+www: "ricardoperdiz.com"
+email: "ricoperdiz@gmail.com"
+github: ricoperdiz
+twitter: ricoperdiz
+
+lang: pt-br
+date: "`r Sys.Date()`"
+headcolor: 414141
+output: vitae::awesomecv
+---
+
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+
+```{r setup, include=FALSE}
+options(encoding = "UTF-8")
+# headcolor: "000088"
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library("tidyverse")
+library("vitae")
+library("GetLattesData")
+library("RefManageR")
+library("glue")
+source("/Users/ricoperdiz/Documents/CV/R/baretable.R")
+source("/Users/ricoperdiz/Documents/CV/R/prep_bib.R")
+file <- "/Users/ricoperdiz/Documents/CV/pubs.bib"
+reviews <- "/Users/ricoperdiz/Documents/PROFISSIONAL/producao_cientifica/08_pareceres/reviews.bib"
+out <-
+  bib_entries(file) %>%
+  prep_bib(.)
+out$authors_sep[grep("BFG", out$author)] <- "{BFG} and **Perdiz, R. O.**"
+revout <-
+  bib_entries(reviews)
+```
+
+```{r lattes, include = FALSE, eval = FALSE}
+dados <- gld_get_lattes_data_from_zip("2115845365136873.zip")
+tpesq <- dados$tpesq
+```
+
+# Sumário profissional
+
+<!-- Sou particularmente interessado na evolução, taxonomia e sistemática de plantas com flores, e possuo muita experiência em inventários botânicos na Amazônia e na Floresta Atlântica. Minha pesquisa botânica é mais focada em um grupo de plantas conhecidas na Amazônia como breus, plantas de elevada diversidade e abundância na Amazônia, família a qual sou responsável pelo tratamento taxonômico para o Brasil no projeto [Flora do Brasil 2020](http://floradobrasil.jbrj.gov.br/reflora/listaBrasil/PrincipalUC/PrincipalUC.do), em conjunto com o Dr. Douglas Daly (NYBG). Desenvolvi habilidades relacionadas ao manejo de linguagens de programação e bancos de dados. Recentemente defendi minha tese de doutorado junto ao  Programa de Pós-graduação em Ciências Biológicas (Botânica) do Instituto Nacional de Pesquisas da Amazônia (INPA). -->
+
+Experiência teórica e prática em botânica tropical, inventários florestais na Amazônia e Mata Atlântica, sistemática e taxonomia de angiospermas (foco intenso nas famílias Burseraceae, Caryocaraceae, e Sapindaceae), chaves interativas de identificação, gestão de dados e metadados ecológicos, trabalho de laboratório (extração de DNA e preparação de bibliotecas para sequenciamento de nova geração), domínio de linguagens de programação na bioinformática para manejo e análise de dados, e em metodologia científica.  
+
+# Dados profissionais
+
+  * [Orcid](https://orcid.org/0000-0002-2333-6549) ![Orcid](/Users/ricoperdiz/Documents/CV/orcid_16x16.png){height=0.5%,width=0.05%}: [0000-0002-2333-6549](https://orcid.org/0000-0002-2333-6549)
+  * [CNPq Lattes](http://lattes.cnpq.br/2115845365136873)
+  * [ResearchGate](https://www.researchgate.net/profile/Ricardo_Perdiz)
+
+
+# Formação acadêmica
+
+```{r degrees, results= 'markup'}
+tribble(
+  ~Período, ~Grau, ~Instituição, ~regiao, ~pais, ~why,
+  "2015--2019", "Doutorado em Ciências Biológicas (Botânica)", "INPA", "Amazonas", "Brasil", "Título da tese: Delimitação de espécies e filogeografia do complexo Protium aracouchini (Aubl.) Marchand (Burseraceae);Financiamento: CNPq e CAPES;Parte do doutorado executada na Universidade da Califórnia, Berkeley (UC Berkeley), EUA, como parte de doutorado sanduíche financiado pela CAPES;Orientador: Paul V.A. Fine (UC Berkeley);Coorientadores: Dr. Alberto Vicentini (INPA) e Dr. Douglas Daly (New York Botanical Garden, EUA)",
+  "2009--2011", "Mestrado em Botânica", "Universidade Estadual de Feira de Santana (UEFS)", "Bahia", "Brasil", "Título da dissertação: Sapindaceae Juss. em remanescentes de floresta montana no sul da Bahia, Brasil;Financiamento: CNPq;Orientador: Dr. André Amorim (UESC, Bahia, Brasil);Coorientadora: Dra. María Silvia Ferrucci (IBONE, Corrientes, Argentina)",
+  "2005--2008", "Bacharelado em Ciências Biológicas", "Universidade Estadual de Santa Cruz (UESC)", "Bahia", "Brasil", "Título da monografia de conclusão de curso: Maxillariinae s.l. (Orchidaceae) em três remanescentes de florestas montanas no sul da Bahia, Brasil;Orientador: Dr. André Amorim (UESC, Bahia, Brasil)"
+) %>%
+  separate_rows(why, sep = ";") %>%
+  # baretable()
+  detailed_entries(
+    what = Grau,
+    when = as.character(glue("{Período}")),
+    with = Instituição,
+    where = glue("{regiao}, {pais}"),
+    why = why
+  )
+```
+
+# Experiência de ensino
+
+```{r teaching_experience, results='asis'}
+tribble(
+  ~year, ~role, ~institution, ~regiao, ~pais, ~why,
+  "6--17 Abr 2020", "Professor na disciplina BOT-89 \\textit{Preparação de dados para análise estatística  e Introdução ao uso de linguagem R}", "Programa de Pós-graduação em Ciências Biológicas (Botânica) INPA", "Amazonas", "Brasil", "Professores:  Drs. Alberto Vicentini (INPA) e Ricardo de Oliveira Perdiz;Este curso treina habilidades analíticas para que os alunos possam lidar com operações básicas da linguagem R e possam executar análises exploratórias de dados com seus próprios conjuntos de dados",
+  "21--30 Jan 2020", "Professor no curso de campo \\textit{Técnicas de coleta e identificação botânica de espécies arbóreas da Amazônia}", "EMBRAPA", "Roraima", "Brasil", "Professores:  Dr. Ricardo de Oliveira Perdiz, M.Sc. Herison Medeiros, Bachelor Daniel Silva, e Adriano Souza;Curso realizado em colaboração com a EMBRAPA-Roraima, Brasil; Lições sobre coleções botânicas, conhecimento básico de morfologia vegetal, boas práticas em coletas e documentação de amostras botânicas, e taxonomia e sistemática de angiospermas lenhosas neotropicais, com ênfase especial na identificação de famílias e gêneros de plantas através de caracteres vegetativos",
+  "19--30 Nov 2018", "Monitor da disciplina \\textit{Uso de espectroscopia para reconhecimento da Biodiversidade}", "Programa de pós-graduação em Ciências Biológicas (Botânica) INPA", "Amazonas", "Brasil", "Professora: Dra. Flávia Durgante (INPA);Auxiliei discentes em lidar com o ambiente R e na aplicação de técnicas estatísticas para responder algumas de suas perguntas durante a segunda semana de classe",
+  "2016-2017", "Monitor da disciplina BOT-89 \\textit{Preparação de dados para análise estatística  e Introdução ao uso de linguagem R}", "Programa de pós-graduação em Ciências Biológicas (Botânica) INPA, Brasil", "Amazonas", "Brasil", "Professor: Dr. Alberto Vicentini (INPA);Atuei como monitor por dois anos consecutivos;Criei um \\href{botanicaamazonica.wiki.br/labotam/doku.php?id=disciplinas:bot89:inicio}{sítio web} para auxiliar os discentes no aprendizado da disciplina",
+  "9--13 Nov 2015", "Monitor da disciplina PRN 235 \\textit{Preparação de dados para análise estatística}", "Programa de Pós-graduação em Recursos Naturais, UFRR, Brasil", "Roraima", "Brasil", "Professores: Dr. Reinaldo Imbrozio Barbosa (INPA), Lidiany Carvalho (UFRR);Auxiliei discentes em lidar com o ambiente R;Contribuí ativamente para o ensino do curso através de reuniões com o professor;Criei um \\href{http://www.botanicaamazonica.wiki.br/labotam/doku.php?id=alunos:r.perdiz:disciplina:inicio}{sítio web} para auxiliar os discentes no aprendizado do R",
+  "8--16 Aug 2013", "Organizador e professor de um curso de campo chamado \\textit{Métodos de herborização e identificação de angiospermas neotropicais arbóreas, com ênfase nos caracteres vegetativos}", "Centro de Estudos da Biodiversidade Amazônica (CENBAM)", "Roraima", "Brasil", "Curso feito em parceria com o Programa de pós-graduação em Recursos Naturais (PRONAT), Universidade Federal de Roraima (UFRR), Brasil;Atuei como professor deste curso durante meu período como gestor de dados e metadados do CENBAM em RR; Lições de taxonomia e sistemática de angiospermas lenhosas neotropicais, com ênfase especial na identificação de famílias e gêneros através do uso de caracteres vegetativos"
+) %>%
+  separate_rows(why, sep = ";") %>%
+  detailed_entries(
+    what = role,
+    when = year,
+    with = institution,
+    where = glue("{regiao}, {pais}"),
+    why = why,
+    .protect = FALSE
+  )
+```
+
+# Habilidades profissionais
+
+  * Atividades no campo e no herbário
+  * Identificação de plantas da flora amazônica, especialmente angiospermas
+  * Trabalho laboratorial - extração de DNA, PCR, preparação de bibliotecas para métodos RADseq e afins
+  * Domínio em metodologia científica
+  * Análise de dados em bioinformática
+  * Conhecimento intermediário (Python, SQL) a avançado (R, bash) de linguagens de programação para ciência de dados
+  * Conhecimento avançado na produção de relatórios dinâmicos usando HTML, CSS, LaTeX, R Markdown, Markdown, Jupyter Notebooks e pandoc
+  * Conhecimento avançado da linguagem git para sistema de controle de versões
+
+# Experiência profissional
+
+* Gestor de dados e metadados do PPBio, núcleo regional Roraima, Centro de Estudos Integrados da Biodiversidade Amazônica - CENBAM. Projeto financiado pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), Brasil. Período: 2011--2014.
+
+# Aparições em mídias e entrevistas
+
+```{r media, results = "asis"}
+media_appear <- 
+  filter(revout, bibtype == "Misc" & note == "entrevista" | bibtype == "Misc" & note == "Documentario") %>%
+  filter(grepl("port", comment)) %>% 
+  arrange(desc(year))
+print_published_data(media_appear, list_type = "as_is", fix_accent = FALSE)
+```
+
+# Certificações
+
+```{r}
+tribble(
+  ~period, ~title, ~who, ~where,
+  "Mar 2019", "\\href{http://coursera.org/verify/GSS6YV4VMABV}{Python for Data Science}", "IBM", "Coursera",
+  "Feb 2019", "\\href{http://coursera.org/verify/6GK8A8662Z7C}{Data Science Methodology}", "IBM", "Coursera",
+  "Feb 2019", "\\href{http://coursera.org/verify/WF46AQV8XSME}{Open Source tools for Data Science}", "IBM", "Coursera",
+  "Feb 2019", "\\href{http://coursera.org/verify/QU8KJ9AZVFND}{What is Data Science}", "IBM", "Coursera"
+) %>%
+  detailed_entries(
+    what = title,
+    when = as.character(period),
+    with = who,
+    where = where,
+    .protect = FALSE
+  )
+```
+
+
+# Produção científica
+
+## Artigos científicos publicados
+
+```{r research-papers, results="asis"}
+art_pub <- 
+  filter(out, bibtype == "Article") %>%
+  filter(!grepl("dataset|preprint|iucn", comment)) %>%
+  filter(is_year) %>% 
+  arrange(desc(year))
+print_published_data(art_pub)
+```
+
+## Pré-publicação
+
+```{r preprint, results="asis"}
+art_preprint <- 
+  filter(out, bibtype == "Article") %>%
+  filter(grepl("preprint", comment))
+print_published_data(art_preprint)
+```
+
+## Catálogos digitais online
+
+```{r online-checklist,  results="asis"}
+online_chklst <- 
+  filter(out, bibtype == "InCollection" & !is.na(url) & grepl("portuguese", note))
+print_published_data(online_chklst)
+```
+
+## Livro digital
+
+```{r book, results='asis'}
+book <- 
+  filter(out, bibtype == "Book" & grepl("portuguese", note))
+print_published_data(book)
+```
+
+## Capítulo de livro
+
+```{r book-chapters, results="asis"}
+book_chp <- 
+  filter(out, bibtype == "InCollection" & is.na(url))
+print_published_data(book_chp)
+```
+
+## Conjunto de dados
+
+```{r datasets, results = "asis"}
+dsets <- 
+  filter(out, grepl("Article|Misc", bibtype)) %>%
+  filter(grepl("dataset", comment)) %>%
+  mutate(note = "portuguese") %>% 
+  arrange(desc(year))
+print_published_data(dsets)
+```
+
+# Prêmios e conquistas
+
+## Financiamentos e bolsas de estudo
+
+```{r awards-grants, results = 'asis'}
+awards <-
+  tribble(
+    ~Year, ~Award, ~Amount,
+    2018, "IAPT Research Grant", "US\\$2000",
+    2017, "ASPT Research Grant for Graduate students", "US\\$800",
+    2016, "José Cuatrecasas Fellowship Award", "US\\$3000",
+    2015, "Alwyn H. Gentry Fellowship for Latin American Botanists, Missouri Botanical Garden, St. Louis MO", "--"
+  )
+baretable(awards)
+# brief_entries(
+#   what = Award,
+#   when = Year,
+#   with =
+# )
+# baretable(align='llll',
+#           hline.after=c(0,NROW(.)),
+#           size="\\fontsize{10}{16}",
+#           add.to.row=list(
+#             pos=as.list(seq(NROW(.))),
+#             command=rep("\\\\[-0.2cm]",NROW(.))))
+```
+
+# Software (pacotes de R)
+
+```{r r_packages}
+tribble(
+  ~Year, ~Author, ~Name, ~URL,
+  "Em desenvolvimento", "Perdiz, R.O.", "NIRtools: Tools to deal with near infrared (NIR) spectroscopy data", "www.github.com/ricoperdiz/NIRtools"
+) %>%
+  detailed_entries(
+    with = Name,
+    what = "Pacote R para lidar com dados de espectroscopia NIR, provendo funções que facilitam a análise dos dados.",
+    when = as.character(glue("{Year}")),
+    where = URL,
+    why = "Desenvolvedor principal",
+    # .open = "<", .close = ">"),
+    .protect = FALSE
+  )
+```
+
+```{r, eval = FALSE, include = FALSE}
+# Referências
+
+Dr. Alberto Vicentini  
+Instituto Nacional de Pesquisas da Amazônia, Amazonas, Brasil (INPA)  
+Email: <vicentini.beto@gmail.com>  
+
+Dr. Paul Fine  
+University of California, Berkeley  
+Email: <paulfine@berkeley.edu>  
+
+Dr. Douglas C. Daly  
+New York Botanical Garden (NYBG)  
+Email: <douglas.daly@gmail.com>  
+```
+
