@@ -87,7 +87,7 @@ tribble(
   "19--30 Nov 2018", "Monitor da disciplina \\textit{Uso de espectroscopia para reconhecimento da Biodiversidade}", "Programa de pós-graduação em Ciências Biológicas (Botânica) INPA", "Amazonas", "Brasil", "Professora: Dra. Flávia Durgante (INPA);Auxiliei discentes em lidar com o ambiente R e na aplicação de técnicas estatísticas para responder algumas de suas perguntas durante a segunda semana de classe",
   "2016-2017", "Monitor da disciplina BOT-89 \\textit{Preparação de dados para análise estatística  e Introdução ao uso de linguagem R}", "Programa de pós-graduação em Ciências Biológicas (Botânica) INPA, Brasil", "Amazonas", "Brasil", "Professor: Dr. Alberto Vicentini (INPA);Atuei como monitor por dois anos consecutivos;Criei um \\href{botanicaamazonica.wiki.br/labotam/doku.php?id=disciplinas:bot89:inicio}{sítio web} para auxiliar os discentes no aprendizado da disciplina",
   "9--13 Nov 2015", "Monitor da disciplina PRN 235 \\textit{Preparação de dados para análise estatística}", "Programa de Pós-graduação em Recursos Naturais, UFRR, Brasil", "Roraima", "Brasil", "Professores: Dr. Reinaldo Imbrozio Barbosa (INPA), Lidiany Carvalho (UFRR);Auxiliei discentes em lidar com o ambiente R;Contribuí ativamente para o ensino do curso através de reuniões com o professor;Criei um \\href{http://www.botanicaamazonica.wiki.br/labotam/doku.php?id=alunos:r.perdiz:disciplina:inicio}{sítio web} para auxiliar os discentes no aprendizado do R",
-  "8--16 Aug 2013", "Organizador e professor de um curso de campo chamado \\textit{Métodos de herborização e identificação de angiospermas neotropicais arbóreas, com ênfase nos caracteres vegetativos}", "Centro de Estudos da Biodiversidade Amazônica (CENBAM)", "Roraima", "Brasil", "Curso feito em parceria com o Programa de pós-graduação em Recursos Naturais (PRONAT), Universidade Federal de Roraima (UFRR), Brasil;Atuei como professor deste curso durante meu período como gestor de dados e metadados do CENBAM em RR; Lições de taxonomia e sistemática de angiospermas lenhosas neotropicais, com ênfase especial na identificação de famílias e gêneros através do uso de caracteres vegetativos"
+  "8--16 Ago 2013", "Organizador e professor de um curso de campo chamado \\textit{Métodos de herborização e identificação de angiospermas neotropicais arbóreas, com ênfase nos caracteres vegetativos}", "Centro de Estudos da Biodiversidade Amazônica (CENBAM)", "Roraima", "Brasil", "Curso feito em parceria com o Programa de pós-graduação em Recursos Naturais (PRONAT), Universidade Federal de Roraima (UFRR), Brasil;Atuei como professor deste curso durante meu período como gestor de dados e metadados do CENBAM em RR; Lições de taxonomia e sistemática de angiospermas lenhosas neotropicais, com ênfase especial na identificação de famílias e gêneros através do uso de caracteres vegetativos"
 ) %>%
   separate_rows(why, sep = ";") %>%
   detailed_entries(
@@ -131,9 +131,9 @@ print_published_data(media_appear, list_type = "as_is", fix_accent = FALSE)
 tribble(
   ~period, ~title, ~who, ~where,
   "Mar 2019", "\\href{http://coursera.org/verify/GSS6YV4VMABV}{Python for Data Science}", "IBM", "Coursera",
-  "Feb 2019", "\\href{http://coursera.org/verify/6GK8A8662Z7C}{Data Science Methodology}", "IBM", "Coursera",
-  "Feb 2019", "\\href{http://coursera.org/verify/WF46AQV8XSME}{Open Source tools for Data Science}", "IBM", "Coursera",
-  "Feb 2019", "\\href{http://coursera.org/verify/QU8KJ9AZVFND}{What is Data Science}", "IBM", "Coursera"
+  "Fev 2019", "\\href{http://coursera.org/verify/6GK8A8662Z7C}{Data Science Methodology}", "IBM", "Coursera",
+  "Fev 2019", "\\href{http://coursera.org/verify/WF46AQV8XSME}{Open Source tools for Data Science}", "IBM", "Coursera",
+  "Fev 2019", "\\href{http://coursera.org/verify/QU8KJ9AZVFND}{What is Data Science}", "IBM", "Coursera"
 ) %>%
   detailed_entries(
     what = title,
