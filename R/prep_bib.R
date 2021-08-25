@@ -164,6 +164,9 @@ prep_bib <- function(out) {
           } else if (is.na(number) & is.na(pages)) {
             pub_numb_pre <-
               glue::glue("{volume}")
+          } else if (is.na(pages)) {
+            pub_numb_pre <-
+              glue::glue("{volume}({number})}")
           } else {
             pub_numb_pre <- ""
           }
@@ -212,8 +215,10 @@ print_bib <- function(bibdf) {
   # bibdf <- out
   # bibdf <-
   #   out %>%
-  # #   filter(bibtype == "Article") %>%
-  #   filter((bibtype == "Article" & grepl("dataset", comment)))
+  #   filter(bibtype == "Article")
+  # 
+  # bibdf %>% View
+    # filter((bibtype == "Article" & grepl("dataset", comment)))
   #
   # #   #   #   # filter(bibtype == "MastersThesis")
   #   filter(bibtype == "Book")
