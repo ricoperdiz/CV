@@ -38,11 +38,6 @@ revout <-
   bib_entries(reviews)
 ```
 
-```{r lattes, include = FALSE, eval = FALSE}
-dados <- gld_get_lattes_data_from_zip("2115845365136873.zip")
-tpesq <- dados$tpesq
-```
-
 # Professional summary
 
 Experience in tropical botany, botanical surveys in the Amazon and Atlantic Forests, angiosperm taxonomy and systematics (especially Burseraceae, Caryocaraceae and Sapindaceae), interactive keys of identification, ecological data and metadata management, laboratory work (DNA extraction and library preparation for NGS), general computational and bioinformatics for data wrangling and analysis.

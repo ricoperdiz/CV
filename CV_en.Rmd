@@ -38,14 +38,9 @@ revout <-
   bib_entries(reviews)
 ```
 
-```{r lattes, include = FALSE, eval = FALSE}
-dados <- gld_get_lattes_data_from_zip("2115845365136873.zip")
-tpesq <- dados$tpesq
-```
-
 # Professional summary
 
-Experience in tropical botany, botanical surveys in the Amazon and Atlantic Forests, angiosperm taxonomy and systematics (especially Burseraceae, Caryocaraceae and Sapindaceae), interactive keys of identification, ecological data and metadata management, laboratory work (DNA extraction and library preparation for NGS), general computational and bioinformatics for data wrangling and analysis.
+Experience in tropical botany, botanical surveys in the Amazon and Atlantic Forests, angiosperm taxonomy and systematics (especially Burseraceae, Caryocaraceae and Sapindaceae), interactive keys of identification, ecological data and metadata management, laboratory work (DNA extraction and library preparation for NGS), general computational and bioinformatics for data wrangling and analysis.  
 
 # Professional data
 
@@ -69,19 +64,6 @@ tribble(
     with = Institution,
     where = glue("{region}, {country}"),
     why = why
-  )
-```
-
-```{r degrees_byOrcid, eval = FALSE}
-myorcid <- "0000-0002-2333-6549"
-edu <- rorcid::orcid_educations(myorcid)
-edu[[myorcid]]$`education-summary` %>%
-  mutate_at("end-date.year.value", ~ ifelse(is.na(.x), "in progress", .x)) %>%
-  detailed_entries(
-    what = `role-title`,
-    when = glue::glue("{`start-date.year.value`}- {`end-date.year.value`}"),
-    with = organization.name,
-    where = organization.address.city
   )
 ```
 

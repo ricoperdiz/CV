@@ -39,11 +39,6 @@ revout <-
   bib_entries(reviews)
 ```
 
-```{r lattes, include = FALSE, eval = FALSE}
-dados <- gld_get_lattes_data_from_zip("2115845365136873.zip")
-tpesq <- dados$tpesq
-```
-
 # Sumário profissional
 
 <!-- Sou particularmente interessado na evolução, taxonomia e sistemática de plantas com flores, e possuo muita experiência em inventários botânicos na Amazônia e na Floresta Atlântica. Minha pesquisa botânica é mais focada em um grupo de plantas conhecidas na Amazônia como breus, plantas de elevada diversidade e abundância na Amazônia, família a qual sou responsável pelo tratamento taxonômico para o Brasil no projeto [Flora do Brasil 2020](http://floradobrasil.jbrj.gov.br/reflora/listaBrasil/PrincipalUC/PrincipalUC.do), em conjunto com o Dr. Douglas Daly (NYBG). Desenvolvi habilidades relacionadas ao manejo de linguagens de programação e bancos de dados. Recentemente defendi minha tese de doutorado junto ao  Programa de Pós-graduação em Ciências Biológicas (Botânica) do Instituto Nacional de Pesquisas da Amazônia (INPA). -->
