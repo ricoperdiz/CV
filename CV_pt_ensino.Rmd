@@ -156,7 +156,7 @@ print_published_data(art_preprint)
 
 ## Catálogos digitais online
 
-```{r online-checklist,  results="asis"}
+```{r online-checklist, results="asis"}
 online_chklst <- 
   filter(out, bibtype == "InCollection" & !is.na(url) & grepl("portuguese", note))
 print_published_data(online_chklst)

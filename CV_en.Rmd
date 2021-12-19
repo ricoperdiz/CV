@@ -90,7 +90,7 @@ print_published_data(art_pub)
 
 ## Research papers - in press
 
-```{r research-papers-in-press, results="asis", include=FALSE}
+```{r research-papers-in-press, results="asis"}
 art_press <- 
   filter(out, bibtype == "Article") %>%
   filter(grepl("in press|accepted", year_up)) %>% 
