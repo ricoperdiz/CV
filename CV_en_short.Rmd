@@ -51,19 +51,16 @@ Experience in tropical botany, botanical surveys in the Amazon and Atlantic Fore
 # Academic Formation
 
 ```{r degrees, results= 'asis'}
-tribble(
-  ~Period, ~Degree, ~Institution, ~region, ~country, ~why,
-  '2015--2019', "Ph.D. in Botany", "INPA", "Amazonas", "Brazil" ,"Thesis title: Species delimitation and phylogeography of the Protium aracouchini (Aubl.) Marchand species complex (Burseraceae);Funding: CNPq and CAPES;Partially executed in the University of California, Berkeley (UC Berkeley), EUA, with a CAPES scholarship;Supervisor: Paul V.A. Fine (UC Berkeley);Co-supervisors: Dr. Alberto Vicentini (INPA) and Dr. Douglas Daly (New York Botanical Garden, EUA)",
-  '2009--2011', "M.S. in Botany", "State University of Feira de Santana (UEFS)", "Bahia", "Brazil", "Dissertation title: Sapindaceae Juss. in remnants of montane forests in southern Bahia, Brazil;Funding: CNPq;Supervisor: Dr. André Amorim (UESC, Bahia, Brazil);Co-supervisor: Dra. María Silvia Ferrucci (IBONE, Corrientes, Argentina)",
-  '2005--2008', "B.Sc. in Biological Sciences", "State University of Santa Cruz (UESC)", "Bahia", "Brazil", "Undergraduate thesis title: Maxillariinae s.l. (Orchidaceae) em três remanescentes de florestas montanas no sul da Bahia, Brasil;Supervisor: Dr. André Amorim (UESC, Bahia, Brazil)"
-) %>% 
-  separate_rows(why, sep = ";") %>% 
+readxl::read_excel("cv_data.xlsx", sheet = "degree") %>% 
+  filter(language == "english") %>% 
+  separate_rows(why, sep = ";") %>%
   detailed_entries(
-  what = Degree,
-  when = as.character(glue("{Period}")),
-  with = Institution,
-  where = glue("{region}, {country}"),
-  why = why) 
+    what = grau,
+    when = as.character(glue("{periodo}")),
+    with = instituicao,
+    where = glue("{regiao}, {pais}"),
+    why = why
+  )
 ```
 
 
@@ -196,35 +193,24 @@ print_published_data(phd_th)
 ## Fellowships & Grants
 
 ```{r awards-grants, results = 'asis'}
-awards <-
-  tribble(
-    ~Year, ~Award, ~Amount,
-    2015, "Alwyn H. Gentry Fellowship for Latin American Botanists, Missouri Botanical Garden, St. Louis MO", "--",
-    2016, "José Cuatrecasas Fellowship Award", "US\\$3000",
-    2017, "ASPT Research Grant for Graduate students", "US\\$800",
-    2018, "IAPT Research Grant", "US\\$2000"
-  )
-baretable(awards)
+readxl::read_excel("cv_data.xlsx", sheet = "grants") %>% 
+  baretable(.)
 ```
 
 # Teaching experience
 
 ```{r teaching_experience, results='asis'}
-tribble(
-  ~year, ~role, ~institution, ~region, ~pais, ~why,
-  "6--17 Apr 2020", "Teacher in BOT-89 \\textit{Preparação de dados para análise estatística  e Introdução ao uso de linguagem R}", "Programa de Pós-graduação em Ciências Biológicas (Botânica) INPA", "Amazonas", "Brazil", "Teachers:  Dr. Alberto Vicentini (INPA) and myself;This course provides skills for students dealing with basic R operations and perform exploratory data analysis in their datasets",
-  "21--30 Jan 2020", "Teacher in \\textit{Técnicas de coleta e identificação botânica de espécies arbóreas da Amazônia}", "EMBRAPA", "Roraima", "Brazil", "Teachers:  Dr. Ricardo de Oliveira Perdiz, M.Sc. Herison Medeiros, Bachelor Daniel Silva, and Adriano Souza;Course done in collaboration with EMBRAPA-Roraima, Brazil; Lessons ranging botanical collections, basic knowledge of plant morphology, good pratices in collecting and documenting botanical collections, and taxonomy and systematics of neotropical woody angiosperms, with special emphasis on how to identify plant families and genera through the use of vegetative characters",
-  "19--30 Nov 2018", "Graduate teaching assistant in \\textit{Uso de espectroscopia para reconhecimento da Biodiversidade}", "Programa de Pós-graduação em Ciências Biológicas (Botânica) INPA", "Amazonas", "Brazil", "Teacher: Dra. Flávia Durgante (INPA)",
-  "2016-2017", "Graduate teaching assistant in BOT-89 \\textit{Preparação de dados para análise estatística  e Introdução ao uso de linguagem R}", "Programa de Pós-graduação em Ciências Biológicas (Botânica) INPA", "Amazonas", "Brazil", "Teacher: Dr. Alberto Vicentini (INPA);Check the \\href{http://www.botanicaamazonica.wiki.br/labotam/doku.php?id=disciplinas:bot89:inicio}{website}",
-  "9--13 Nov 2015", "Graduate teaching assistant in PRN 235 \\textit{Preparação de dados para análise estatística}", "Programa de Pós-graduação em Recursos Naturais, UFRR, Brazil", "Roraima", "Brazil", "Teacher: Dr. Reinaldo Imbrozio Barbosa (INPA), Lidiany Carvalho (UFRR);Assisted students in dealing with R environment;Actively contributed to lecture course design through meetings with instructor;Created a \\href{http://www.botanicaamazonica.wiki.br/labotam/doku.php?id=alunos:r.perdiz:disciplina:inicio}{website} to help students in learning R",
-  "8--16 Aug 2013", "Organizer and teacher of field course called \\textit{Métodos de herborização e identificação de angiospermas neotropicais arbóreas, com ênfase nos caracteres vegetativos}", "Centro de Estudos da Biodiversidade Amazônica (CENBAM)", "Roraima", "Brazil", "Course done in collaboration with Programa de Pós-graduação in Natural Resources from Federal University of Roraima (PRONAT UFRR), Brazil;Lessons of taxonomy and systematics of neotropical woody angiosperms, with special emphasis on how to identify plant families and genera through the use of vegetative characters"
-) %>%
+readxl::read_excel("cv_data.xlsx", sheet = "experience") %>% 
+  filter(language == "english") %>% 
+  filter(experience_type == "teaching") %>% 
+  filter(fix_it == "no") %>% 
+  dplyr::select(-language, -experience_type, -fix_it) %>%
   separate_rows(why, sep = ";") %>%
   detailed_entries(
     what = role,
     when = year,
     with = institution,
-    where = glue("{region}, {pais}"),
+    where = glue("{regiao}, {pais}"),
     why = why,
     .protect = FALSE
   )
