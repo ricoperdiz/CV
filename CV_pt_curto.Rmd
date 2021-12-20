@@ -114,9 +114,9 @@ art_press <-
 print_published_data(art_press)
 ```
 
-## Artigos científicos submetidos
 
-```{r research-papers-submitted, results="asis"}
+```{r research-papers-submitted, results="asis", eval=FALSE}
+## Artigos científicos submetidos
 art_subm <- 
   filter(out, bibtype == "Article") %>%
   filter(year_up == "submitted") %>%
