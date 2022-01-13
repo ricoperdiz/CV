@@ -121,7 +121,9 @@ print_published_data(art_preprint)
 
 ```{r online-checklist,  results="asis"}
 online_chklst <- 
-  filter(out, bibtype == "InCollection" & !is.na(url) & grepl("english", note))
+  filter(out, bibtype == "InCollection" & !is.na(url) & grepl("english", note)) %>% 
+  mutate_at("year", as.numeric) %>% 
+  filter(!is.na(year))
 print_published_data(online_chklst)
 ```
 
