@@ -90,9 +90,9 @@ art_pub <-
 print_published_data(art_pub)
 ```
 
-## Artigos científicos no prelo
 
-```{r research-papers-in-press, results="asis"}
+```{r research-papers-in-press, results="asis", eval=FALSE}
+## Artigos científicos no prelo
 # , include=FALSE
 art_press <- 
   filter(out, bibtype == "Article") %>%
