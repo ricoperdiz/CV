@@ -31,7 +31,7 @@ reviews <- "/Users/ricoperdiz/Documents/PROFISSIONAL/producao_cientifica/08_pare
 out <-
   bib_entries(file) %>%
   prep_bib(.)
-out$authors_sep[grep("BFG", out$author)] <- "{BFG} and **Perdiz, R. O.**"
+out$authors_sep[grep("BFG", out$author)] <- "{BFG} e **Perdiz, R. O.**"
 revout <-
   bib_entries(reviews)
 load("textos.RData")
