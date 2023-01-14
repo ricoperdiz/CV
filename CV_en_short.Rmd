@@ -103,9 +103,9 @@ art_pub <-
 print_published_data(art_pub)
 ```
 
-
-```{r research-papers-in-press, results="asis", eval=FALSE}
 ## Research papers - in press
+
+```{r research-papers-in-press, results="asis", eval=TRUE}
 art_press <- 
   filter(out, bibtype == "Article") %>%
   filter(grepl("in press|accepted", year_up)) %>% 
@@ -138,7 +138,8 @@ print_published_data(art_preprint)
 online_chklst <- 
   filter(out, bibtype == "InCollection" & !is.na(url) & grepl("english", note)) %>% 
   mutate_at("year", as.numeric) %>% 
-  filter(!is.na(year))
+  filter(!is.na(year)) %>% 
+  arrange(desc(year))
 print_published_data(online_chklst)
 ```
 
