@@ -133,29 +133,29 @@ tribble(
 
 # Produção científica
 
-## Artigos científicos publicados
+## Artigos científicos publicados recentemente
 
 ```{r research-papers, results="asis"}
 art_pub <- 
   filter(out, bibtype == "Article") %>%
   filter(!grepl("dataset|preprint|iucn", comment)) %>%
   filter(is_year) %>% 
-  arrange(desc(year))
+  arrange(desc(year)) %>% 
+  slice(1:5)
 print_published_data(art_pub)
 ```
 
+```{r preprint, results="asis", eval=FALSE}
 ## Pré-publicação
-
-```{r preprint, results="asis"}
 art_preprint <- 
   filter(out, bibtype == "Article") %>%
   filter(grepl("preprint", comment))
 print_published_data(art_preprint)
 ```
 
-## Catálogos digitais online
 
-```{r online-checklist, results="asis"}
+```{r online-checklist, results="asis", eval=FALSE}
+## Catálogos digitais online
 online_chklst <- 
   filter(out, bibtype == "InCollection" & !is.na(url) & grepl("portuguese", note)) %>% 
   mutate_at("year", as.numeric) %>% 
@@ -179,9 +179,9 @@ book_chp <-
 print_published_data(book_chp)
 ```
 
-## Conjunto de dados
 
-```{r datasets, results = "asis"}
+```{r datasets, results = "asis", eval=FALSE}
+## Conjunto de dados
 dsets <- 
   filter(out, grepl("Article|Misc", bibtype)) %>%
   filter(grepl("dataset", comment)) %>%

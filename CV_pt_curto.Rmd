@@ -103,9 +103,9 @@ art_pub <-
 print_published_data(art_pub)
 ```
 
-## Artigos científicos no prelo
 
-```{r research-papers-in-press, results="asis", eval=TRUE}
+```{r research-papers-in-press, results="asis", eval=FALSE}
+## Artigos científicos no prelo
 art_press <- 
   filter(out, bibtype == "Article") %>%
   filter(grepl("in press|accepted", year_up)) %>% 
