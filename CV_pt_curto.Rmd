@@ -6,7 +6,7 @@ phone: +55 95 98126 2633
 www: "ricardoperdiz.com"
 email: "ricoperdiz@gmail.com"
 github: ricoperdiz
-twitter: ricoperdiz
+twitter: 
 
 lang: pt-br
 date: "`r Sys.Date()`"
@@ -19,24 +19,25 @@ options(tinytex.verbose = TRUE)
 options(encoding = "UTF-8")
 # headcolor: "000088"
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-library("tidyverse")
-library("vitae")
-library("GetLattesData")
-library("RefManageR")
-library("glue")
-source("/Users/ricoperdiz/Documents/CV/R/baretable.R")
-source("/Users/ricoperdiz/Documents/CV/R/prep_bib.R")
-file <- "/Users/ricoperdiz/Documents/CV/pubs.bib"
-reviews <- "/Users/ricoperdiz/Documents/PROFISSIONAL/producao_cientifica/08_pareceres/reviews.bib"
+library(tidyverse)
+library(vitae)
+library(GetLattesData)
+library(RefManageR)
+library(glue)
+source("R/baretable.R")
+source("R/prep_bib.R")
+# file <- "C:\Users\ricop\Documents\CV\pubs.bib"
+file <- "C:/Users/ricop/Documents/CV/pubs.bib"
+reviews <- "C:/Users/ricop/Documents/PROFISSIONAL/producao_cientifica/08_pareceres/reviews.bib"
 out <-
   bib_entries(file) %>%
   prep_bib(.)
-out$authors_sep[grep("BFG", out$author)] <- "{BFG} e **Perdiz, R. O.**"
+out$authors_sep[grep("BFG", out$author)] <- "{BFG} and **Perdiz, R. O.**"
 revout <-
   bib_entries(reviews)
 load("textos.RData")
 texto <- textos %>% 
-  filter(lingua == "português" & parte == "sumário") %>% 
+  filter(lingua == "inglês" & parte == "sumário") %>% 
   .[['texto']]
 ```
 
@@ -46,7 +47,7 @@ texto <- textos %>%
 
 # Dados profissionais
 
-  * [Orcid](https://orcid.org/0000-0002-2333-6549) ![Orcid](/Users/ricoperdiz/Documents/CV/orcid_16x16.png){height=0.5%,width=0.05%}: [0000-0002-2333-6549](https://orcid.org/0000-0002-2333-6549)
+  * [Orcid](https://orcid.org/0000-0002-2333-6549) ![Orcid](C:/Users/ricop/Documents/CV/orcid_16x16.png){height=0.5%,width=0.05%}: [0000-0002-2333-6549](https://orcid.org/0000-0002-2333-6549)
   * [CNPq Lattes](http://lattes.cnpq.br/2115845365136873)
   * [ResearchGate](https://www.researchgate.net/profile/Ricardo_Perdiz)
 
