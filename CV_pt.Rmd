@@ -36,8 +36,9 @@ out$authors_sep[grep("BFG", out$author)] <- "{BFG} and **Perdiz, R. O.**"
 revout <-
   bib_entries(reviews)
 load("textos.RData")
-texto <- textos %>% 
-  filter(lingua == "inglês" & parte == "sumário") %>% 
+texto <- 
+  textos %>% 
+  filter(lingua == "português" & parte == "sumário") %>% 
   .[['texto']]
 ```
 

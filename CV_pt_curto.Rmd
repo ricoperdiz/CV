@@ -37,7 +37,7 @@ revout <-
   bib_entries(reviews)
 load("textos.RData")
 texto <- textos %>% 
-  filter(lingua == "inglês" & parte == "sumário") %>% 
+  filter(lingua == "português" & parte == "sumário") %>% 
   .[['texto']]
 ```
 
