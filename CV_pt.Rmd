@@ -26,9 +26,10 @@ library(RefManageR)
 library(glue)
 source("R/baretable.R")
 source("R/prep_bib.R")
-# file <- "C:\Users\ricop\Documents\CV\pubs.bib"
-file <- "C:/Users/ricop/Documents/CV/pubs.bib"
-reviews <- "C:/Users/ricop/Documents/PROFISSIONAL/producao_cientifica/08_pareceres/reviews.bib"
+# file <- "C:\Users\ricop\Documentos\CV\pubs.bib"
+file <- "C:/Users/ricop/OneDrive/Documentos/CV/pubs.bib"
+reviews <- "C:/Users/ricop/OneDrive/Documentos/PROFISSIONAL/producao_cientifica/08_pareceres/reviews.bib"
+here::here()
 out <-
   bib_entries(file) %>%
   prep_bib(.)
@@ -48,7 +49,7 @@ texto <-
 
 # Dados profissionais
 
-  * [Orcid](https://orcid.org/0000-0002-2333-6549) ![Orcid](C:/Users/ricop/Documents/CV/orcid_16x16.png){height=0.5%,width=0.05%}: [0000-0002-2333-6549](https://orcid.org/0000-0002-2333-6549)
+  * [Orcid](https://orcid.org/0000-0002-2333-6549) ![Orcid](C:/Users/ricop/OneDrive/Documentos/CV/orcid_16x16.png){height=0.5%,width=0.05%}: [0000-0002-2333-6549](https://orcid.org/0000-0002-2333-6549)
   * [CNPq Lattes](http://lattes.cnpq.br/2115845365136873)
   * [ResearchGate](https://www.researchgate.net/profile/Ricardo_Perdiz)
 
@@ -58,6 +59,7 @@ texto <-
 readxl::read_excel("cv_data.xlsx", sheet = "degree") %>% 
   filter(language == "português") %>% 
   separate_rows(why, sep = ";") %>%
+  arrange(desc(periodo)) %>% 
   detailed_entries(
     what = grau,
     when = as.character(glue("{periodo}")),
@@ -69,13 +71,11 @@ readxl::read_excel("cv_data.xlsx", sheet = "degree") %>%
 
 # Habilidades profissionais
 
-  * Atividades no campo e no herbário
-  * Identificação de plantas da flora amazônica, especialmente angiospermas
-  * Trabalho laboratorial - extração de DNA, PCR, preparação de bibliotecas para métodos RADseq e afins
-  * Análise de dados em bioinformática
-  * Conhecimento intermediário (Python, SQL) a avançado (R, bash) de linguagens de programação para ciência de dados
-  * Conhecimento avançado na produção de relatórios dinâmicos usando HTML, CSS, LaTeX, R Markdown, Markdown, Jupyter Notebooks e pandoc
-  * Conhecimento avançado da linguagem git para sistema de controle de versões
+```{r skill, results="asis"}
+readxl::read_excel("cv_data.xlsx", sheet = "skills") %>%
+  filter(language == "português") %>% 
+  glue_data("\\* {skill}  ", .sep = "")
+```
 
 # Produção científica
 
@@ -172,7 +172,8 @@ print_published_data(pareceres, fix_accent = FALSE)
 
 ```{r iucn, results = "asis"}
 iucn_review <- 
-  filter(revout, (bibtype == "Article" & grepl("iucn", comment))) %>% 
+  filter(out, bibtype == "Article") %>%
+  filter(grepl("iucn", comment)) %>%
   arrange(desc(year))
 print_published_data(iucn_review)
 ```
@@ -209,6 +210,13 @@ out <-
 
 ```
 
+# Palestras
+
+```{r lectures, results = 'asis'}
+readxl::read_excel("cv_data.xlsx", sheet = "lectures") %>%
+  arrange(desc(year)) %>% 
+  glue_data("(@) {event}, {institution}, _{lecture}_. {year}.  ", .sep = "")
+```
 
 # Prêmios e conquistas
 
@@ -279,18 +287,16 @@ tribble(
 # Software (pacotes de R)
 
 ```{r r_packages}
-tribble(
-  ~Year, ~Author, ~Name, ~URL,
-  "Em desenvolvimento", "Perdiz, R.O.", "NIRtools: Tools to deal with near infrared (NIR) spectroscopy data", "www.github.com/ricoperdiz/NIRtools"
-) %>%
+readxl::read_excel("cv_data.xlsx", sheet = "software") %>% 
+  filter(language == "português") %>%
   detailed_entries(
     with = Name,
-    what = "Pacote R para lidar com dados de espectroscopia NIR, provendo funções que facilitam a análise dos dados.",
+    what = what,
     when = as.character(glue("{Year}")),
     where = URL,
-    why = "Desenvolvedor principal",
+    why = why
     # .open = "<", .close = ">"),
-    .protect = FALSE
+    # .protect = FALSE
   )
 ```
 

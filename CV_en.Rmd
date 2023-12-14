@@ -26,8 +26,8 @@ library(glue)
 source("R/baretable.R")
 source("R/prep_bib.R")
 # file <- "C:\Users\ricop\Documents\CV\pubs.bib"
-file <- "C:/Users/ricop/Documents/CV/pubs.bib"
-reviews <- "C:/Users/ricop/Documents/PROFISSIONAL/producao_cientifica/08_pareceres/reviews.bib"
+file <- "C:/Users/ricop/OneDrive/Documentos/CV/pubs.bib"
+reviews <- "C:/Users/ricop/OneDrive/Documentos/PROFISSIONAL/producao_cientifica/08_pareceres/reviews.bib"
 out <-
   bib_entries(file) %>%
   prep_bib(.)
@@ -46,7 +46,7 @@ texto <- textos %>%
 
 # Professional data
 
-  * [Orcid](https://orcid.org/0000-0002-2333-6549) ![Orcid](C:/Users/ricop/Documents/CV/orcid_16x16.png){height=0.5%,width=0.05%}: [0000-0002-2333-6549](https://orcid.org/0000-0002-2333-6549)
+  * [Orcid](https://orcid.org/0000-0002-2333-6549) ![Orcid](C:/Users/ricop/OneDrive/Documentos/CV/orcid_16x16.png){height=0.5%,width=0.05%}: [0000-0002-2333-6549](https://orcid.org/0000-0002-2333-6549)
   * [Brazilian CNPq Lattes CV](http://lattes.cnpq.br/2115845365136873)
   * [ResearchGate](https://www.researchgate.net/profile/Ricardo_Perdiz)
 
@@ -56,6 +56,7 @@ texto <- textos %>%
 readxl::read_excel("cv_data.xlsx", sheet = "degree") %>% 
   filter(language == "english") %>% 
   separate_rows(why, sep = ";") %>%
+  arrange(desc(periodo)) %>% 
   detailed_entries(
     what = grau,
     when = as.character(glue("{periodo}")),
@@ -67,15 +68,11 @@ readxl::read_excel("cv_data.xlsx", sheet = "degree") %>%
 
 # Professional skills
 
-  * Field work and herbarium activities
-  * Plant identification of the Amazon flora, especially angiosperms
-  * Laboratory work - DNA extraction, PCR, library preparation for ddRADseq method
-  * General computational and data skills in bioinformatics
-  * Intermediate (Python, SQL) to advanced (R, bash) knowledge of programming languages for data science
-  * Advanced knowledge in reproducible reports using HTML, CSS, LaTeX, R Markdown, Markdown, Jupyter Notebooks and pandoc
-  * Advanced knowledge of Git for version-control system
-
-<!-- I could test my R package named NIRtools in class -->
+```{r skill, results="asis"}
+readxl::read_excel("cv_data.xlsx", sheet = "skills") %>%
+  filter(language == "english") %>% 
+  glue_data("\\* {skill}  ", .sep = "")
+```
 
 # Scientific Production
 
@@ -170,7 +167,9 @@ print_published_data(pareceres, fix_accent = FALSE)
 
 ```{r iucn, results = "asis"}
 iucn_review <- 
-  filter(revout, (bibtype == "Article" & grepl("iucn", comment)))
+  filter(out, bibtype == "Article") %>%
+  filter(grepl("iucn", comment)) %>%
+  arrange(desc(year))
 print_published_data(iucn_review)
 ```
 
@@ -196,6 +195,14 @@ proceedings <-
   filter(out, bibtype == "InProceedings") %>% 
   arrange(desc(year))
 print_published_data(proceedings)
+```
+
+# Public lectures
+
+```{r lectures, results = 'asis'}
+readxl::read_excel("cv_data.xlsx", sheet = "lectures") %>%
+  arrange(desc(year)) %>% 
+  glue_data("(@) {event}, {institution}, _{lecture}_. {year}.  ", .sep = "")
 ```
 
 # Awards and Achievements
@@ -268,16 +275,18 @@ tribble(
 # Software (R packages)
 
 ```{r r_packages}
-tribble(
-  ~Year, ~Author, ~Name, ~URL,
-  "In development", "Perdiz, R.O.", "NIRtools: Tools to deal with near infrared (NIR) spectroscopy data", "github.com/ricoperdiz/NIRtools"
-) %>%
+# tribble(
+#   ~Year, ~Author, ~Name, ~URL,
+#   "In development", "Perdiz, R.O.", "NIRtools: Tools to deal with near infrared (NIR) spectroscopy data", "github.com/ricoperdiz/NIRtools"
+# ) %>%
+readxl::read_excel("cv_data.xlsx", sheet = "software") %>% 
+  filter(language == "english") %>%
   detailed_entries(
     with = Name,
-    what = "R package for dealing with NIR spectroscopy data and providing wraper functions for turning NIR data analysis easier.",
+    what = what,
     when = as.character(glue("{Year}")),
     where = URL,
-    why = "Lead developer"
+    why = why
     # .open = "<", .close = ">"),
     # .protect = FALSE
   )
